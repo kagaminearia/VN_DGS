@@ -26,9 +26,9 @@ define config.check_conflicting_properties = True
 # The text fonts and size for different screens
 define gui.text_font = "fonts/站酷仓耳渔阳体-W02.ttf"
 define gui.interface_text_font = "fonts/站酷高端黑.ttf"
-define gui.text_size = 35
+define gui.text_size = 30
 define gui.name_text_font = "fonts/站酷仓耳渔阳体-W03.ttf"
-define gui.name_text_size = 45
+define gui.name_text_size = 43
 
 ## Localization ################################################################
 

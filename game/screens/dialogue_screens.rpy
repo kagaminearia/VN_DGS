@@ -39,15 +39,15 @@ init python:
 style window:
     xalign 0.5
     yalign 1.0
-    xysize (1300, 300)
-    padding (60, 10, 40, 40)
+    xysize (1300, 270)
+    padding (60, 30, 40, 40)
     background Image("gui/textbox.png", xalign=0.5, yalign=1.0)
 
 # Style for the dialogue
 style say_dialogue:
     color '#000000'
     adjust_spacing False
-    ypos 60
+    ypos 40
 
 # The style for dialogue said by the narrator
 style say_thought:
@@ -55,9 +55,9 @@ style say_thought:
 
 # Style for the box containing the speaker's name
 style namebox:
-    xpos -20
-    ypos -80
-    xysize (290, 120)
+    xpos -60
+    ypos -105
+    xysize (230, 100)
     background Frame("gui/namebox.png", 5, 5, 5, 5, tile=True, xalign=0.0)
     padding (5, 5, 5, 5)
 

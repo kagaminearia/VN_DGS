@@ -16,8 +16,7 @@ define config.thumbnail_height = 216
 screen save():
 
     tag menu
-
-    add HBox(Transform("#292835", xsize=350), "#21212db2") # The background; can be whatever
+    add "bg_black"
 
     use file_slots(_("Save"))
 
@@ -25,9 +24,8 @@ screen save():
 screen load():
 
     tag menu
-
-    add HBox(Transform("#292835", xsize=350), "#21212db2") # The background; can be whatever
-
+    add "bg_black"
+    
     use file_slots(_("Load"))
 
 

@@ -12,33 +12,41 @@ image main_menu_background = HBox(
 )
 
 screen main_menu():
-
     ## This ensures that any other menu screen is replaced.
     tag menu
 
-    add "main_menu_background"
-
+    add "main"
+    add "main-title"
     vbox:
-        xpos 60
+        style_prefix "main_navigation"
+        xpos 125
         yalign 0.5
-        spacing 6
+        yoffset 150
+        spacing 10
 
-        textbutton _("Start") action Start()
+        textbutton _("开始游戏") action Start()
 
-        textbutton _("Load") action ShowMenu("load")
+        textbutton _("读取进度") action ShowMenu("load")
 
-        textbutton _("Preferences") action ShowMenu("preferences")
+        textbutton _("游戏设置") action ShowMenu("preferences")
 
-        textbutton _("About") action ShowMenu("about")
+        textbutton _("关于游戏") action ShowMenu("about")
 
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
             ## Help isn't necessary or relevant to mobile devices.
-            textbutton _("Help") action ShowMenu("help")
+            textbutton _("游戏帮助") action ShowMenu("help")
 
         if renpy.variant("pc"):
 
             ## The quit button is banned on iOS and unnecessary on Android and
             ## Web.
-            textbutton _("Quit") action Quit(confirm=not main_menu)
+            textbutton _("退出游戏") action Quit(confirm=not main_menu)
 
+
+style main_navigation_button_text:
+    color "#fff"
+    hover_color "#ad973f"
+    size 48
+    # xalign 0
+    
