@@ -1,0 +1,13 @@
+define me = Character("我",what_prefix="“",what_suffix="”")
+# add side image later
+define by = Character("白一",what_prefix="“",what_suffix="”")
+define cx = Character("岑宣",what_prefix="“",what_suffix="”")
+define fj = Character("繁锦",what_prefix="“",what_suffix="”")
+define lwl = Character("林望龙",what_prefix="“",what_suffix="”")
+define sw = Character("姒舞",what_prefix="“",what_suffix="”")
+define ty = Character("天玉",what_prefix="“",what_suffix="”")
+define wf = Character("卫锋",what_prefix="“",what_suffix="”")
+define xl = Character("小蓝",what_prefix="“",what_suffix="”")
+define xp = Character("西平",what_prefix="“",what_suffix="”")
+define xs = Character("西顺",what_prefix="“",what_suffix="”")
+define zb = Character("张班",what_prefix="“",what_suffix="”")
