@@ -17,8 +17,7 @@ EasyRenPyGui is made by {a=https://github.com/shawna-p}Feniks{/a} {a=https://fen
 screen about():
 
     tag menu
-
-    add "bg_black"
+    add "gui/menu_bg.webp"
 
     use game_menu(_("About"))
 
@@ -52,7 +51,7 @@ style about_label_text:
 screen help():
 
     tag menu
-
+    add "gui/menu_bg.webp"
     default device = "keyboard"
 
     add HBox(Transform("#292835", xsize=350), "#21212db2") # The background; can be whatever

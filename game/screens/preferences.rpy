@@ -10,7 +10,7 @@ screen preferences():
 
     tag menu
 
-    add "bg_black"
+    add "gui/menu_bg.webp"
 
     use game_menu(_("Preferences"))
 

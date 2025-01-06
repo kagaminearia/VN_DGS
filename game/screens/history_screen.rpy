@@ -10,13 +10,10 @@
 define config.history_length = 250
 
 screen history():
-
     tag menu
-
+    add "gui/menu_bg.webp"
     ## Avoid predicting this screen, as it can be very large.
     predict False
-
-    add "bg_black"
 
     use game_menu(_("History"))
 
@@ -59,7 +56,7 @@ define gui.history_allow_tags = { "alt", "noalt", "rt", "rb", "art" }
 
 
 style history_frame:
-    xsize 1400
+    xsize None
     ysize None
     background None
 
@@ -75,7 +72,7 @@ style history_name:
 style history_name_text:
     textalign 1.0
     align (1.0, 0.0)
-    color '#f93c3e'
+    color gui.white
 
 style history_text:
     textalign 0.0
@@ -85,3 +82,4 @@ style history_label:
 
 style history_label_text:
     xalign 0.5
+    color gui.white

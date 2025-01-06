@@ -10,26 +10,13 @@
 ##
 
 screen game_menu(title):
-
     style_prefix "game_menu"
 
-    vbox:
-        xpos 60 yalign 0.5
-        spacing 6
-
-        if main_menu:
-
-            textbutton _("Start") action Start()
-
-        else:
-
-            textbutton _("History") action ShowMenu("history")
-
-            textbutton _("Save") action ShowMenu("save")
-
-        textbutton _("Load") action ShowMenu("load")
-
-        textbutton _("Preferences") action ShowMenu("preferences")
+    hbox:
+        xalign 0.5
+        yalign 1.0
+        yoffset -40
+        spacing 50
 
         if _in_replay:
 
@@ -37,24 +24,37 @@ screen game_menu(title):
 
         elif not main_menu:
 
-            textbutton _("Main Menu") action MainMenu()
+            textbutton _("回到主页") action MainMenu()
 
-        textbutton _("About") action ShowMenu("about")
+        if main_menu:
+
+            textbutton _("Start") action Start()
+
+        else:
+
+            textbutton _("历史记录") action ShowMenu("history")
+
+            textbutton _("保存进度") action ShowMenu("save")
+
+        textbutton _("读取进度") action ShowMenu("load")
+
+        textbutton _("游戏设置") action ShowMenu("preferences")
+
 
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
             ## Help isn't necessary or relevant to mobile devices.
-            textbutton _("Help") action ShowMenu("help")
+            textbutton _("游戏帮助") action ShowMenu("help")
 
         if renpy.variant("pc"):
 
             ## The quit button is banned on iOS and
             ## unnecessary on Android and Web.
-            textbutton _("Quit") action Quit(confirm=not main_menu)
+            textbutton _("退出游戏") action Quit(confirm=not main_menu)
 
-    textbutton _("Return"):
-        style "return_button"
-        action Return()
+    # textbutton _("Return"):
+    #     style "return_button"
+    #     action Return()
 
     ## Remove this line if you don't want to show the screen
     ## title text as a label (for example, if it's baked into
@@ -70,8 +70,8 @@ style return_button:
     yoffset -45
 
 style game_menu_viewport:
-    xsize config.screen_width-420
-    ysize config.screen_height-200
+    xsize config.screen_width
+    ysize config.screen_height
     align (0.5, 0.5)
 
 style game_menu_side:
@@ -82,6 +82,16 @@ style game_menu_vscrollbar:
     unscrollable "hide"
 
 style game_menu_label:
+    align(0.5, 0.0)
+    yoffset 20
     padding (10, 10)
+
 style game_menu_label_text:
+    size 55
+    color gui.white
+
+style game_menu_button_text:
     size 45
+    color gui.white
+    hover_color gui.gold
+    selected_color gui.gold

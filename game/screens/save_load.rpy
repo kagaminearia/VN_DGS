@@ -16,7 +16,7 @@ define config.thumbnail_height = 216
 screen save():
 
     tag menu
-    add "bg_black"
+    add "gui/menu_bg.webp"
 
     use file_slots(_("Save"))
 
@@ -24,7 +24,7 @@ screen save():
 screen load():
 
     tag menu
-    add "bg_black"
+    add "gui/menu_bg.webp"
     
     use file_slots(_("Load"))
 
@@ -32,13 +32,13 @@ screen load():
 screen file_slots(title):
 
     default page_name_value = FilePageNameInputValue(
-        pattern=_("Page {}"), auto=_("Automatic saves"),
+        pattern=_(""), auto=_("Automatic saves"),
         quick=_("Quick saves"))
 
     use game_menu(title)
 
     fixed:
-        xsize 1500 xalign 1.0
+        xsize 1300 xalign 0.5
         ## This ensures the input will get the enter event before any of the
         ## buttons do.
         order_reverse True
@@ -81,31 +81,23 @@ screen file_slots(title):
                     key "save_delete" action FileDelete(slot)
 
         ## Buttons to access other pages.
-        vbox:
+        
+        hbox:
+            xalign 0.5 yalign 1.0 yoffset -150
             style_prefix "page"
-            hbox:
-                textbutton _("<") action FilePagePrevious()
+            textbutton _("<") action FilePagePrevious()
 
-                if config.has_autosave:
-                    textbutton _("{#auto_page}A") action FilePage("auto")
+            if config.has_autosave:
+                textbutton _("{#auto_page}A") action FilePage("auto")
 
-                if config.has_quicksave:
-                    textbutton _("{#quick_page}Q") action FilePage("quick")
+            if config.has_quicksave:
+                textbutton _("{#quick_page}Q") action FilePage("quick")
 
-                ## range(1, 10) gives the numbers from 1 to 9.
-                for page in range(1, 10):
-                    textbutton "[page]" action FilePage(page)
+            ## range(1, 10) gives the numbers from 1 to 9.
+            for page in range(1, 10):
+                textbutton "[page]" action FilePage(page)
 
-                textbutton _(">") action FilePageNext()
-
-            if config.has_sync:
-                if CurrentScreenName() == "save":
-                    textbutton _("Upload Sync"):
-                        action UploadSync()
-                else:
-                    textbutton _("Download Sync"):
-                        action DownloadSync()
-
+            textbutton _(">") action FilePageNext()
 
 style page_label:
     xpadding 75
@@ -115,7 +107,8 @@ style page_label:
 style page_label_text:
     textalign 0.5
     layout "subtitle"
-    hover_color '#ff8335'
+    idle_color '#ffffff'
+    hover_color gui.gold
 
 style slot_grid:
     xalign 0.5
@@ -137,8 +130,8 @@ style slot_button:
 style slot_button_text:
     size 21
     xalign 0.5
-    idle_color '#aaaaaa'
-    hover_color '#ff8335'
+    idle_color '#ffffff'
+    hover_color gui.gold
     selected_idle_color '#ffffff'
 
 style page_hbox:
@@ -151,6 +144,7 @@ style page_vbox:
     spacing 5
 
 style page_button:
+    hover_color gui.gold
     padding (15, 6, 15, 6)
     xalign 0.5
 

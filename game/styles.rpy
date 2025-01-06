@@ -49,6 +49,10 @@ init offset = -1
 ## Styles
 ################################################################################
 
+define gui.gold = "#ad973f"
+define gui.white = "#ffffff"
+define gui.black = "#000000"
+
 style default:
     font gui.text_font
     size gui.text_size
