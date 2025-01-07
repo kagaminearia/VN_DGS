@@ -56,7 +56,7 @@ screen help():
 
     add HBox(Transform("#292835", xsize=350), "#21212db2") # The background; can be whatever
 
-    use game_menu(_("Help"))
+    use game_menu(_("游戏帮助"))
 
     viewport:
         style_prefix 'game_menu'

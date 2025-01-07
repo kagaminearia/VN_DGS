@@ -14,19 +14,15 @@ define config.thumbnail_height = 216
 
 
 screen save():
-
     tag menu
     add "gui/menu_bg.webp"
-
-    use file_slots(_("Save"))
+    use file_slots(_("保存进度"))
 
 
 screen load():
-
     tag menu
     add "gui/menu_bg.webp"
-    
-    use file_slots(_("Load"))
+    use file_slots(_("读取进度"))
 
 
 screen file_slots(title):
@@ -105,6 +101,7 @@ style page_label:
     xalign 0.5
 
 style page_label_text:
+    font gui.detail_font
     textalign 0.5
     layout "subtitle"
     idle_color '#ffffff'
@@ -116,7 +113,8 @@ style slot_grid:
     spacing 15
 
 style slot_time_text:
-    size 25
+    font gui.detail_font
+    size 20
     xalign 0.5
 
 style slot_vbox:
@@ -145,6 +143,11 @@ style page_vbox:
 
 style page_button:
     hover_color gui.gold
+    selected_color gui.gold
     padding (15, 6, 15, 6)
     xalign 0.5
 
+style page_button_text:
+    font gui.detailtitle_font
+    hover_color gui.gold
+    selected_color gui.gold

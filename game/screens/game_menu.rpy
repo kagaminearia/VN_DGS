@@ -19,42 +19,36 @@ screen game_menu(title):
         spacing 50
 
         if _in_replay:
-
-            textbutton _("End Replay") action EndReplay(confirm=True)
+            textbutton _("结束回放") action EndReplay(confirm=True)
 
         elif not main_menu:
-
             textbutton _("回到主页") action MainMenu()
-
-        if main_menu:
-
-            textbutton _("Start") action Start()
-
-        else:
-
             textbutton _("历史记录") action ShowMenu("history")
-
             textbutton _("保存进度") action ShowMenu("save")
 
-        textbutton _("读取进度") action ShowMenu("load")
+        # if main_menu:
+        #     textbutton _("Start") action Start()
 
+
+        textbutton _("读取进度") action ShowMenu("load")
         textbutton _("游戏设置") action ShowMenu("preferences")
 
-
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
-
             ## Help isn't necessary or relevant to mobile devices.
             textbutton _("游戏帮助") action ShowMenu("help")
 
         if renpy.variant("pc"):
-
             ## The quit button is banned on iOS and
             ## unnecessary on Android and Web.
             textbutton _("退出游戏") action Quit(confirm=not main_menu)
 
-    # textbutton _("Return"):
-    #     style "return_button"
-    #     action Return()
+    imagebutton:
+        idle "gui/button/return_idle.png"
+        hover "gui/button/return_hover.png"
+        xalign 0.0
+        yalign 0.5
+        xoffset 70
+        action Return()
 
     ## Remove this line if you don't want to show the screen
     ## title text as a label (for example, if it's baked into
@@ -94,4 +88,4 @@ style game_menu_button_text:
     size 45
     color gui.white
     hover_color gui.gold
-    selected_color gui.gold
+    selected_color gui.white

@@ -15,7 +15,7 @@ screen history():
     ## Avoid predicting this screen, as it can be very large.
     predict False
 
-    use game_menu(_("History"))
+    use game_menu(_("历史记录"))
 
     viewport:
         style_prefix 'game_menu'

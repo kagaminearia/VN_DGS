@@ -29,6 +29,8 @@ define gui.interface_text_font = "fonts/站酷高端黑.ttf"
 define gui.text_size = 30
 define gui.name_text_font = "fonts/站酷仓耳渔阳体-W03.ttf"
 define gui.name_text_size = 43
+define gui.detailtitle_font = "fonts/香萃潮汐宋W40.ttf"
+define gui.detail_font = "fonts/香萃潮汐宋W15.ttf"
 
 ## Localization ################################################################
 
@@ -79,19 +81,19 @@ style button_text:
     yalign 0.5
     xalign 0.0
     ## The color used for a text button when it is neither selected nor hovered.
-    idle_color '#888888'
+    idle_color gui.white
     ## The color that is used for buttons and bars that are hovered.
-    hover_color '#ff8335'
+    hover_color gui.gold
     ## The color used for a text button when it is selected but not focused. A
     ## button is selected if it is the current screen or preference value.
     selected_color '#ffffff'
     ## The color used for a text button when it cannot be selected.
-    insensitive_color '#8888887f'
+    insensitive_color gui.white
 
 style label_text:
     is gui_text
     size 36
-    color '#f93c3e'
+    color gui.white
 
 
 style bar:
