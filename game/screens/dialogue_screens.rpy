@@ -152,6 +152,10 @@ screen quick_menu():
             yoffset -10
             auto "gui/quickmenu_btn/btn_hide_%s.png"
             action HideInterface()
+        
+        $ tooltip = GetTooltip()
+        if tooltip:
+            text "[tooltip]"
 
         
 

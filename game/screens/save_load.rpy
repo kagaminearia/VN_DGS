@@ -85,7 +85,6 @@ screen file_slots(title):
 
             if config.has_autosave:
                 textbutton _("{#auto_page}A") action FilePage("auto")
-
             if config.has_quicksave:
                 textbutton _("{#quick_page}Q") action FilePage("quick")
 
