@@ -61,7 +61,6 @@ screen file_slots(title):
                 button:
                     action FileAction(slot)
                     has vbox
-
                     add FileScreenshot(slot) xalign 0.5
 
                     ## https://www.fabriziomusacchio.com/blog/2021-08-15-strftime_Cheat_Sheet/
@@ -77,7 +76,6 @@ screen file_slots(title):
                     key "save_delete" action FileDelete(slot)
 
         ## Buttons to access other pages.
-        
         hbox:
             xalign 0.5 yalign 1.0 yoffset -150
             style_prefix "page"
@@ -91,7 +89,6 @@ screen file_slots(title):
             ## range(1, 10) gives the numbers from 1 to 9.
             for page in range(1, 10):
                 textbutton "[page]" action FilePage(page)
-
             textbutton _(">") action FilePageNext()
 
 style page_label:
@@ -103,8 +100,11 @@ style page_label_text:
     font gui.detail_font
     textalign 0.5
     layout "subtitle"
-    idle_color '#ffffff'
-    hover_color gui.gold
+    idle_color gui.white
+    hover_color gui.white
+    hover_underline True
+    selected_underline True
+    selected_hover_underline True
 
 style slot_grid:
     xalign 0.5
@@ -115,6 +115,7 @@ style slot_time_text:
     font gui.detail_font
     size 20
     xalign 0.5
+    hover_underline True
 
 style slot_vbox:
     spacing 12
@@ -127,9 +128,12 @@ style slot_button:
 style slot_button_text:
     size 21
     xalign 0.5
-    idle_color '#ffffff'
-    hover_color gui.gold
-    selected_idle_color '#ffffff'
+    idle_color gui.white
+    hover_color gui.white
+    selected_idle_color gui.white
+    hover_underline True
+    selected_underline True
+    selected_hover_underline True
 
 style page_hbox:
     xalign 0.5
@@ -145,8 +149,11 @@ style page_button:
     selected_color gui.gold
     padding (15, 6, 15, 6)
     xalign 0.5
+    
 
 style page_button_text:
     font gui.detailtitle_font
-    hover_color gui.gold
-    selected_color gui.gold
+    hover_color gui.white
+    hover_underline True
+    selected_underline True
+    selected_hover_underline True

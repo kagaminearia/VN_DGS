@@ -49,6 +49,7 @@ style confirm_prompt:
     xalign 0.5
 
 style confirm_prompt_text:
+    font gui.detailtitle_font
     textalign 0.5
     align (0.5, 0.5)
     layout "subtitle"
@@ -62,6 +63,8 @@ style confirm_button:
 
 style confirm_button_text:
     textalign 0.5
+    hover_color gui.white
+    hover_underline True
 
 
 ## Skip indicator screen #######################################################

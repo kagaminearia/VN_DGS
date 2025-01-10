@@ -114,6 +114,10 @@ style radio_button:
 
 style radio_button_text:
     font gui.detail_font
+    hover_color gui.white
+    hover_underline True
+    selected_underline True
+    selected_hover_underline True
     
 
 ## CHECK
@@ -136,6 +140,10 @@ style check_button:
 
 style check_button_text:
     font gui.detail_font
+    hover_color gui.white
+    hover_underline True
+    selected_underline True
+    selected_hover_underline True
 
 ## SLIDER
 style slider_label:

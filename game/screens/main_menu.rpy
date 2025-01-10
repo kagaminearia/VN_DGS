@@ -5,12 +5,6 @@
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#main-menu
 
-## Replace this with your background image, if you like
-image main_menu_background = HBox(
-    Solid("#292835", xsize=350),
-    Solid("#21212d")
-)
-
 screen main_menu():
     ## This ensures that any other menu screen is replaced.
     tag menu
@@ -24,7 +18,9 @@ screen main_menu():
         yoffset 150
         spacing 10
 
-        textbutton _("开始游戏") action Start()
+        textbutton _("开始游戏"):
+            # underline True
+            action Start()
 
         textbutton _("读取进度") action ShowMenu("load")
 
@@ -33,9 +29,9 @@ screen main_menu():
         textbutton _("关于游戏") action ShowMenu("about")
 
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
-
             ## Help isn't necessary or relevant to mobile devices.
-            textbutton _("游戏帮助") action ShowMenu("help")
+            textbutton _("游戏帮助"):
+                action ShowMenu("help")
 
         if renpy.variant("pc"):
 
@@ -45,8 +41,10 @@ screen main_menu():
 
 
 style main_navigation_button_text:
-    color "#fff"
-    hover_color "#ad973f"
+    color gui.white
+    hover_color gui.white
     size 48
-    # xalign 0
+    hover_underline True
+    selected_underline True
+    selected_hover_underline True
     

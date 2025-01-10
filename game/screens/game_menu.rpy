@@ -87,5 +87,8 @@ style game_menu_label_text:
 style game_menu_button_text:
     size 45
     color gui.white
-    hover_color gui.gold
+    hover_color gui.white
     selected_color gui.white
+    hover_underline True
+    selected_underline True
+    selected_hover_underline True
