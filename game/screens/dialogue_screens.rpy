@@ -75,6 +75,14 @@ style say_label:
 ## The quick menu is displayed in-game to provide easy access to the out-of-game
 ## menus.
 
+# control mouse location
+# init python:
+#     def get_mouse():
+#         global mouse_xy
+#         mouse_xy = renpy.get_mouse_pos()
+
+# default mouse_xy = (0, 0)
+
 screen quick_menu():
 
     ## Ensure this appears on top of other screens.
@@ -86,8 +94,11 @@ screen quick_menu():
             yalign 1.0
             xoffset -230
             yoffset -170
-            auto "gui/quickmenu_btn/btn_auto_%s.png"
+            idle "gui/quickmenu_btn/btn_auto_idle.png"
+            hover "gui/quickmenu_btn/btn_auto_hover.png"
+            selected "gui/quickmenu_btn/btn_auto_hover.png"
             action Preference("auto-forward", "toggle")
+            tooltip _("自动")
 
         imagebutton:
             xalign 1.0
@@ -96,6 +107,7 @@ screen quick_menu():
             yoffset -170
             auto "gui/quickmenu_btn/btn_skip_%s.png"
             action Skip() alternate Skip(fast=True, confirm=True)
+            tooltip _("快进")
 
         imagebutton:
             xalign 1.0
@@ -104,6 +116,7 @@ screen quick_menu():
             yoffset -170
             auto "gui/quickmenu_btn/btn_log_%s.png"
             action ShowMenu('history')
+            tooltip _("历史记录")
 
         imagebutton:
             xalign 1.0
@@ -112,6 +125,7 @@ screen quick_menu():
             yoffset -90
             auto "gui/quickmenu_btn/btn_save_%s.png"
             action ShowMenu('save')
+            tooltip _("保存进度")
 
         imagebutton:
             xalign 1.0
@@ -120,6 +134,7 @@ screen quick_menu():
             yoffset -90
             auto "gui/quickmenu_btn/btn_load_%s.png"
             action ShowMenu('load')
+            tooltip _("读取进度")
 
         imagebutton:
             xalign 1.0
@@ -128,6 +143,7 @@ screen quick_menu():
             yoffset -90
             auto "gui/quickmenu_btn/btn_config_%s.png"
             action ShowMenu('preferences')
+            tooltip _("游戏设置")
 
         imagebutton:
             xalign 1.0
@@ -135,7 +151,8 @@ screen quick_menu():
             xoffset -230
             yoffset -10
             auto "gui/quickmenu_btn/btn_dict_%s.png"
-            action HideInterface()
+            action ShowMenu('detail_screen')
+            tooltip _("线索")
 
         imagebutton:
             xalign 1.0
@@ -144,6 +161,7 @@ screen quick_menu():
             yoffset -10
             auto "gui/quickmenu_btn/btn_help_%s.png"
             action HideInterface()
+            tooltip _("游戏帮助")
 
         imagebutton:
             xalign 1.0
@@ -152,10 +170,19 @@ screen quick_menu():
             yoffset -10
             auto "gui/quickmenu_btn/btn_hide_%s.png"
             action HideInterface()
+            tooltip _("隐藏对话")
         
         $ tooltip = GetTooltip()
         if tooltip:
-            text "[tooltip]"
+            # style_prefix "tooltip"
+            # timer 0.1 repeat True action Function(get_mouse)
+            # $ mx = mouse_xy[0] - 30
+            # $ my = mouse_xy[1] + 30
+            text tooltip:
+                font gui.interface_text_font
+                pos(1630, 810)
+                size 33
+                outlines [(2, "#000005", 0, 0)]
 
         
 

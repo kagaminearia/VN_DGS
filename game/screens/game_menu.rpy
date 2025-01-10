@@ -16,7 +16,7 @@ screen game_menu(title):
         xalign 0.5
         yalign 1.0
         yoffset -40
-        spacing 50
+        spacing 60
 
         if _in_replay:
             textbutton _("结束回放") action EndReplay(confirm=True)
@@ -26,7 +26,8 @@ screen game_menu(title):
             textbutton _("历史记录") action ShowMenu("history")
             textbutton _("保存进度") action ShowMenu("save")
 
-        # if main_menu:
+        if main_menu:
+            textbutton _("关于游戏") action ShowMenu("about")
         #     textbutton _("Start") action Start()
 
 
@@ -81,7 +82,7 @@ style game_menu_label:
     padding (10, 10)
 
 style game_menu_label_text:
-    size 55
+    size 65
     color gui.white
 
 style game_menu_button_text:

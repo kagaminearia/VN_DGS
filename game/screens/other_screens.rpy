@@ -19,7 +19,7 @@ screen about():
     tag menu
     add "gui/menu_bg.webp"
 
-    use game_menu(_("About"))
+    use game_menu(_("关于游戏"))
 
     viewport:
         style_prefix 'game_menu'

@@ -1,4 +1,3 @@
-
 ## History screen ##############################################################
 ##
 ## This is a screen that displays the dialogue history to the player. While
@@ -10,6 +9,7 @@
 define config.history_length = 250
 
 screen history():
+
     tag menu
     add "gui/menu_bg.webp"
     ## Avoid predicting this screen, as it can be very large.
@@ -18,9 +18,12 @@ screen history():
     use game_menu(_("历史记录"))
 
     viewport:
+        ysize 800
+        xalign 0.5
+        yalign 0.5
         style_prefix 'game_menu'
         mousewheel True draggable True pagekeys True
-        scrollbars "vertical" yinitial 1.0
+        yinitial 1.0
 
         has vbox
 
@@ -29,7 +32,8 @@ screen history():
         for h in _history_list:
 
             frame:
-                has hbox
+                style_prefix "history_inside"
+                has vbox
                 if h.who:
                     label h.who style 'history_name':
                         substitute False
@@ -44,6 +48,7 @@ screen history():
 
                 $ what = renpy.filter_text_tags(h.what, allow=gui.history_allow_tags)
                 text what:
+                    font gui.detail_font
                     substitute False
 
         if not _history_list:
@@ -54,32 +59,45 @@ screen history():
 
 define gui.history_allow_tags = { "alt", "noalt", "rt", "rb", "art" }
 
+style history_vscrollbar:
+    unscrollable False
 
 style history_frame:
-    xsize None
-    ysize None
     background None
 
 style history_hbox:
-    spacing 20
+    spacing 40
 
 style history_vbox:
+    ysize None
     spacing 20
 
+style history_inside_vbox:
+    ysize None
+    spacing 5
+
+style history_inside_frame:
+    left_padding 310
+    right_padding 310
+    background None
+
 style history_name:
-    xalign 1.0
+    xalign 0.0
 
 style history_name_text:
-    textalign 1.0
-    align (1.0, 0.0)
+    font gui.detailtitle_font
+    textalign 0.0
+    align (0.0, 0.0)
     color gui.white
 
 style history_text:
+    font gui.detail_font
     textalign 0.0
+    color gui.white
 
 style history_label:
     xfill True
 
 style history_label_text:
+    font gui.detail_font
     xalign 0.5
-    color gui.white
