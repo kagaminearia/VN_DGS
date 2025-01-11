@@ -1,11 +1,6 @@
-label detail_label:
-    show screen detail_screen
-    pause
-    jump detail_label
-    return
-
 
 screen detail_screen:
+    add "#0000001a"
     default category = "dict"
     add "gui/ev/ev-bg.png":
         xalign 0.5
