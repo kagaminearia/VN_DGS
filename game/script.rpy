@@ -1,30 +1,10 @@
-﻿# The script of the game goes in this file.
-
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
-
-define bai = Character("白一")
-
-
-# The game starts here.
+﻿# The game starts here.
 
 label start:
-
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
-
     scene bg room
 
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
 
-    show byimg
-
-    # These display lines of dialogue.
-
-    by "【站酷仓耳渔阳体】是仓耳字库在2020新冠疫情期间为造福社会奉上的一份礼物，也是站酷冠名的首款拥有家族字体的公益字库。字形结合宋、黑二体的结构特点，将部分笔画转折处做圆角处理，方圆结合，厚重又不失灵动。"
+    by eye_move o "【站酷仓耳渔阳体】是仓耳字库在2020新冠疫情期间为造福社会奉上的一份礼物，也是站酷冠名的首款拥有家族字体的公益字库。字形结合宋、黑二体的结构特点，将部分笔画转折处做圆角处理，方圆结合，厚重又不失灵动。"
     "测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试"
     "test"
     by "测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试"
