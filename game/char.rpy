@@ -11,6 +11,7 @@ define xl = Character("小蓝",what_prefix="“",what_suffix="”")
 define xp = Character("西平",what_prefix="“",what_suffix="”")
 define xs = Character("西顺",what_prefix="“",what_suffix="”")
 define zb = Character("张班",what_prefix="“",what_suffix="”")
+define unknown = Character("？？",what_prefix="“",what_suffix="”")
 
 image side byimg = LayeredImageProxy("byimg", Transform(zoom=0.49,xoffset=-250,yoffset=1450))
 

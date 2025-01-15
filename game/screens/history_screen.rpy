@@ -41,8 +41,7 @@ screen history():
                         ## from the Character, if set
                         if "color" in h.who_args:
                             text_color h.who_args["color"]
-                        xsize 200   # this number and the null width
-                                    # number should be the same
+                        xsize 200   # this number and the null width number should be the same
                 else:
                     null width 200
 
@@ -74,7 +73,7 @@ style history_vbox:
 
 style history_inside_vbox:
     ysize None
-    spacing 5
+    spacing 1
 
 style history_inside_frame:
     left_padding 310
@@ -85,6 +84,7 @@ style history_name:
     xalign 0.0
 
 style history_name_text:
+    size 35
     font gui.detailtitle_font
     textalign 0.0
     align (0.0, 0.0)
