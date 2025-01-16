@@ -1,6 +1,7 @@
 ﻿# The game starts here.
 
 label start:
+    call c0
     scene bg room
 
 
