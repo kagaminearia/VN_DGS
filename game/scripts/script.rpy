@@ -1,9 +1,10 @@
 ﻿# The game starts here.
 
 label start:
+    # "{font=fonts/BlueSecretText.ttf}test{/font}"
+
     call c0
     scene bg room
-
 
     by eye_move o "【站酷仓耳渔阳体】是仓耳字库在2020新冠疫情期间为造福社会奉上的一份礼物，也是站酷冠名的首款拥有家族字体的公益字库。字形结合宋、黑二体的结构特点，将部分笔画转折处做圆角处理，方圆结合，厚重又不失灵动。"
     "测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试"

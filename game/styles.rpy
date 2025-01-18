@@ -31,6 +31,7 @@ define gui.name_text_font = "fonts/站酷仓耳渔阳体-W03.ttf"
 define gui.name_text_size = 43
 define gui.detailtitle_font = "fonts/香萃潮汐宋W40.ttf"
 define gui.detail_font = "fonts/香萃潮汐宋W15.ttf"
+define gui.decorate_font = "fonts/BlueSecretText.ttf"
 
 ## Localization ################################################################
 
