@@ -48,7 +48,8 @@ style window:
 style say_dialogue:
     color '#000000'
     adjust_spacing False
-    ypos 40
+    ypos 35
+    xpos 20
 
 # The style for dialogue said by the narrator
 style say_thought:

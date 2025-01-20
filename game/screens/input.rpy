@@ -11,20 +11,26 @@
 
 screen input(prompt):
     style_prefix "input"
-
-    window:
-        # This makes the background the same as the ADV dialogue box
-
+    frame:
+        xalign 0.5
+        yalign 0.5
+        xpadding 50
+        ypadding 50
         vbox:
-            xanchor 0.0 ypos 20 spacing 10
+            spacing 20
             text prompt style "input_prompt"
             input id "input"
 
 style input_prompt:
     xalign 0.0
+    yalign 0.5
+    color gui.white
 
 style input:
-    xalign 0.0
+    xalign 0.5
     xmaximum 1116
+    color gui.white
 
 
+style input:
+    adjust_spacing False

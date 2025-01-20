@@ -27,3 +27,35 @@ image ctc-img:
     "gui/ctc/ctc-11.png"
     pause 0.3
     repeat
+
+screen tpoinfo(time,loc):
+    add "images/tpo.webp"
+    style_prefix 'tpo'
+    vbox:
+        xalign 0.5
+        yalign 0.48
+        spacing 10
+        hbox:
+            xalign 0.5
+            yalign 0.5
+            spacing 5
+            text "——"
+            text time
+            text "——"
+        hbox:
+            xalign 0.5
+            yalign 0.5
+            spacing 5
+            text "——"
+            text loc
+            text "——"
+
+style tpo_text:
+    font gui.detailtitle_font
+    size 55
+    color gui.white
+
+
+
+# videos
+image black1 = Movie(play="videos/black1.webm")

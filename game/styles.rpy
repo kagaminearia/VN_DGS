@@ -61,9 +61,6 @@ style default:
     size gui.text_size
     language gui.language
 
-style input:
-    adjust_spacing False
-
 style hyperlink_text:
     hover_underline True
     color "#f93c3e"

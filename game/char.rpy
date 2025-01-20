@@ -1,4 +1,4 @@
-define me = Character("我",what_prefix="“",what_suffix="”")
+define me = Character("我",what_prefix="“",what_suffix="”",ctc="ctc-img",ctc_position="fixed")
 # add side image later
 define by = Character("白一", image="byimg",what_prefix="“",what_suffix="”", ctc="ctc-img",ctc_position="fixed")
 define cx = Character("岑宣",what_prefix="“",what_suffix="”")

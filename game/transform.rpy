@@ -18,3 +18,10 @@ transform char_left:
     yalign 0.1
     yoffset 80
     xoffset 200
+
+init python:
+    # change punch variable
+    hpunch = Move((30, 0), (-30, 0), .50, bounce=True, repeat=True, delay=.275)
+    vpunchs = Move((0, 10), (0, -10), 0.5, bounce=True, repeat=True, delay=.275)
+    vpunchm = Move((0, 40), (0, -40), 0.2, bounce=True, repeat=True, delay=.275)
+    shake = Move((70, 70), (-70, -70), 3, bounce=True, repeat=True, delay=.275)
