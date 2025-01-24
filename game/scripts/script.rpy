@@ -2,7 +2,6 @@
 
 label start:
     # "{font=fonts/BlueSecretText.ttf}test{/font}"
-
     call c0
     scene bg room
 
