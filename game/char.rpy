@@ -230,6 +230,8 @@ layeredimage xpimg:
     group eyes:
         attribute eye_def default:
             "images/char/xp/eye-def.webp"
+        attribute eye_still default:
+            "images/char/xp/eye-still.webp"
 
     group mouse:
         attribute def default:
@@ -268,7 +270,7 @@ layeredimage xsimg:
 
 
 # 张班
-layeredimage xpimg:
+layeredimage zbimg:
     group body:
         attribute uniform default:
             "images/char/xp/uniform.webp"
