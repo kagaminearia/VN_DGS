@@ -136,6 +136,8 @@ label c0:
     by eye_wacky e "哈？那是什么意思？"
     "咔哒。"
     me "这很难解释，我和你看到的东西也许不一样，就像是一个屏幕——"
+
+    scene bg_sickroom with vpunchm
     unknown "{size=45}啊——！！！！{/size}"
     "巨大的尖叫声打断了我要说的话。"
     "白一转过头，而后四肢僵硬，愣在原地。"
@@ -156,6 +158,9 @@ label c0:
     me "不过，话说，城安局是什么地方？"
     by eye_wacky o "……啊？你连城安局是什么都不知道，却知道这里是？\n真是有够奇怪的……"
     by eye_def e "就是城市安全管理局啊，顾名思义吧。"
+    python:
+        persistent.dictList.append(("城安局","全称为城市安全管理局，顾名思义，负责处理影响到城市安全的事件。\n内部人员一般分为三个组，民案组，刑事组，特调组。"))
+        persistent.dictList = list(set(persistent.dictList))
     me "哦……"
     by eye_move o "这么看，这里应该是询问室了。啧……我怎么这么倒霉。"
     "白一坐在角落的凳子上，双手紧绷着握拳，似乎意识到什么，放低了说话声音。"
@@ -170,8 +175,12 @@ label c0:
     show xpimg o at char_mid with moveinright
     xp "刚才的事很抱歉，是误会。只是我们有些问题想要问你。"
     by eye_def o "噢……好。"
+    hide xpimg
+    show xpimg at char_mid
     "白一突然出现在这里，还失去意识，无论怎么想都十分奇怪，对方要询问也是理所当然。"
     "况且最重要的是，无论如何，在这个地方，白一并没有反抗的能力……"
+    hide xpimg
+    show xpimg o at char_mid
     xp "前天下午和晚上的时候，你在哪里，做什么？前天，12月10日。"
     by eye_def o "……12月10号？是……"
     "白一愣了愣，尽力含糊其辞——我知道，她是不记得之前的事情了。"
@@ -181,16 +190,22 @@ label c0:
     xp "是吗？有人看到你下午经过晟欧路路口。"
     by "那——可能是我记错了……"
     me "……这好像是前天发生的事吧，又不是前年，谁会相信啊。"
+    hide xpimg
+    show xpimg at char_mid
     "的确，西平也只是顿了顿，而后加重语气，重复了一遍。"
     hide xpimg
     show xpimg eye_still o at char_mid
     xp  "你确定吗？"
     by eye_move def "……"
     by eye_def o "好吧……其实，我失忆了，不记得那天发生的事情。"
+    hide xpimg
+    show xpimg eye_still at char_mid
     "房间里陷入沉默，但意外的是，这次对面的人并没有在第一时间驳斥白一，而是拧起了眉毛，看着白一，似乎在等她继续说下去。"
     "没得到反应，白一吞了吞口水，只好轻轻地，缓缓地吐出一口气。"
     by eye_def o "呃，就是，我只记得周四，我跟平时一样上学放学，晚上在家里睡觉。然后，醒来之后……就是刚才了。"
-    xp eye_def o "之前的事情全部还记得，只有这两天的事忘了？"
+    hide xpimg
+    show xpimg o at char_mid
+    xp "之前的事情全部还记得，只有这两天的事忘了？"
     by eye_def e "嗯……对。"
     xp "那么，没有发生过其他事情吗？任何不确定的细节都可以。"
     by eye_def def"……没有。"
@@ -209,15 +224,24 @@ label c0:
     show xsimg smile at char_c with dissolve
     "西顺忽然露出一个浅笑，眼睛直勾勾盯着白一。"
     "深黑色的眸子在灯下隐约闪烁着反光，如同深邃的漩涡，摄取人的心神。"
+    hide xsimg
+    show xsimg o at char_c
     xs "这么说吧，特调组，还有另外一个名字。"
+    hide xsimg
+    show xsimg at char_c
     xs "特殊怪异事件调查组。"
+    python:
+        persistent.dictList.append(("特调组","对外称为特别案件调查组，负责解决已经对社会产生重大恶劣影响的事件。\n除此之外，组内更重要的任务是处理一些无法用常理解释的“非正常”事件，因此也称为特殊怪异事件调查组。"))
+        persistent.dictList.append(("怪异","对“无法用现如今的常识解释的，违反对科学的普遍认知的事件“的统称。\n怪异有多种形态，可单独存在，也可以和生物相互影响。\n怪异各有不同，一千种怪异可能有一千种特征。它们被收录在城安局的信息系统，也总结出了一套处理公式。"))
+        persistent.dictList = list(set(persistent.dictList))
     by eye_wacky def "……"
     "不知为何，也许是一种直觉，白一的呼吸短暂停止了一瞬间。"
     "但只是一瞬间。她很快又恢复气息，装作没有任何反应的样子。"
-    by eye_wacky o "……你跟我解释这个干嘛？"
+    by eye_move o "……你跟我解释这个干嘛？"
     hide xsimg
     show xsimg eye_move smile at char_c
     xs "嗯，这个啊，意思就是——"
+    show bg_black with dissolve
     hide xsimg
     show xsimg laugh at char_c
     xs "你，或者说在你身上的“那个东西”，到底是什么？"

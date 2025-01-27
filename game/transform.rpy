@@ -20,11 +20,10 @@ transform char_left:
     xoffset 200
 
 transform char_c:
-    zoom 0.7
+    zoom 0.75
     xalign 0.5
-    yalign 0.2
-    yoffset 80
-    xoffset 20
+    yalign 0.1
+    yoffset 90
 
 init python:
     # change punch variable

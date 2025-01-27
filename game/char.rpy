@@ -230,7 +230,7 @@ layeredimage xpimg:
     group eyes:
         attribute eye_def default:
             "images/char/xp/eye-def.webp"
-        attribute eye_still default:
+        attribute eye_still:
             "images/char/xp/eye-still.webp"
 
     group mouse:
@@ -265,7 +265,7 @@ layeredimage xsimg:
             "images/char/xs/m-smile.webp"
         attribute o:
             "images/char/xs/m-o.webp"
-        attribute purse:
+        attribute laugh:
             "images/char/xs/m-laugh.webp"
 
 
