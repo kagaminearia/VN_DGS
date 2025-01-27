@@ -253,10 +253,10 @@ label c1_1:
     xs "嗯，这里环境就这样，暂且忍忍吧。"
     "楼房排得很挤，老旧的建筑外墙到处是掉漆和粉尘散落的痕迹，角落堆叠着不少杂物。"
     "白一用力裹了裹外套，跟在西顺身后，走到挂着“12”标牌的楼下。"
-    by "等等。"
+    by eye_def o "等等。"
     xs "怎么了？"
-    by "呃，啊，没……我鞋带掉了，系一下。"
-    xs "行，不急，别摔了。"
+    by eye_def e "呃，啊，没……我鞋带掉了，系一下。"
+    xs "哦行，不急，别摔了。"
     "西顺没有对白一突兀的话表示些什么，白一绷着的肩膀放松了，慢吞吞地蹲下身。"
 
     scene bg_ground with dissolve
@@ -281,7 +281,7 @@ label c1_1:
     $ quick_menu = False
     window hide
     scene bg_sickroom with fade
-    show screen tpoinfo("12月12日，星期日","？？温心的家？") with dissolve
+    show screen tpoinfo("12月12日，星期日","温心的家") with dissolve
     pause 1
     hide screen tpoinfo with dissolve
     window show

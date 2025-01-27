@@ -21,8 +21,9 @@ screen history():
         ysize 800
         xalign 0.5
         yalign 0.5
-        style_prefix 'game_menu'
+        style_prefix 'history'
         mousewheel True draggable True pagekeys True
+        scrollbars "vertical"
         yinitial 1.0
 
         has vbox
@@ -60,6 +61,11 @@ define gui.history_allow_tags = { "alt", "noalt", "rt", "rb", "art" }
 
 style history_vscrollbar:
     unscrollable False
+    xsize 25
+    ysize 800
+    xoffset -150
+    base_bar Frame("gui/scrollbar/log-vsc-bar.png", 6, 6, 6, 6, tile=False)
+    thumb Frame("gui/scrollbar/log-vsc-thumb.png", 6, 6, 6, 6, tile=False)
 
 style history_frame:
     background None

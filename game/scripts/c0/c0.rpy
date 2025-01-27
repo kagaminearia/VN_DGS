@@ -2,7 +2,7 @@ define pov = Character("[user]")
 label c0:
     scene bg_black
     show black1 with w20
-    "……"
+    "………………"
     "好黑……"
     "什么东西……"
     $ quick_menu = False

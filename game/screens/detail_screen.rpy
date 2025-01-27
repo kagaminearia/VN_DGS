@@ -1,4 +1,3 @@
-
 screen detail_screen:
     add "#0000001a"
     default category = "dict"
@@ -55,9 +54,39 @@ screen detail_screen:
 
     if category == "dict":
         frame:
-            background "black"
+            add "#fff"
+            style_prefix "detail"
             align (0.5,0.5)
-            xysize (460,920)
+            xysize (520,920)
+            vpgrid:
+                cols 2
+                spacing 30
+                draggable True
+                mousewheel True
+
+                scrollbars "vertical"
+
+                # Since we have scrollbars, we have to position the side, rather
+                # than the vpgrid proper.
+                side_xalign 0.8
+
+                for i in range(len(clueList)):
+                    button:
+                        add "evlocked":
+                            align (0.5,0.0)
+                            yoffset 20
+                        background "gui/ev/ev-btn-idle.png"
+                        hover_background "gui/ev/ev-btn-hover.png"
+                        text "[clueList[i][0]]":
+                            yoffset -20
+                            align (0.5,1.0)
+                            color gui.black
+                            font gui.detailtitle_font
+                            size 20
+                        xysize(215,250)
+                        action Return("i")
+    
+
     elif category == "clue":
         frame:
             background "black"
@@ -68,3 +97,16 @@ screen detail_screen:
             background "black"
             align (0.5,0.5)
             xysize (460,920)
+
+
+
+style detail_vscrollbar:
+    xsize 25
+    base_bar Frame("gui/scrollbar/ev-vsc-bar.png", 6, 6, 6, 6, tile=False)
+    thumb Frame("gui/scrollbar/ev-vsc-thumb.png", 6, 6, 6, 6, tile=False)
+    unscrollable 'hide'
+    xoffset 150
+
+
+# images for this screen
+image evlocked = "gui/ev/ev-locked.png"
