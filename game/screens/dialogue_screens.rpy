@@ -41,7 +41,7 @@ style window:
     xalign 0.5
     yalign 1.0
     xysize (1300, 270)
-    padding (40, 30, 40, 40)
+    padding (60, 30, 40, 40)
     background Image("gui/textbox.png", xalign=0.5, yalign=1.0)
 
 # Style for the dialogue

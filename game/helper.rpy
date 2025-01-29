@@ -17,3 +17,6 @@ define config.mouse = { }
 define config.mouse['default'] = [ ( "gui/cursor/cc.png", 0, 0) ]
 define config.mouse['pressed_default'] = [ ( "gui/cursor/cc-click.png", 0, 0) ]
 # define config.mouse['button'] = [ ( "gui/cursor/cc-btn.png", 0, 0) ]
+
+init:
+    define config.layers = [ 'master', 'transient', 'screens', 'overlay', 'ontop' ]
