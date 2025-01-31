@@ -210,15 +210,18 @@ label c1_1:
 
     $ quick_menu = False
     window hide
+    scene bg_byroom3 with Fade(0.3,0.5,0.3)
     show screen tpoinfo("12月12日，星期日","白一的家") with dissolve
     pause 1
     hide screen tpoinfo with dissolve
     window show
     $ quick_menu = True
     "笃，笃，笃……"
+    scene bg_byroom3 with vpunchs
     "笃笃笃笃——"
     me "喂……"
     "没有回应。"
+    scene bg_byroom3 with vpunchs
     "笃笃笃笃——"
     me "你再切菜板都要坏了。"
     by eye_def o "啊？哦……"
@@ -228,6 +231,7 @@ label c1_1:
     "说完，她又举起菜刀，恶狠狠地拍了两下。"
     "看这架势，怕是把西顺当成了这块被剁的肉……"
 
+    scene bg_byroom3 with fade
     "凌晨回家后，白一就直接睡着了，中午醒来就一直是这一副怨气极深的样子。"
     "不过，想来也能理解。{p}无论是谁，突然被卷入这种事情都很难保持平静吧……"
     "醒来之后，白一已经把家里检查了一遍，但仍然没有想起任何关于那两天的事情。"
@@ -255,7 +259,8 @@ label c1_1:
     scene bg_car with fade
     "到了车上，西平和西顺坐在驾驶座和副驾驶，白一则顺势坐在了后座，有些无聊地看向窗外。"
     xs "你看起来好像不怎么害怕啊，没什么想法吗？"
-    by eye_close e "……害怕有用吗？反正都死过一次，大不了就是真死了呗。"
+    by eye_move e "……害怕有用吗？"
+    by eye_close def "反正都死过一次，大不了就是真死了呗。"
     xs "嗯，你这个心态倒是挺好的。"
     by eye_wacky o "啧……你不就觉得是我杀了她嘛，不用这么虚伪地夸我。"
     "西顺坐在前排整理资料的声音停了，她往后看了一眼，又转过头去。"
@@ -320,7 +325,7 @@ label c1_1:
 
     $ quick_menu = False
     window hide
-    scene bg_sickroom with fade
+    scene bg_wxroom with fade
     show screen tpoinfo("12月12日，星期日","温心的家") with dissolve
     pause 1
     hide screen tpoinfo with dissolve
@@ -328,7 +333,7 @@ label c1_1:
     $ quick_menu = True
 
     by eye_def e "咳，咳咳……"
-    "楼梯间更加狭窄拥挤。爬上来耗费的体力，杂物中飞舞的灰尘，以及冰冷的空气让白一忍不住咳嗽了好一会。"
+    "楼梯间更加狭窄拥挤。\n爬上来耗费的体力，杂物中飞舞的灰尘，以及冰冷的空气让白一忍不住咳嗽了好一会。"
     "推开门，有些狭小的房间一览无余。"
     "一张木桌贴着一张床在右侧，旁边挨着几个高高的柜子，最左边的柜子通向贴墙的小灶台。中间开了一扇门，通向洗手间。"
     show xsimg o at char_mid with moveinleft
