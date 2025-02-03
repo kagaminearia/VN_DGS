@@ -3,7 +3,6 @@
 label start:
     # "{font=fonts/BlueSecretText.ttf}test{/font}"
     # testing
-    jump wxroom
     call c1_1
     $ quick_menu = False
     window hide

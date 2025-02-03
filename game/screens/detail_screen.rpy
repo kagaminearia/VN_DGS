@@ -1,6 +1,6 @@
 screen detail_screen:
     add "#0000001a"
-    default category = "dict"
+    default category = "clue"
     add "gui/ev/ev-bg.png":
         xalign 0.5
         yalign 0.5
@@ -71,20 +71,37 @@ screen detail_screen:
                 side_xalign 0.8
 
                 for i in range(len(clueList)):
-                    button:
-                        add "evlocked":
-                            align (0.5,0.0)
-                            yoffset 20
-                        background "gui/ev/ev-btn-idle.png"
-                        hover_background "gui/ev/ev-btn-hover.png"
-                        text "[clueList[i][0]]":
-                            yoffset -20
-                            align (0.5,1.0)
-                            color gui.black
-                            font gui.detailtitle_font
-                            size 20
-                        xysize(215,250)
-                        action Return("i")
+                    if persistent.clue[i] == 1:
+                        button:
+                            add "clue[i]":
+                                size(170,170)
+                                align (0.5,0.0)
+                                yoffset 20
+                            background "gui/ev/ev-btn-idle.png"
+                            hover_background "gui/ev/ev-btn-hover.png"
+                            text "[clueList[i][0]]":
+                                yoffset -20
+                                align (0.5,1.0)
+                                color gui.black
+                                font gui.detailtitle_font
+                                size 20
+                            xysize(215,250)
+                            action [ShowMenu("clue_screen",i),Hide("detail_screen")]
+                    else:
+                        button:
+                            add "evlocked":
+                                align (0.5,0.0)
+                                yoffset 20
+                            background "gui/ev/ev-btn-idle.png"
+                            hover_background "gui/ev/ev-btn-hover.png"
+                            text "暂未解锁":
+                                yoffset -20
+                                align (0.5,1.0)
+                                color gui.black
+                                font gui.detailtitle_font
+                                size 20
+                            xysize(215,250)
+                            action Return()
     
 
     elif category == "dict":
@@ -129,8 +146,33 @@ screen detail_screen:
 
 
 
-# screen clue_screen(index):
+screen clue_screen(index):
+    add "gui/ev/clue-bg.webp":
+        pos(637,72)
 
+    frame:
+        add "#ffffff"
+        align (0.5,0.35)
+        xysize (445,700)
+        vbox:
+            spacing 35
+            add "clue[index]":
+                size(445,445)
+            vbox:
+                spacing 6
+                text [clueList[index][0]]:
+                    font gui.detailtitle_font
+                    size 30
+                    color gui.black
+                text [clueList[index][1]]:
+                    font gui.detail_font
+                    size 20
+                    color gui.black
+    imagebutton:
+        idle "gui/ev/close-btn.png"
+        hover "gui/ev/close-btn-hover.png"
+        pos(905,897)
+        action ShowMenu("detail_screen")
 
 
 style detail_vscrollbar:
@@ -141,5 +183,54 @@ style detail_vscrollbar:
     xoffset 150
 
 
+screen clue_choice(correctlist):
+    add "#0000001a"
+    add "gui/ev/ev-bg.png":
+        xalign 0.5
+        yalign 0.5
+    frame:
+        add "#fff"
+        style_prefix "detail"
+        align (0.5,0.5)
+        xysize (520,920)
+        vpgrid:
+            cols 2
+            spacing 30
+            draggable True
+            mousewheel True
+
+            scrollbars "vertical"
+            side_xalign 0.8
+
+            # change for correct choices
+            for i in range(len(clueList)):
+                if persistent.clue[i] == 1:
+                    button:
+                        add "clue[i]":
+                            size(170,170)
+                            align (0.5,0.0)
+                            yoffset 20
+                        background "gui/ev/ev-btn-idle.png"
+                        hover_background "gui/ev/ev-btn-hover.png"
+                        text "[clueList[i][0]]":
+                            yoffset -20
+                            align (0.5,1.0)
+                            color gui.black
+                            font gui.detailtitle_font
+                            size 20
+                        xysize(215,250)
+                        if i == 1:
+                            action Hide("clue_choice")
+                        else:
+                            action [Hide("clue_choice"), Jump("start")]
+
+
+
 # images for this screen
 image evlocked = "gui/ev/ev-locked.png"
+image clue1 = "images/clue/clue_1.png"
+image clue2 = "images/clue/clue_2.png"
+image clue3 = "images/clue/clue_3.png"
+image clue4 = "images/clue/clue_4.png"
+image clue5 = "images/clue/clue_5.png"
+image clue5 = "images/clue/clue_6.png"
