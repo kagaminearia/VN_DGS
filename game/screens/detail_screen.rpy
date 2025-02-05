@@ -147,6 +147,7 @@ screen detail_screen:
 
 
 screen clue_screen(index):
+    add "#0000001a"
     add "gui/ev/clue-bg.webp":
         pos(637,72)
 
@@ -183,7 +184,15 @@ style detail_vscrollbar:
     xoffset 150
 
 
-screen clue_choice(correctlist):
+label clue_choice_label:
+    window hide
+    $ quick_menu = False
+    show screen clue_choice
+    pause
+    jump clue_choice_label
+    return
+
+screen clue_choice(correctchoice,wronglabel,correctlabel):
     add "#0000001a"
     add "gui/ev/ev-bg.png":
         xalign 0.5
@@ -219,18 +228,10 @@ screen clue_choice(correctlist):
                             font gui.detailtitle_font
                             size 20
                         xysize(215,250)
-                        if i == 1:
-                            action Hide("clue_choice")
+                        if i in correctchoice:
+                            action [Hide("clue_choice"),Jump(correctlabel)]
                         else:
-                            action [Hide("clue_choice"), Jump("start")]
+                            action [Hide("clue_choice"), Jump(wronglabel)]
 
 
 
-# images for this screen
-image evlocked = "gui/ev/ev-locked.png"
-image clue1 = "images/clue/clue_1.png"
-image clue2 = "images/clue/clue_2.png"
-image clue3 = "images/clue/clue_3.png"
-image clue4 = "images/clue/clue_4.png"
-image clue5 = "images/clue/clue_5.png"
-image clue5 = "images/clue/clue_6.png"

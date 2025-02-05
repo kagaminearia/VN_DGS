@@ -1,13 +1,3 @@
-init:
-    define f_wxroom_table = False
-    define f_wxroom_bed = False
-    define f_wxroom_stove = False
-    define f_wxroom_garbage = False
-    define f_wxroom_window = False
-    define f_wxroom_medicine = False
-    define f_wxroom_note = False
-
-
 label wxroom:
     window hide
     $ quick_menu = False
@@ -100,8 +90,7 @@ screen wxroom_screen:
 
 
 label wxroom_table: 
-    $ f_wxroom_table = True
-    scene wxroom with dissolve
+    $ persistent.clue[1] = 1
     "抽屉里有一双木质筷子，一双用过后洗干净的一次性筷子，上面刻有“湘味”的字迹。"
     me "一次性筷子用第二次的话还能叫一次性筷子吗？"
     by eye_wacky e "哈？你要用谁会管你？等等，你在说这双吗？"
@@ -117,8 +106,7 @@ label wxroom_table:
     return
 
 label wxroom_bed:
-    $ f_wxroom_bed = True
-    scene wxroom with dissolve
+    $ persistent.clue[2] = 1
     "被子已经被掀开，堆在一边。床单很旧，有不少补丁，但很干净。枕头上有两个人躺过的痕迹。"
     by eye_wacky e "我之前就跟她躺在这吗……"
     me "看起来是的。"
@@ -132,8 +120,7 @@ label wxroom_bed:
     return
 
 label wxroom_stove:
-    $ f_wxroom_stove = True
-    scene wxroom with dissolve
+    $ persistent.clue[3] = 1
     "有长时间开过火的痕迹，燃气灶老旧，燃气喷嘴处有异物堵塞。"
     me "这个灶台，之前好像开了很久……旁边都烧到变形了。"
     me "喷嘴好像有点塞住了，这样会燃烧不完全，产生一氧化碳的吧。"
@@ -145,8 +132,7 @@ label wxroom_stove:
     return
 
 label wxroom_garbage:
-    $ f_wxroom_garbage = True
-    scene wxroom with dissolve
+    $ persistent.clue[4] = 1
     "空空如也，没有袋子"
     by eye_def o "收拾得好干净啊。"
     me "嗯。"
@@ -157,8 +143,7 @@ label wxroom_garbage:
     return
 
 label wxroom_window:
-    $ f_wxroom_window = True
-    scene wxroom with dissolve
+    $ persistent.clue[5] = 1
     "被百叶窗盖住的窗户关闭，上了锁"
     me "嗯？百叶窗后面是锁死的。"
     by eye_def o "难怪感觉这里好闷，完全不透气啊。"
@@ -167,8 +152,7 @@ label wxroom_window:
     return
 
 label wxroom_medicine:
-    $ f_wxroom_medicine = True
-    scene wxroom with dissolve
+    $ persistent.clue[6] = 1
     "透明药盒里有两瓶一样的感冒药，其中一瓶空了。"
     by eye_def o "啊，这个我知道，味道超级苦的感冒药。"
     me "是吗？她吃了很多，有一瓶空了。"
@@ -177,8 +161,7 @@ label wxroom_medicine:
     return
 
 label wxroom_note:
-    $ f_wxroom_note = True
-    scene wxroom with dissolve
+    $ persistent.clue[7] = 1
     by eye_def o "我去，好吓人的日程表。"
     me "你不是吗？同个学校的学生应该都差不多吧。"
     by eye_def o "我可没这么认真学习，受不了。"
@@ -187,8 +170,7 @@ label wxroom_note:
     return
 
 label wxroom_by:
-    scene wxroom with dissolve
-    if f_wxroom_note and f_wxroom_medicine and f_wxroom_garbage and f_wxroom_window and f_wxroom_stove and f_wxroom_bed and f_wxroom_table:
+    if persistent.clue[1] and persistent.clue[2] and persistent.clue[3] and persistent.clue[4] and persistent.clue[5] and persistent.clue[6] and persistent.clue[7]:
         jump c1_1_extra
     else:
         by eye_still e "怎么了，继续看啊？"

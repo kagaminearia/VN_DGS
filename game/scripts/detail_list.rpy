@@ -1,4 +1,4 @@
-define clueList = [ # clue content
+define clueList = [ # clue content, index = line number - 2
     ("调查报告1", "与怪异联系后，城安局特调组重新对温心的死亡事件进行了调查。"),
     ("客厅-餐桌","抽屉里有一双木质筷子，一双用过后洗干净的一次性筷子，上面刻有“湘味”的字迹。"),
     ("客厅-床铺","被子已经被掀开，堆在一边。床单很旧，有不少补丁，但很干净。枕头上有两个人躺过的痕迹。"),
@@ -36,6 +36,15 @@ define clueList = [ # clue content
 ]
 
 default persistent.clue = [0]*34
+# images for clues
+image evlocked = "gui/ev/ev-locked.png"
+image clue1 = "images/clue/clue_1.png"
+image clue2 = "images/clue/clue_2.png"
+image clue3 = "images/clue/clue_3.png"
+image clue4 = "images/clue/clue_4.png"
+image clue5 = "images/clue/clue_5.png"
+image clue6 = "images/clue/clue_6.png"
+image clue7 = "images/clue/clue_7.webp"
 
 # character info
 define charList = [

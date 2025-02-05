@@ -349,39 +349,49 @@ label c1_1:
 
 
 label c1_1_extra:
-    # 【全检查完后】
+    scene bg_wxroom with fade
+    $ quick_menu = True
     by eye_def o "好像看完了，你觉得是什么情况？"
     me "嗯……"
     menu:
         "没有他人导致温心死亡":
             me "她……应该是自杀，或者意外死亡？"
             by eye_def e "是吗？你怎么看出来的？"
+            # 【选择笔记】
+            by eye_wacky o "……这和你的结论有什么关系？"
+            me "呃……就是，这样，那样？"
+            by eye_wacky e "你在搞笑吗？"
+            me "……"
             return
         "有他人导致温心死亡":
+            me "她……应该不是自杀吧。是被人害了。"
+            by eye_def def "……嗯。"
+            by eye_def o "怎么说？"
+            jump c1_1_menu1
             return
 
 
+label c1_1_menu1:
+    window hide
+    $ quick_menu = False
+    # 【选对笔记-药盒/燃气灶】
+    show screen clue_choice([3],"c1_1_menu1_wrong","c1_1_menu1_correct")
+    pause
+    jump c1_1_menu1
+    return
 
 
-
-
-
-
-    # 【没有他人导致温心死亡】
-    me "她……应该是自杀，或者意外死亡？"
-    by eye_def e "是吗？你怎么看出来的？"
-    # 【选择笔记】
-    by eye_wacky o "……这和你的结论有什么关系？"
-    me "呃……就是，这样，那样？"
-    by eye_wacky e "你在搞笑吗？"
-    me "……"
-    # 【有他人导致温心死亡】
-    me "她……应该是被人害了。"
-    by eye_def def "……嗯。"
-    by eye_def o "怎么说？"
+label c1_1_menu1_wrong:
+    $ quick_menu = True
     # 【选错笔记】
     by eye_wacky o "你是怎么通过这种东西得出刚才的结论的？"
     me "……"
+    jump c1_1_menu1
+    return
+
+
+label c1_1_menu1_correct:
+    $ quick_menu = True
     # 【选对笔记-药盒/燃气灶】
     by eye_def def "看来你跟我想得差不多。"
     me "嗯……也许？"
@@ -410,14 +420,42 @@ label c1_1_extra:
     me "别啊，也不能证明就是你……"
     by eye_wacky e "呵呵，我也希望，但是又没有证据——不，有吗……？"
     by eye_def o "你觉不觉得……好像还有什么细节？"
-    # 【没有了】
-    by eye_still def "是吗？但我总觉得好像忘了什么。"
-    me "啊？那你说是什么？"
-    by eye_close o "这就要问你了啊，你总不能拖我后腿吧？"
-    me "……"
-    # 【还有细节-选错】
-    by "不对，这里好像没什么东西，你再看看别的。"
+    menu:
+        "没有了":
+            by eye_still def "是吗？但我总觉得好像忘了什么。"
+            me "啊？那你说是什么？"
+            by eye_close o "这就要问你了啊，你总不能拖我后腿吧？"
+            me "……"
+        "还有细节":
+            me "貌似……还有吧。"
+            by eye_def def "我也感觉，但，是什么？"
+            me "嗯……"
+    me "那么……如果说真的还有被忽略的细节的话……"
+    me "应该是……"
+    jump c1_1_menu2
+    return
+
+    
+
+label c1_1_menu2:
+    window hide
+    $ quick_menu = False
     # 【选垃圾桶/餐桌/备忘录】
+    show screen clue_choice([1,4,7],"c1_1_menu2_wrong","c1_1_menu2_correct")
+    pause
+    jump c1_1_menu2
+    return
+
+
+label c1_1_menu2_wrong:
+    $ quick_menu = True
+    by "不对，这里好像没什么东西，你再看看别的。"
+    jump c1_1_menu2
+    return
+    
+
+label c1_1_menu2_correct:
+    $ quick_menu = True
     me "我不确定，但有样东西可能不见了。"
     by eye_def def "嗯？什么意思。"
     "白一冲我指的方向看了一眼，而后思考片刻，敲了敲手背。"
@@ -444,3 +482,4 @@ label c1_1_extra:
     by eye_close o "啊——好吧。"
     "白一翻了个白眼，然后像号丧一样，长长地吐出一口气，认命地跟在西顺身后。"
     return
+

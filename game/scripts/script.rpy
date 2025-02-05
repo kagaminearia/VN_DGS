@@ -4,6 +4,7 @@ label start:
     # "{font=fonts/BlueSecretText.ttf}test{/font}"
     # testing
     call c1_1
+    "test: c1_1 end"
     $ quick_menu = False
     window hide
     scene black with Dissolve(1)
