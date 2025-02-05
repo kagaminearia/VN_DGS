@@ -22,24 +22,69 @@ screen about():
     use game_menu(_("关于游戏"))
 
     viewport:
-        style_prefix 'game_menu'
+        xsize 1300
+        ysize 800
+        xalign 0.5
+        yalign 0.5
+        style_prefix 'about'
         mousewheel True draggable True pagekeys True
         scrollbars "vertical"
 
         has vbox
         style_prefix "about"
 
-        label "[config.name!t]"
-        text _("Version [config.version!t]\n")
+        label _("剧本·美术·程序")
+        text _("可食用蓝墨水")
 
-        if gui.about:
-            text "[gui.about!t]\n"
+        label _("音乐·音效")
+        text _("akagi·可食用蓝墨水")
 
-        text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
+        label _("游戏测试")
+        text _("akagi·可食用蓝墨水 ")
+        
+        label ""
 
+        label _("参考·素材·资源")
+        text _("游戏引擎：{a=https://www.renpy.org/}Ren'Py{/a}")
+        text _("场景图片：{a=https://unsplash.com/}Unsplash{/a}，\
+{a=https://www.videvo.net/#rs=videvo-logo}Videvo{/a}，\
+{a=https://www.freepik.com/}Freepik{/a}") 
+        text _("代码设计：{a=https://lemmasoft.renai.us/forums/viewtopic.php?t=37628&sid=acd42f4aadf6680211571a586cbf4a80}image dissolve transitions{/a}，\
+{a=https://wattson.itch.io/renpy-wave-shader}Ren'py Wave Shader by Wattson{/a}，\
+{a=https://feniksdev.itch.io/easy-renpy-gui}Easy Ren'Py GUI by Feniks{/a}")
+        text _("字体：仓耳渔阳体，站酷高端黑，香萃潮汐宋，清松手写体，BlueSecretText")
+
+style about_vbox:
+    ysize None
+    spacing 10
+    xalign 0.5
 
 style about_label_text:
-    size 36
+    size 35
+    font gui.detailtitle_font
+    textalign 0.0
+    color gui.white
+
+style about_text:
+    size 25
+    font gui.detail_font
+    textalign 0.0
+    color gui.white
+
+style about_hyperlink_text:
+    hover_underline True
+    size 25
+    font gui.detail_font
+    textalign 0.0
+    color gui.white
+
+style about_vscrollbar:
+    unscrollable False
+    xsize 25
+    ysize 800
+    xoffset 150
+    base_bar Frame("gui/scrollbar/log-vsc-bar.png", 6, 6, 6, 6, tile=False)
+    thumb Frame("gui/scrollbar/log-vsc-thumb.png", 6, 6, 6, 6, tile=False)
 
 
 ## Help screen #################################################################
@@ -52,148 +97,40 @@ screen help():
 
     tag menu
     add "gui/menu_bg.webp"
-    default device = "keyboard"
-
-    add HBox(Transform("#292835", xsize=350), "#21212db2") # The background; can be whatever
-
+    add "gui/help_image.png":
+        align(0.5,0.5)
+    style_prefix "help"
     use game_menu(_("游戏帮助"))
-
-    viewport:
-        style_prefix 'game_menu'
-        mousewheel True draggable True pagekeys True
-        scrollbars "vertical"
-
-        has vbox
-        style_prefix "help"
-        spacing 23
-
-        hbox:
-
-            textbutton _("Keyboard") action SetScreenVariable("device", "keyboard")
-            textbutton _("Mouse") action SetScreenVariable("device", "mouse")
-
-            if GamepadExists():
-                textbutton _("Gamepad") action SetScreenVariable("device", "gamepad")
-
-        if device == "keyboard":
-            use keyboard_help
-        elif device == "mouse":
-            use mouse_help
-        elif device == "gamepad":
-            use gamepad_help
+    text _("剧情前进"):
+        pos(407,477)
+    text _("剧情前进"):
+        pos(832,395)
+    text _("剧情前进"):
+        pos(1347,579)
+    text _("剧情前进"):
+        pos(1418,681)
+    text _("快进"):
+        pos(1261,375)
+    text _("屏幕截图"):
+        pos(1261,477)
+    text _("游戏菜单"):
+        pos(704,477)
+    text _("历史记录"):
+        pos(832,328)
 
 
-screen keyboard_help():
 
-    hbox:
-        label _("Enter")
-        text _("Advances dialogue and activates the interface.")
-
-    hbox:
-        label _("Space")
-        text _("Advances dialogue without selecting choices.")
-
-    hbox:
-        label _("Arrow Keys")
-        text _("Navigate the interface.")
-
-    hbox:
-        label _("Escape")
-        text _("Accesses the game menu.")
-
-    hbox:
-        label _("Ctrl")
-        text _("Skips dialogue while held down.")
-
-    hbox:
-        label _("Tab")
-        text _("Toggles dialogue skipping.")
-
-    hbox:
-        label _("Page Up")
-        text _("Rolls back to earlier dialogue.")
-
-    hbox:
-        label _("Page Down")
-        text _("Rolls forward to later dialogue.")
-
-    hbox:
-        label "H"
-        text _("Hides the user interface.")
-
-    hbox:
-        label "S"
-        text _("Takes a screenshot.")
-
-    hbox:
-        label "V"
-        text _("Toggles assistive {a=https://www.renpy.org/l/voicing}self-voicing{/a}.")
-
-    hbox:
-        label "Shift+A"
-        text _("Opens the accessibility menu.")
+style help_text:
+    size 25
+    font gui.detail_font
+    textalign 0.5
+    color gui.white
 
 
-screen mouse_help():
+# style help_label:
+#     xsize 375
+#     right_padding 30
 
-    hbox:
-        label _("Left Click")
-        text _("Advances dialogue and activates the interface.")
-
-    hbox:
-        label _("Middle Click")
-        text _("Hides the user interface.")
-
-    hbox:
-        label _("Right Click")
-        text _("Accesses the game menu.")
-
-    hbox:
-        label _("Mouse Wheel Up\nClick Rollback Side")
-        text _("Rolls back to earlier dialogue.")
-
-    hbox:
-        label _("Mouse Wheel Down")
-        text _("Rolls forward to later dialogue.")
-
-
-screen gamepad_help():
-
-    hbox:
-        label _("Right Trigger\nA/Bottom Button")
-        text _("Advances dialogue and activates the interface.")
-
-    hbox:
-        label _("Left Trigger\nLeft Shoulder")
-        text _("Rolls back to earlier dialogue.")
-
-    hbox:
-        label _("Right Shoulder")
-        text _("Rolls forward to later dialogue.")
-
-
-    hbox:
-        label _("D-Pad, Sticks")
-        text _("Navigate the interface.")
-
-    hbox:
-        label _("Start, Guide, B/Right Button")
-        text _("Accesses the game menu.")
-
-    hbox:
-        label _("Y/Top Button")
-        text _("Hides the user interface.")
-
-    textbutton _("Calibrate") action GamepadCalibrate()
-
-
-style help_button:
-    xmargin 12
-
-style help_label:
-    xsize 375
-    right_padding 30
-
-style help_label_text:
-    xalign 1.0
-    textalign 1.0
+# style help_label_text:
+#     xalign 1.0
+#     textalign 1.0

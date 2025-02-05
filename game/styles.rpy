@@ -63,7 +63,8 @@ style default:
 
 style hyperlink_text:
     hover_underline True
-    color "#f93c3e"
+    font gui.detail_font
+    color "#ffffff"
 
 style gui_text:
     color '#ffffff'

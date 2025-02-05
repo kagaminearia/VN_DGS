@@ -162,7 +162,7 @@ screen quick_menu():
             xoffset -130
             yoffset -10
             auto "gui/quickmenu_btn/btn_help_%s.png"
-            action HideInterface()
+            action ShowMenu('help')
             tooltip _("游戏帮助")
 
         imagebutton:
