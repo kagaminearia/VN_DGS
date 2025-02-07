@@ -17,15 +17,10 @@ screen main_menu():
         yalign 0.5
         yoffset 150
         spacing 10
-
-        textbutton _("开始游戏"):
-            # underline True
-            action Start()
-
+        
+        textbutton _("开始游戏") action Start()
         textbutton _("读取进度") action ShowMenu("load")
-
         textbutton _("游戏设置") action ShowMenu("preferences")
-
         textbutton _("关于游戏") action ShowMenu("about")
 
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
@@ -34,11 +29,11 @@ screen main_menu():
                 action ShowMenu("help")
 
         if renpy.variant("pc"):
-
             ## The quit button is banned on iOS and unnecessary on Android and
             ## Web.
             textbutton _("退出游戏") action Quit(confirm=not main_menu)
-
+        
+        textbutton _("测试") action ShowMenu("testchapter")
 
 style main_navigation_button_text:
     color gui.white
@@ -48,3 +43,15 @@ style main_navigation_button_text:
     selected_underline True
     selected_hover_underline True
     
+screen testchapter():
+    tag menu
+    key "mouseup_3" action Return()
+    add "#000000ff"
+    vbox:
+        xalign 0.25
+        yalign 0.25
+        spacing 10
+        textbutton ("c0") action Start("c0")
+        textbutton ("c1-1") action Start("c1_1")
+        textbutton ("c1-2") action Start("c1_2")
+        textbutton ("c1-3") action Start("c1_3")

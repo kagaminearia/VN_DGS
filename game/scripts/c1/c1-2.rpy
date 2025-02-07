@@ -3,6 +3,7 @@ label c1_2:
     me "检查结果明天才出来。"
     by eye_def o "啥？我知道啊？"
     me "呃……我是想说……明天才知道，你现在不用这么，紧张？"
+    by eye_def def "……"
     by eye_wacky e "哈？你觉得我在紧张吗？"
     me "不是吗，那你为什么一直在床上滚来滚去。"
     me "能别转了么，弄得我头很晕啊……"
@@ -156,7 +157,7 @@ label c1_2:
     xs "嗯，那就好。"
     hide xsimg
     show xsimg at char_mid
-    "西顺挑了挑眉，看着白一笑了一会。\n但她没有继续调侃下去，而是很快收起了笑容。"
+    "西顺挑了挑眉，看着白一轻笑了一会。{p}但她没有继续调侃下去，而是很快收起了笑容。"
     hide xsimg
     show xsimg o at char_mid
     xs "像你们这种情况，共感，同知，可以算是每时每刻在一起。"
@@ -168,7 +169,7 @@ label c1_2:
     show xsimg o at char_mid
     xs "不要被吊桥效应影响。"
     by eye_still def "……哦。你要教我做事？"
-    "白一皱起眉毛，对西顺提醒的语气嗤之以鼻。"
+    "白一皱起眉毛，语气立马冷了下来，对西顺的提醒嗤之以鼻。"
     by eye_still o "解决这种问题本来就是你们的工作内容吧。我是会配合，但这可不是我的责任。"
     hide xsimg
     show xsimg eye_close o at char_mid
@@ -219,7 +220,7 @@ label c1_2:
     "不如说，她更像是某种蛰伏的动物，一直观察着白一和西顺。"
     "而稍有不对，就会露出獠牙。"
     "当然，是对白一露出獠牙。"
-    by eye_wacky e "我只是说我要先去个洗手间！{size=23}……顺便晾一下你们……{/size}又要怎样啊？？"
+    by eye_wacky e "我只是说我要先去个洗手间！{size=23}……顺便晾一下你们……{/size}你们又要怎样啊？？"
     "夹在中间的那句抱怨很小声，没人听见。"
     "因而西平顿了顿，而后微微颔首。"
     show xpimg o at char_right with moveinright
@@ -235,22 +236,26 @@ label c1_2:
     me "嗯……有点。"
     me "但是……主要是因为，你手上有伤吧……你之前弄的那些……"
     "白一抱怨的声音一下停住。而后，声音变得更加冷硬。"
-    by "对啊。是又怎样？你不喜欢吗？"
+    by eye_still def "哦，对啊。"
+    by eye_wacky smile "是又怎样？你不喜欢吗？"
     me "不……我没那么说……嘶。"
-    by "可惜了，那你也只能受着。"
+    by eye_close def "可惜了，那你也只能受着。"
     show cg_arm at cg0 with vpunchs
     "她撩起左手的袖口，用力在深深浅浅的伤口上又捏了一把。"
     me "喂……"
     "我没想到只是稍微提一嘴，她的反应就那么大。"
     "说到底，我其实也没有非要问出什么的意思，只是难免会有些好奇而已……"
+    "毕竟，那些伤痕深深浅浅，很明显不是最近这一次就能弄成的样子。"
+    "但……"
+    me "嘶……"
+    "又一阵尖锐的刺痛随着白一的动作产生，疼得我恍惚一瞬，忘了思考。"
     by "没有不喜欢就好。而且，你不觉得很爽吗？"
-    "说完，又是一阵尖锐的刺痛。"
     "最新的伤口好像有些裂开了，暴露在冰冷的空气里。"
     hide cg_arm with w21
     me "……不觉得。"
-    by "那也没办法，毕竟这还是我的身体。"
+    by eye_close smile "噢，那抱歉。不过那也没办法，毕竟这还是我的身体。"
     "白一有些恶劣地笑了笑，而我不知道该如何回复，只好轻轻地叹了口气。"
-    "话题突兀地结束，没有人想要说什么，于是继续的只有沉默。"
+    "话题突兀地结束，没有人想要继续说什么，于是继续的只有沉默。"
 
     scene bg_corri with fade
     "从洗手间出去，白一在转角处看见了倚在墙边的西平。"
@@ -263,15 +268,25 @@ label c1_2:
     xp "城安局，没打算继续查这个案件。"
     by eye_def o "……啊？"
     xp "你——"
+    show xsimg smile at char_left with moveinleft
     xs "喂，我说西平姐姐，你说的有事，该不会就是指偷偷找我的嫌疑人吧？"
+    hide xpimg
+    show xpimg at char_right
     xp "……"
     "西顺忽然出现，声音打断了西平要说的话。"
+    hide xpimg with moveoutright
     "她动了动嘴唇，最终还是什么也没说，只是稍稍后退两步，又变成那副背景板的样子。"
     by eye_wacky def "……你们到底要干嘛啊？别把我扯进去行不行。"
+    hide xsimg
+    show xsimg eye_close o at char_left
     xs "哎……"
     xp "你没说我不能说。"
-    xs "我知道，我没在说你……"
+    hide xsimg
+    show xsimg at char_left
+    xs "……我知道，我没在说你。"
     "西顺轻轻拍了拍西平的背，然后冲着白一无奈地耸耸肩膀。"
+    hide xsimg
+    show xsimg o at char_left
     xs "大家都在这，还是回房间说吧。"
     by eye_def o "哦……"
 
@@ -283,7 +298,8 @@ label c1_2:
     hide xsimg
     show xsimg at char_mid
     xs "唔——这件事现在变得很复杂，而它“不值得”变得这么复杂。"
-    by eye_wacky e "……哈？什么意思。"
+    by eye_wacky e "……哈？什么意思。能不能说清楚点。"
+    "白一皱起眉——她最讨厌这样似是而非的说法。"
     hide xsimg
     show xsimg eye_move at char_mid
     xs "怎么说呢，嗯……"
@@ -296,114 +312,188 @@ label c1_2:
     hide xsimg
     show xsimg eye_shock o at char_mid
     xs "你——嗯？？你说什么？"
-    "西顺罕见地愣住，一时间竟然没能接上话，只是呆呆地盯着白一。"
     hide xsimg
     show xsimg eye_shock at char_mid
-    xs "不是，你——"
-    by eye_move e "咳咳！反正，反正差不多就是了。"
+    "西顺罕见地愣住，一时间竟然没能接上话，只是呆呆地盯着白一。"
+    hide xsimg
+    show xsimg eye_shock o at char_mid
+    xs "{size=45}咳咳咳！！{/size}不是，你——"
+    hide xsimg
+    show xsimg eye_shock at char_mid
+    by eye_move e "咳——反正，反正差不多就是了。"
     by eye_def o "我说，这不是重点吧？你要说什么就快点，别纠结这个。"
-    xs "好，这不重要。总体来说，你和温心都是没什么社会联系的人，高中生，报案人也是个普通的高中生。"
+    hide xsimg
+    show xsimg eye_close o at char_mid
+    xs "好吧，这确实不重要。总体来说，你和温心都是没什么社会联系的人，高中生，报案人也是个普通的高中生。"
+    hide xsimg
+    show xsimg o at char_mid
     xs "像你们……你们这样的事情，过程很麻烦，但是涉案人和结果都很简单，不值得动用这么多资源查。"
     by eye_wacky def "哦，我懂了。"
     by eye_close o "就是温心死掉也没什么关系，我有什么事也没什么关系，因为没人在意，是吧？"
-    xs "嗯……你应该理解得没错。"
+    hide xsimg
+    show xsimg at char_mid
+    xs "嗯……你想这么理解，那也可以。"
+    "西顺并没有直接承认，但她的态度跟直接认同白一没什么区别。"
+    hide xsimg
+    show xsimg eye_close o at char_mid
     xs "这不是我的想法。"
-    "西顺轻轻叹了口气，而后抬起手用力捏了捏眉心。"
-    xs "昨天打电话，他们给了两个选择。"
-    xs "公布温心是自杀，或者公布你是凶手。"
+    "她强调一遍，轻轻叹了口气，而后抬起手用力捏了捏眉心。"
+    by eye_def def "哦，那又怎样？"
+    "是谁怎么想都无所谓，白一只是冷淡地看着西顺继续说。"
+    hide xsimg
+    show xsimg o at char_mid
+    xs "昨天我收到通知，被要求马上结束调查这件事，有两个选择。"
+    xs "一是公布温心是自杀，二是公布你是凶手。"
+    hide xsimg
+    show xsimg at char_mid
     by eye_close def "……"
     by eye_def def "哦。"
-    by eye_def o "那你是什么想法？跟我说这么多是什么意思？"
-    by eye_close o "反正我也很可能是凶手，这样不就是直接搞定了，根本不用麻烦那么多。"
-    by eye_still e "你跟我说，是要让我对你感激涕零吗？"
-    xs "没有，我不需要你的感激，我需要你的帮助。"
-    by "……啊？"
+    by eye_def o "所以呢？那你是什么想法？跟我说这么多是什么意思？"
+    hide xsimg
+    show xsimg o at char_mid
+    xs "因为，你——"
+    by eye_def o "说得很有道理啊，反正我也很可能是凶手，这样不就是直接搞定了，根本不用麻烦那么多事。"
+    by eye_still e "你还是说，你把这些告诉我，是要让我对你感激涕零吗？"
+    hide xsimg
+    show xsimg at char_mid
+    xs "……不，不要这么想。"
+    hide xsimg
+    show xsimg o at char_mid
+    xs "我不需要你的感谢，我需要你的帮助。"
+    by eye_wacky o "……啊？"
+    hide xsimg
+    show xsimg eye_close o at char_mid
     xs "如你所见，因为城安局，我自己查东西的时候会受到阻碍。之后，需要你帮忙的地方更多了。"
     by eye_move o "哦……免费劳动力是吧。"
-    "白一有些无语，但又有些疑惑。"
-    by eye_def e "所以……搞这么麻烦，为什么你还要继续？"
-    xs "首先，现在明显还有疑点。"
-    xs "其次，就算是你杀了她，也不是让你不明不白地在三个月之后失去生命的理由。"
+    "白一了然，但又有些疑惑。"
+    by eye_def e "所以……意思是这么麻烦的事情，你还要继续？而且，你这样不算违规？"
+    hide xsimg
+    show xsimg eye_move o at char_mid
+    xs "嗯，我自然有我的方法。"
+    hide xsimg
+    show xsimg eye_move at char_mid
+    "西顺轻咳两声，很快带过这点，显然也是不想多说。"
+    hide xsimg
+    show xsimg o at char_mid
+    xs "首先，现在明显还有疑点。嫌疑很重，也不代表真的是凶手。"
+    xs "其次，就算是你杀了她，也不是让你不明不白地在三个月之后失去生命的理由。这是两码事。"
+    hide xsimg
+    show xsimg at char_mid
     xs "最后……"
+    hide xsimg
+    show xsimg o at char_mid
     xs "你不想知道真相吗？"
     by eye_def def "……"
+    by eye_move def "……"
+    hide xsimg
+    show xsimg at char_mid
     "白一陷入了沉默，没有回话。"
     "西顺也并不显得着急，只是静静地看着她的眼睛。"
     by eye_close o "好吧，我知道了。"
-    by eye_def o "我听你的就是了。真烦……现在这是要干嘛？"
+    by eye_move e "我听你的就是了。{size=23}反正我也没资格拒绝吧……{/size}"
+    by eye_def o "那所以现在这是要干嘛？"
+    hide xsimg
+    show xsimg o at char_mid
     xs "伸手。"
-    "白一拧了拧眉毛，还是把右手伸到桌面。"
+    hide xsimg
+    show xsimg at char_mid
+    "白一拧了拧眉毛，还是把右手从桌底下拿上来。"
     "西顺轻轻按住从袖口伸出的手指，而后，白一的指尖溢出一滴鲜血。"
     "血液滴在平摊的纸张上，瞬间，一道红光闪过，纸张上浮现出由曲线构成的印记。"
-    xs "嗯，保密协议。"
-    "面对白一的疑惑，西顺拿起纸，在白一的眼前晃了晃。"
-    by "你们搞成这样……真的不是什么邪恶仪式吗。"
+    by eye_wacky e "喂——"
+    hide xsimg
+    show xsimg o at char_mid
+    xs "保密协议。"
+    "西顺像是知道白一要问什么，赶在她出声之前，拿起纸，在白一的眼前晃了晃。"
+    "上面的确打印着“保密协议”的墨字，还有几条严谨的条例，右下角则是刚刚才出现的红印。"
+    by eye_wacky e "你们搞成这样……真的不是什么邪恶仪式吗。"
     xs "只是限制你不往外说这里的事，不会有别的危害的。"
-    by "哦……"
+    by eye_still def "哦……"
     xs "你就放心好了，我还能知法犯法？看，举报电话就在门口，你记一下？"
-    by "……"
+    by eye_wacky def "……"
     "白一有些无语，朝着西顺明晃晃地翻了个白眼，站起身来。"
     xs "对了，这个给你。"
-    by "呃……？"
+    by eye_def e "呃……？"
     "西顺的表情变得有些奇怪，好像在憋笑一般，递过了一个小盒子。"
-    xs "西平送给你的，嗯，估计是让你用的，担心你啊。"
+    hide xsimg
+    show xsimg eye_move smile at char_mid
+    xs "西平送给你的，嗯，估计是让你用的，她担心你吧。"
     "盒子里是一条耳机，白一一时间没反应过来，有些疑惑。"
-    by "担心什么？"
+    by eye_def o "啊？担心什么？"
+    hide xsimg
+    show xsimg eye_squint smile at char_mid
     xs "担心你平时和[user]说话被人当成脑子有问题呗哈哈哈。"
-    "西顺没忍住笑出了声，看起来一点也不靠谱。"
-    by "……"
-    by "呵呵。"
+    "西顺没忍住笑出了声，看起来虽然想憋笑，但完全没成功。"
+    by eye_still def "……"
+    by eye_wacky e "呵呵。"
 
     scene bg_byroom2 with fade
-    by "喂，那个啥，你还活着吗？"
+    by eye_def o "喂，那个啥，你还活着吗？"
+    "………………"
     me "……啊？在说我吗？"
-    by "难道房间里还有第二个人？"
-    me "噢……在啊。"
-    by "哦。"
-    by "你今天都没怎么说话。"
-    me "啊，呃……有吗？"
-    by "你觉得我看起来像白痴？"
+    "愣了一会，我后知后觉地出声。"
+    by eye_wacky e "难道房间里还有第二个人？"
+    me "嗯……噢，在啊。"
+    by eye_close o "哦。"
+    by eye_def o "那你怎么今天都没怎么说话，我还以为你终于消失了呢。"
+    me "……你是在担心还是在幸灾乐祸？"
+    by eye_def e "你猜？"
     me "……"
-    me "就是，呃，今天西顺不是那么说的吗……"
-    by "你——"
-    "白一说到一半，像是想起什么，蓦地轻轻嗤笑了一声。"
-    by "你该不会以为，像我们这样，真的能产生所谓的感情吧。"
-    by "被西顺忽悠瘸了？信她的鬼话。"
-    me "没……"
+    me "好吧，我没怎么说话吗？"
+    by eye_close o "我是看起来像白痴吗？"
+    me "……"
+    me "好吧……就是，呃，今天西顺不是那么说的吗……"
+    by eye_def o "什么？"
+    by eye_still o "哦，你——"
+    "白一有些疑惑，而后说到一半，像是想起什么，蓦地轻轻嗤笑了一声。"
+    by eye_still e "你该不会是在想，西顺说的那个“吊桥效应”吧。"
+    by eye_wacky def "被西顺忽悠瘸了？信她的鬼话。"
+    me "呃，没……"
     "不知为何，对于这个话题，我好似没有什么欲望谈论下去。"
-    by "那你这么紧张干什么，显得更刻意了好吗。"
+    by "那你这么紧张干什么，就为了这个刻意不说话？更奇怪了。"
     me "呃……嗯。"
+    "我不得不承认她说得有道理。"
+    "不说话是为了拉开距离，可在某种程度上，我们的确……密不可分。"
+    "可是……可是……"
+
+    scene bg_byroom2 with Fade(0.5,1,0.5)
     "白一沉默了一会，突然睁开眼睛。"
     "眼睛已经熟悉了黑暗，能够在无光的环境里隐约看见熟悉的天花板，一时间竟然有些恍惚。"
     "不知道什么时候开始，这里对我来说，也是逐渐熟悉的天花板了。"
-    by "明天要去上学。"
+    by eye_close o "明天要去上学。"
     me "是啊。"
-    by "突然感觉好不习惯，明明也没过几天。"
+    by eye_def o "我竟然还要上学唉？"
+    me "……"
+    by eye_def o "突然感觉好不习惯，但是好像也没过几天。"
     me "嗯……可能是因为你失忆了一段时间，然后又发生了很多事情吧。"
-    by "有道理啊……"
-    by "西顺说去找线索，你有什么想法吗？"
+    by eye_move e "啧，有道理啊……"
+    by eye_def e "西顺说去找线索，你有什么想法吗？"
     "因为明面上不让查，西顺也不能以特调组的名义去询问学校里相关的人，这件事只能让白一来做。"
     me "这不是你要考虑的问题嘛？"
-    by "我不擅长聊天啊，只擅长骂人。"
+    by eye_close o "我不擅长聊天啊，只擅长骂人。"
     me "……"
-    by "好了，到时候这件事就交给你帮我做。"
+    by eye_def e "好了，那到时候这件事就交给你帮我做。"
     me "怎么就交给我了？"
-    by "那你总得有点用处吧？"
+    by eye_def o "那你总得有点用处吧？"
+    "白一语气抬高，像是听到了什么令人很惊讶的事情。"
     me "……"
     "说不过她，也做不了任何事。我无语地叹了口气，也只好默认了她的说法。"
     me "……"
     me "对了……"
-    by "嗯……啊？"
+    by eye_close o "嗯……啊？"
     "白一大概已经很困了，意识模糊，过了好一会才发出含糊地回应。"
-    me "你……"
-    me "你不会像西顺说的那样……对吗？"
-    by "……哪样……？"
-    me "就是……吊桥效应。"
-    by "……"
+    me "所以，你……"
+    me "你不会像西顺说的那样，对吧？"
+    by eye_close o "……哪样……？"
+    me "就是……她说的吊桥效应啊。"
+    by eye_still def "……"
     "许久没有听到回复，我以为她没听清，或是不想回答。"
     "再问一次的勇气也没有了。我安下心，静静地等着她彻底睡着，失去意识。"
-    by "哧……"
-    "枕头与被子之间忽然传来极其轻微的笑声，而后，白一慢吞吞的声音在房间里响起。"
-    by "别太自恋了，你就放一百个心吧……"
-    by "我绝对，绝对不会，对你产生任何感情的……"
+    by eye_close smile "哧……"
+    "不知道过了多久，枕头与被子之间忽然传来极其轻微的笑声。"
+    "而后，白一说话的声音在房间里响起。"
+    "她的声音很轻，慢吞吞的，语气却很笃定。"
+    by eye_close e "别太自恋了，你就放一百个心吧……"
+    by eye_close e "像她说的那种故事，什么在特殊环境下，产生错误的感情……"
+    by eye_close def "那种故事……早就过时了。"
     return
