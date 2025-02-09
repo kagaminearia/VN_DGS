@@ -375,7 +375,7 @@ label c1_1_menu1:
     window hide
     $ quick_menu = False
     # 【选对笔记-药盒/燃气灶】
-    show screen clue_choice([3],"c1_1_menu1_wrong","c1_1_menu1_correct")
+    show screen clue_choice([3,6],"c1_1_menu1_wrong","c1_1_menu1_correct")
     pause
     jump c1_1_menu1
     return
