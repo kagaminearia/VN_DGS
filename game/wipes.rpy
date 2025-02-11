@@ -20,6 +20,7 @@
     $ sunshine = ImageDissolve("wipes/sunshine.jpg", 1.0, 8)
     $ glasswool = ImageDissolve("wipes/glasswool.jpg", 1.0, 8)
     $ wet = ImageDissolve("wipes/wet.jpg", 1.0, 8)
+    $ pix1 = ImageDissolve("wipes/pix1.jpg", 1.0, 8)
 
     $ w1 = ImageDissolve("wipes/1.jpg", 1.0, 8)
     $ w2 = ImageDissolve("wipes/2.png", 1.0, 8)

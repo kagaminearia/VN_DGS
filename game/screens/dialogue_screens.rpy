@@ -218,24 +218,26 @@ style quick_button_text:
 
 
 screen nvl(dialogue, items=None):
+    if nvl_mode == "phone":
+        use PhoneDialogue(dialogue, items)
+    else:
+        window:
+            style "nvl_window"
 
-    window:
-        style "nvl_window"
+            has vbox
+            spacing 15
 
-        has vbox
-        spacing 15
+            use nvl_dialogue(dialogue)
 
-        use nvl_dialogue(dialogue)
+            ## Displays the menu, if given. The menu may be displayed incorrectly if
+            ## config.narrator_menu is set to True.
+            for i in items:
 
-        ## Displays the menu, if given. The menu may be displayed incorrectly if
-        ## config.narrator_menu is set to True.
-        for i in items:
+                textbutton i.caption:
+                    action i.action
+                    style "nvl_button"
 
-            textbutton i.caption:
-                action i.action
-                style "nvl_button"
-
-    add SideImage() xalign 0.0 yalign 1.0
+        add SideImage() xalign 0.0 yalign 1.0
 
 
 screen nvl_dialogue(dialogue):
