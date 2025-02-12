@@ -343,7 +343,7 @@ label c1_2:
     hide xsimg
     show xsimg o at char_mid
     xs "昨天我收到通知，被要求马上结束调查这件事，有两个选择。"
-    xs "一是公布温心是自杀，二是公布你是凶手。"
+    xs "一是公布温心是意外死亡，二是公布你是凶手。"
     hide xsimg
     show xsimg at char_mid
     by eye_close def "……"
