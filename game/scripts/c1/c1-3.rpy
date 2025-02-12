@@ -235,30 +235,31 @@ label c1_3:
     "说到这，白一的声音放得更低了，吃饭的动作也慢下来。"
     me "噢，对，她刚刚好像有提到……"
     me "不过，霸凌……真有这种事吗？"
-    by "呵呵，不然呢？你不会不相信吧？"
+    by eye_still e "呵呵，不然呢？你不会不相信吧？"
     me "只是觉得可能没那么常见。"
-    by "这种事常见才是正常的好吧。"
+    by eye_close o "这种事常见才是正常的好吧。"
+    "好绕口的一句话。"
     "你太悲观了……我想这么说，但还是没说出口。"
     me "如果真的是霸凌，那那个人应该很讨厌温心吧。"
-    by "也就是说，相当有作案动机咯？"
+    by eye_still e "也就是说，相当有作案动机咯？"
     me "嗯。"
-    by "很好。那么……那个人是谁呢……"
+    by eye_move o "很好。那么……那个人是谁呢……"
     menu:
         "问老师":
             me "要不你问问老师……"
-            by "……你是脑干缺失吗？老师怎么可能会管这种事。"
+            by eye_wacky e "……你是脑干缺失吗？老师怎么可能会管这种事。"
             me "不会吗？"
-            by "要是会的话，我们就不会听说有这件事了。"
+            by eye_close o "要是会的话，事情估计都不会被传播开，我们也不会听说有这件事了。"
             me "……那？"
-            by "问老师还不如问别的同学，又不是只有班长一个人。"
+            by eye_move o "问老师还不如问别的同学，又不是只有班长一个人。"
             me "噢……比如温心的同桌？"
-            by "嗯。"
+            by eye_def def "嗯。"
         "问同学":
             me "不能问卫锋，那找其他同学问一下也可以的吧。"
-            by "问谁？"
+            by eye_def o "问谁啊？"
             me "比如……她同桌？"
-            by "哦……可以试试。"
-            by "所以又要去找人咯？还是连续找人。"
+            by eye_still e "哦……可以试试。"
+            by eye_move o "所以又要去找人咯？还是连续找人。"
             me "嗯。"            
 
     by eye_close o "……哦。"
@@ -331,43 +332,72 @@ init:
     define c_1_3_choice1s = [0]*3
 
 label c1_3_choice1:
+    hide swimg
+    show swimg at char_mid
     menu:
         "和温心的关系":
-            by "你看起来知道很多温心的情况，你和她很熟悉是吗？"
-            sw "嗯……算是吧？我偶尔会让她帮我做点事这样。"
+            by eye_def o "你看起来知道很多温心的情况，你和她很熟悉是吗？"
+            hide swimg
+            show swimg o at char_mid
+            sw "嗯……算是吧？我偶尔会去找她帮我做点事……这样。"
             sw "因为不在一个班，要说特别熟的话也没有，但就还可以吧。"
-            by "所以你们相处得挺好的？"
+            by eye_def e "所以你们相处得挺好的？"
+            hide swimg
+            show swimg smile at char_mid
             sw "嗯，对呀，挺好的。"
-            by "……总觉得很奇怪。"
+            by eye_still e "{size=23}……总觉得很奇怪。{/size}"
             $ c_1_3_choice1s[0] = 1
             jump c1_3_choice1
         "温心上周发生的事":
-            by "看起来你认识温心，那你有注意到她上周做了什么吗？"
-            sw "啊？这也太宽泛了吧……就算是我同桌，我也不可能知道她做的每件事啊，温心跟我还不是同一个班的呢。"
-            by "就是，有没有做什么会让你注意到的，和平时不一样的事？"
+            by eye_def o "看起来你认识温心，那你有注意到她上周做了什么吗？"
+            hide swimg
+            show swimg eye_squint o at char_mid
+            sw "啊？这也太宽泛了吧……"
+            hide swimg
+            show swimg eye_blink o at char_mid
+            sw "就算是我同桌，我也不可能知道她做的每件事啊，温心跟我还不是同一个班的呢。"
+            by eye_def e "就是，有没有做什么会让你注意到的，和平时不一样的事？"
+            hide swimg
+            show swimg o at char_mid
             sw "没啊，我都这么说了，当然是没有嘛。和平时一样，很早来学校，下课也很早走。"
+            hide swimg
+            show swimg eye_blink o at char_mid
             sw "噢，不过最近好像没那么早走了，不过就一点点。"
+            hide swimg
+            show swimg eye_blink at char_mid
             "她用夸张地用两根手指比了个手势，随后放下，耸了耸肩膀。"
-            by "一点点……好像什么也不能说明。"
+            by eye_still def "一点点……好像也不能说明什么。"
             $ c_1_3_choice1s[1] = 1
             jump c1_3_choice1
         "对问问题的想法":
-            by "话说……我这么过来问你，你不觉得奇怪吗？"
-            sw "不奇怪啊。你自己找我为什么要这么问？"
+            by eye_still e "话说……我这么过来问你，你不觉得奇怪吗？"
+            hide swimg
+            show swimg eye_blink o at char_mid
+            sw "不奇怪啊。诶，你自己找我为什么要这么问？"
+            hide swimg
+            show swimg o at char_mid
             sw "噢，所以你不知道我是谁嘛？"
-            by "姒舞啊。"
+            by eye_def e "我知道，姒舞啊。"
+            hide swimg
+            show swimg eye_blink o at char_mid
             sw "不不，不是说名字。"
-            by "啊？"
+            by eye_def o "啊？"
+            hide swimg
+            show swimg eye_squint laugh at char_mid
             sw "我啊——社交小天才，八卦小能手，育才小神通！"
-            by "……"
+            by eye_shock def "……"
             "白一罕见地呆住，似是怀疑自己所听到的话。"
-            by "你……"
-            "白一的表情顿时变得一言难尽。"
-            by "一直都是这样的吗？"
-            by "我好像听说过……青春期的时候，有些人会觉得自己很特别，会做一些，和别人不一样的事。"
-            sw "……我才不是中二病！只是想跟你解释一下而已！"
+            by eye_wacky e "你……"
+            "而后，她的表情顿时变得一言难尽。"
+            by eye_wacky o "一直都是这样的吗？"
+            by eye_still o "我好像听说过……青春期的时候，有些人会觉得自己很特别，会做一些，和别人不一样的事。"
+            hide swimg
+            show swimg eye_squint o at char_mid
+            sw "{size=45}……我才不是中二病！{/size}只是想跟你解释一下而已！"
+            hide swimg
+            show swimg eye_blink at char_mid
             sw "哼，明明是你找我，现在还说这种话。"
-            by "噢……嗯，好。"
+            by eye_still o "噢……嗯，好。"
             $ c_1_3_choice1s[2] = 1
             jump c1_3_choice1
         "不问了" if c_1_3_choice1s[0] and c_1_3_choice1s[1] and c_1_3_choice1s[2]:
@@ -376,68 +406,122 @@ label c1_3_choice1:
     return
     
 label c1_3_extra:
+    scene bg_buildingoutside with fade
+    show swimg at char_mid with dissolve
     "几个不痛不痒的话题说完，白一陷入短暂的沉默。"
     "而后，她像是决定了什么，重新开口。"
     by "你平时……经常霸凌温心吗？"
+    hide swimg
+    show swimg eye_sad o at char_mid with vpunchm
     sw "……哈？！"
     "不想试探什么，直接问吧——白一大概是这么想的。"
     "而效果也很明显：姒舞瞪大了眼睛和嘴巴，表情十分夸张，像是完全不敢相信发生了什么。"
     sw "原来如此……难怪你要来找我！"
+    by eye_still def "嗯……？"
     sw "拜托，我又要解释一遍……我没有啊！"
-    by "又要是什么意思？"
-    sw "对啊，你们班班长也来问过一遍，就在不久之前。"
+    by eye_def e "又要是什么意思？之前也有人问？"
+    hide swimg 
+    show swimg eye_blink o at char_mid 
+    sw "对啊，因为你们班班长也来问过一遍，就在不久之前。"
+    hide swimg 
+    show swimg eye_blink at char_mid 
     "姒舞撇了撇嘴，一副十分不爽的表情，最后无奈地叹了口气。"
-    by "说明你确实很可疑。"
-    sw "什么叫可疑啊！"
+    by eye_def o "说明你确实很可疑。"
+    hide swimg 
+    show swimg eye_squint o at char_mid with vpunchm
+    sw "{size=45}什么叫可疑啊！{/size}"
     by "你不是说经常让她帮忙吗？就是强迫她做事？"
+    hide swimg 
+    show swimg eye_squint def at char_mid
     sw "才没有！只是字面意思上的帮忙，而且她也愿意的啊。"
-    by "呵呵，强行自愿的事情多了去了。"
-    by "你认识那么多人，估计有个小团体吧，你们要是合起伙来强迫，难道还能拒绝？"
-    sw "我是有，但……干嘛把别人都想得这么坏啊！"
+    by eye_still e "……该不会是让人强行自愿做的事吧。"
+    by eye_still o "比如……你认识那么多人，估计，搞个小团体之类的。"
+    by eye_still o "你们要是真的合起伙来强迫，难道还能拒绝吗。"
+    "白一的语气轻飘飘的，但每句话都在反驳姒舞。"
+    hide swimg 
+    show swimg eye_sad o at char_mid
+    sw "好吧，我是有，但……干嘛把别人都想得这么坏啊！"
     "姒舞气鼓鼓地瞪着白一，白一没反应，只是冷冷地看回去。"
+    hide swimg 
+    show swimg eye_sad o at char_mid
     sw "她……我……"
+    hide swimg 
+    show swimg eye_sad at char_mid
+    sw "真的不是你想的那种啊。"
+    by eye_still o "……那是哪种？"
+    hide swimg 
+    show swimg eye_sad o at char_mid
     sw "她——"
     "姒舞深吸一口气。"
+    hide swimg 
+    show swimg eye_squint o at char_mid
     sw "她之前在厕所没有卫生巾被我遇见了我就给了她一张后来发现她经济条件不太好所以有时候会借口让她帮我买东西顺便把买的东西送她一点"
+    hide swimg 
+    show swimg o at char_mid
     sw "然后……事情就是这样。"
-    sw "我才没有霸凌……真要说那明明是隔壁——呸呸……"
+    hide swimg 
+    show swimg eye_sad at char_mid
+    sw "我才没有霸凌……{size=23}真要说那明明是隔壁——呸呸……{/size}"
+    hide swimg 
+    show swimg at char_mid
     "她不满地嘟了嘟嘴，一边小声嘟囔着什么一边从兜里掏出手机。"
     "手指对着屏幕划了几下，朝着白一的方向展示。"
     "屏幕上是一段聊天软件的记录，看起来是姒舞和她另一个朋友的对话。"
-    "“/表情包-喂”"
-    "“喂，人呢？不会又去找温心了吧。”"
-    "“对，刚好给她送一点东西。”"
-    "“真能行吗？这么频繁，不会被她发现吧。”"
-    "“不会，她是好人，只要说是帮忙就不会多想。”"
-    "“/表情包-无语”"
+
+    s_nvl "喂喂喂"
+    s_nvl "喂，你人呢？不会又去找温心了吧"
+    r_nvl "对啊，刚好去给她送一点东西"
+    s_nvl "真能行吗？这么频繁，确定不会被她发现？"
+    r_nvl "不会，她是好人，只要说是帮忙就不会多想的"
+    s_nvl "切……"
+    s_nvl "最好是这样咯"
+
+    scene bg_buildingoutside with fade
+    show swimg eye_blink at char_mid with dissolve
     sw "喏……就是这样，够解释了嘛？"
-    by "……"
-    by "你们真的没有霸凌？"
-    "明知道是废话，但白一还是脱口而出。"
-    sw "对呀！"
+    hide swing
+    show swimg at char_mid
+    by eye_move e "……"
+    by ey_def o "你们真的没有霸凌？"
+    "明知道是废话，但白一还是想都没想，脱口而出。"
+    hide swimg
+    show swimg eye_blink o at char_mid
+    sw "对呀！那当然了！"
+    hide swimg
+    show swimg eye_blink at char_mid
     by "所以……你的意思是，其实是同学之间的互帮互助？"
+    hide swimg
+    show swimg laugh at char_mid
     sw "对呀！"
+    hide swimg
+    show swimg o at char_mid
     sw "这还不够明显嘛？对了，你去问温心呀，问我有没有欺负她嘛。"
-    by "……"
+    by eye_shock def "……"
     "白一对此保持沉默。"
-    "这一次，她沉默了很久，最后也只是用粗劣的话语搪塞话题的结尾。"
+    "这一次，她沉默了很久，最后也只是用粗劣的话语搪塞。"
+    "对话匆匆结束，讨论的事情也不了了之。"
+    scene bg_buildingoutside with Fade(0.5,0.8,0.5)
     "白一和温心并不熟悉，不如说几乎是陌生人，只是刚好同在一个班上学而已。"
     "自然，也没有多余的心神去考虑她的事。"
-    "直到此时此刻，白一才开始“感知”到她的死亡。"
+    "直到此时此刻，姒舞直接问出的那句话，白一才开始“感知”到她的死亡。"
     "一个人的死亡意味着什么？"
     "无法被看到。"
     "无法为自己说话。"
     "无法再做到任何事。"
     "最后……彻底消失在这个世界上。"
+
+    scene bg_buildingoutside with Fade(0.5,0.8,0.5)
     me "话说，你有注意到她当时没说完的话吗？"
-    by "啥玩意？"
+    by eye_def o "啥玩意？"
     me "说到霸凌的时候，说隔壁什么的……"
-    by "……"
-    by "那都无所谓吧。"
-    me "啊……只是稍微有点好奇。"
-    by "那你好奇着吧……我对其他人的事不感兴趣。"
-    me "温心也算其他人吗？"
-    by "……你是白痴吗？"
-    by "我现在在这里做这些麻烦事，只是因为我……不，只是因为西顺要我这么做而已。"
-    by "至于其他人，当然跟我没有任何关系。"
+    by eye_def def "……"
+    by eye_still e "可能是在说其他班同学被霸凌？"
+    me "对啊，那——"
+    by eye_move o "那都无所谓吧。"
+    me "啊……就是稍微有点好奇。"
+    by eye_close o "那你好奇着呗……我对其他人的事不感兴趣。"
+    me "你不也问了温心的事……温心也算其他人吗？"
+    by eye_still e "……你是白痴吗？"
+    by eye_def o "我现在在这里做这些麻烦事，只是因为我……不，只是因为西顺要我这么做而已。"
+    by eye_close o "至于其他人，当然跟我没有任何关系。"
     return
