@@ -275,7 +275,7 @@ label c1_4:
     "无论是关心，担心，或是猎奇，最后都会变成窥视的目光。"
     "已经死去的人无法回应，剩下的只有白一作为目光的载体。"
 
-    scene bg_buildingoutside with Dissolve2
+    scene bg_buildingoutside with Dissolve(2)
     by eye_still def "啧……"
     "走出教室，白一开始了停止一下午的抱怨。"
     by eye_close o "人果然不能把话说得太满，我现在觉得吹冷风也不错。"
@@ -374,75 +374,109 @@ label c1_4:
     "姒舞眨了眨眼睛，一脸的好奇求知。"
     me "……你们这到底是什么对话？"
     by eye_shock def "……"
+    hide swimg
+    show swimg at char_mid
     "白一还以为自己的耳朵出了问题。"
-    by "叫白一。"
-    by "我刚刚都是瞎说的，这你都信？"
+    by eye_still e "……叫白一。"
+    by eye_wacky def "我刚刚都是瞎说的，这你都信？"
+    hide swimg
+    show swimg eye_blink o at char_mid
     sw "诶诶是吗？可是，不是还挺有趣的吗？"
+    hide swimg
+    show swimg eye_blink laugh at char_mid
     sw "嘿嘿，不管你是幽灵姐姐，还是白一，都很有意思啊~"
-    by "……"
-    by "你到底找我有什么事？"
-    "白一不知道怎么接话，开始自顾自地转移话题。"
+    hide swimg
+    show swimg at char_mid
+    by eye_wacky def "……"
+    by eye_def o "你到底找我有什么事？"
+    "白一也是看出来了，姒舞大概就是故意来找乐子的。"
+    "她不知道怎么接话，开始自顾自地转移话题。"
+    hide swimg
+    show swimg eye_blink o at char_mid
     sw "没什么事呀，就是过来看看你。"
+    hide swimg
+    show swimg eye_squint smile at char_mid
     sw "那些学校的谣言，你没被影响真是太好了~"
-    by "哦，好吧。那没事了吧。"
+    by eye_def e "哦，好吧。那没别的事了吧。"
     "话音刚落，白一朝着姒舞摆摆手，就要离开。"
+    hide swimg
+    show swimg o at char_mid with vpunchs
     sw "唉等等等等——"
-    by "你到底要干嘛啊？"
+    by eye_def o "你到底要干嘛啊？"
+    hide swimg
+    show swimg smile at char_mid
     sw "你电话号码多少啊，加个好友呗~"
-    sw "不想说电话的话，加wegroup账号也可以呀！"
-    by "……我没有那玩意。"
+    hide swimg
+    show swimg laugh at char_mid
+    sw "不想说电话的话，加wegroup账号也可以的呀！"
+    by eye_def def "……我没有那玩意。"
+    hide swimg
+    show swimg o at char_mid
     sw "哪有，学校里不是每个人都要加通知群的吗？"
-    by "对啊，所以我加完就再也没打开过软件了。"
+    by eye_def o "对啊，所以我加完就再也没打开过软件了。"
+    hide swimg
+    show swimg eye_squint at char_mid
     sw "……呜……"
+    hide swimg
+    show swimg o at char_mid
     sw "那就电话嘛，电话号码！"
     "相对白一的不耐烦，姒舞显得十分热情，甚至让白一有些难以招架。"
-    by "不，你……"
+    hide swimg
+    show swimg at char_mid
+    by eye_still e "不，你……"
     "滋——滋——"
     "手机的震动阻断了白一要说的话。"
     "她愣了愣，而后肉眼可见地松了一口气。"
-    by "看到了吗？我还有事，先走咯。"
+    by eye_def o "看到了吗？我还有事，先走咯。"
     "她掏出手机，学着之前姒舞的样子在她面前晃了晃屏幕。"
+    hide swimg
+    show swimg o at char_mid with vpunchs
     sw "唉不是——等等呀——"
-    by "虽然平时觉得很烦，但现在这个电话效果还不错。"
+
+    scene bg_buildingoutside with Dissolve(2)
+    by eye_def o "虽然平时觉得很烦，但现在这个电话效果还不错。"
     "说完，白一按断了电话。"
     me "……那你还挂人家电话。"
-    by "待会打回去就是了。"
-    by "我现在先缓缓……"
+    by eye_close o "待会打回去就是了。"
+    by eye_close def "我现在先缓缓……"
     me "怎么，被你自己说的瞎话吓到了吗。"
     "想到刚刚的场景，我不由得笑出声来。"
-    by "靠，你别说了……"
+    by eye_wacky def "靠，你别说了……"
     me "是你先编排我的呀，我什么时候抢你身体了？"
-    by "好吧，我只是想吓一吓她。"
-    by "但现在她绝对把我也当成有中二病的傻逼了，跟她一样。"
+    by eye_move e "……我就随口一说。"
+    by eye_close o"好吧，我只是想吓一吓她。"
+    by eye_wacky e "但现在她绝对把我也当成有中二病的傻逼了，靠，跟她一样。"
     me "嗯……听起来的确就是啊，中二病。"
-    by "……滚啊！！"
-    by "她什么毛病啊？"
+    by eye_close o "……滚啊！！"
+    by eye_close e "真受不了……她什么毛病啊？"
     "白一百思不得其解，发出有些崩溃的声音。"
-    by "一般来说不都应该很害怕鬼故事的吗？"
-    me "讲鬼故事需要点气氛……但你完全是平铺直叙嘛。"
+    by eye_still o "一般来说不都应该很害怕鬼故事的吗？"
+    me "嗯……可能讲鬼故事需要点气氛……但你完全是平铺直叙嘛。"
     me "连语气都毫无变化。"
     me "比读课文还平淡。"
-    by "停，闭嘴。"
-    by "有本事你讲。"
+    by eye_still o "停停停，闭嘴。"
+    by eye_close o "你还说得起劲了，有本事你讲。"
     me "我……这不是只有你能听见我的声音嘛。"
     "我绝对不说自己也不会这件事。"
-    by "哼。"
+    by eye_close def "哼。"
     "白一一边骂骂咧咧，一边打开手机，拨出号码。"
-    by "喂？刚刚有点事，没接电话。"
+    by eye_def o "喂？刚刚有点事，没接电话。"
     xs "哦没事啊，我就是跟你说——"
-    by "明天我能去找你吗？"
-    xs "嗯？有必要特地过来一趟吗。虽然我有事，但你不是……"
-    by "反正我也不方便去上学了啊，当然我也不想去。"
+    by eye_def o "明天我能去找你吗？"
+    xs "嗯？有必要特地过来一趟吗。虽然我有事要说，但你不是……"
+    by eye_def o "你就说行不行呗。"
+    xs "可以是可以……但是我没想着耽误你上学，你——"
+    by eye_def o "停，反正我现在也不方便去上学，当然我也不想去。"
     "至少在这段风波过去之前……现在的确不太适合。"
     xs "什么意思，你怎么了？"
-    by "哦，你自己去查吧。"
-    "白一轻轻地嗤笑了一声，然后挂了电话。"
+    by eye_close o "哦，你自己去查吧。"
+    "白一无所谓地嗤笑了一声，然后挂了电话。"
     "刚才打电话的人是西顺，据说是“调查出了一些事情”。"
-    "白一趁机提出要求，不为别的，就是暂时远离一下学校。"
+    "白一趁机提出要求，不为别的，就是暂时远离一下学校和学校的事情。"
     "打完电话后一会，西顺传来了短信，是她的办公地址，看来是交涉成功了。"
     "盯着那行字看了一会，白一放下手机，轻轻呼出一口气。"
     me "……至少说明她们还是有在继续查的，是吧？"
-    by "那又怎样？这不是她的应该做的工作吗。"
+    by "那又怎样？这是她的工作啊，不做这个做什么。"
     by "再说了，现在大概是事情刚发生没多久，不好搪塞我吧。"
     by "一直查不出来，过一段时间估计就会被放置了。"
     me "……"
@@ -459,12 +493,13 @@ label c1_4:
     $ quick_menu = True
     "提前打过招呼，白一很顺利地进了门，上二楼。"
     "之前待过的房间关着门，白一试探着敲了敲。"
-    by "喂，有人——"
-    by "……吗？"
+    by eye_still o "喂，有人——"
+    by eye_def def "……吗？"
     "门没有关紧，被白一碰了一下就推开了。"
     "而门后的，是两道贴得很近的身影。"
     "这两个身影还都很熟悉，前不久才见过。"
     "以至于白一愣在原地，想说的话也被截断。"
+    "下一秒，她想都没想，火速把门再次关好。"
     me "哇哦。"
     by "呃……你们，这是？"
     xs "不好意思，看错时间。"

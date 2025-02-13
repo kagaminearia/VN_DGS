@@ -16,13 +16,14 @@ define unknown = Character("？？",what_prefix="“",what_suffix="”")
 define stuA = Character("同学A",what_prefix="“",what_suffix="”")
 define stuB = Character("同学B",what_prefix="“",what_suffix="”")
 define fem = Character("女性",what_prefix="“",what_suffix="”")
+define teacher = Character("老师",what_prefix="“",what_suffix="”")
 
 
 image side byimg = LayeredImageProxy("byimg", Transform(zoom=0.49,xoffset=-250,yoffset=1450))
 
 
-define s_nvl = Character("Nighten", kind=nvl)
-define r_nvl = Character("Eileen", kind=nvl)
+define s_nvl = Character("", kind=nvl)
+define r_nvl = Character("", kind=nvl)
 
 
 # 白一
