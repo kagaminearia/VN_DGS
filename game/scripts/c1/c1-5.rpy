@@ -1,49 +1,88 @@
 label c1_5:
-    "——12月20日，上学路"
+    $ quick_menu = False
+    window hide
+    scene bg_buildingoutside with Fade(0.5,0.8,0.5)
+    show screen tpoinfo("12月20日，星期一","丰宁二中") with dissolve
+    pause 1
+    hide screen tpoinfo with dissolve
+    show tophalfblk with dissolve
+    window show
+    $ quick_menu = True
     by "哈……啾！"
     "白一胡乱地抹了鼻子几下，有些不爽。"
-    by "靠，都好几天了，感冒怎么还没好，鼻子都要被擦烂了。"
+    by eye_still e "靠，都好几天了，感冒怎么还没好，鼻子都要被擦烂了。"
     me "的确……有点痛。要不你再多穿点？"
     "我跟着吸了吸鼻子。"
-    by "已经很多了啊，再叠就穿不上校服外套了。"
-    by "而且室内有些地方温差大容易出汗，到时候更冷了。"
+    by eye_close o "已经很多了啊，再叠就穿不上校服外套了。"
+    by eye_def o "而且室内有些地方温差大容易出汗，到时候更冷了。"
     me "好吧……"
-    by "要我说最好的解决方式就是不上学。"
-    by "在家待着就什么事都没了，是吧？"
+    by eye_def e "要我说最好的解决方式就是不上学。"
+    by eye_def o "在家待着就什么事都没了，是吧？"
     me "呃……嗯。"
-    by "所以说啊——"
+    by eye_close o "所以说啊——"
+    show swimg laugh at char_mid with vpunchs
     sw "白一！"
     "肩膀突然从后面被人拍了一下，白一整个人都有一瞬的颤抖，差点就要原地跳起来。"
     "回过头，果不其然是一脸笑意的姒舞。"
+    hide swimg
+    show swimg o at char_mid
     sw "咦，你刚刚在说什么呢？"
-    by "……呃，刚刚有电话。"
+    hide swimg
+    show swimg at char_mid
+    by eye_move e "……呃，刚刚有电话。"
     "没想到会在上学路上偶遇，白一顿住，用手指了指耳朵上挂着的耳机。"
-    me "扑哧……看来耳机还是很有用的。哎呀。"
+    me "噗……没想到耳机还真的派上用场了。"
     "我忍不住笑了出来，被白一在兜里掐住了手指。"
+    by "{size=23}……滚啊。{/size}"
+    hide swimg
+    show swimg o at char_mid
     sw "啊？这样啊，不好意思不好意思……"
-    by "呃……没事，打完了。"
-    by "你呢，又有什么事？"
+    by eye_move o "不……没事，打完了。"
+    by eye_def o "所以你又有什么事？"
+    hide swimg
+    show swimg smile at char_mid
     sw "没有啊，这不是看到你，来打个招呼嘛。"
+    hide swimg
+    show swimg eye_blink smile at char_mid
     sw "对了对了，你看我们这么有缘，干脆就交换个号码呗~"
-    by "嗯……好啊。"
+    by eye_still e "嗯……好啊。"
     me "等等，你不会真的想查她的手机号吧。"
     "白一从喉咙里发出极其轻微的哼声，我知道我大概猜对了。"
+    hide swimg
+    show swimg o at char_mid
     sw "就算不——咦？你同意啦？"
+    hide swimg
+    show swimg smile at char_mid
     "姒舞惊喜的表情不似作伪，以至于白一都有些迟疑。"
     "白一自认自己是个毫无优点，也十分无趣的人，对于太过主动热情的姒舞，不得不觉得奇怪。"
     by "所以你为什么非要找我？"
+    hide swimg
+    show swimg eye_squint smile at char_mid
     sw "因为你没朋友啊。"
-    by "？"
+    by by eye_shock def "？？？"
+    me "……这是可以直接说的吗？"
+    hide swimg
+    show swimg o at char_mid
     sw "啊……不好意思，我不是那个意思啦。"
-    sw "就是……其实……好吧我有点讨厌你们班的一个人，但你和班上的人好像关系都不好。"
+    hide swimg
+    show swimg eye_squint o at char_mid
+    sw "好吧，其实也有点那个意思……"
+    by by eye_wacky def "？"
+    hide swimg
+    show swimg eye_blink o at char_mid
+    sw "就是……我有点讨厌你们班的一个人，但你和班上的人好像关系都不好。"
+    hide swimg
+    show swimg eye_squint laugh at char_mid
     sw "所以……敌人的敌人就是朋友！你懂的！对吧？！"
-    by "……"
-    "在这之前，白一其实私下阴谋论了好几回。"
-    "但没想到的是，最后姒舞给出的是这样一个堪称……无语的回答。"
-    by "我感觉，好像可以不用让西顺查姒舞的手机号了。"
+    by eye_wacky def "……"
+    "关于姒舞异常的热情，在这之前，白一其实私下阴谋论了好几回。"
+    "但她完全没想过，最后姒舞给出的是这样一个堪称……无语的回答。"
+
+    scene bg_canteen with Fade(0.5,0.8,0.5)
+    by eye_def o "我感觉，好像可以不用让西顺查姒舞的手机号了。"
     "食堂，咽下一口饭后，白一突然开口。"
     me "嗯？为什么突然说这个。"
-    by "我感觉她好像没有脑子。"
+    by eye_still e "我感觉她好像没有脑子。"
     by "不，不对……怎么说，应该说脑子里都是八卦？"
     by "看起来不像是会做出杀人这种事还能隐瞒过去的人。"
     me "噗……"
@@ -153,7 +192,8 @@ label c1_5:
     xs "如果没有权力，我现在也没办法继续寻找真相，你的事情也会无疾而终。"
     by "……哈？"
     by "所以你的意思是我是多么荣幸，能承你的情咯？"
-    by "是不是还要对你感恩戴德才行？"
+    by "是不是还要对你感激万分才行？"
+    "这样的话似曾相识，白一之前也说过，现在仍然是同样的毫不留情。"
     xs "我并不是那个意思。"
     xs "只是想说，我没有能够通天的权力改变一切，只能尽力在自己的范围内做好。"
     xs "在这一点上，我和你的目的是相同的，我也至少不会因为权力害你。"
@@ -200,17 +240,25 @@ label c1_5:
     xs "我是说你自己。"
     by "……那，不是还有三个月吗。"
 
-    "——12月24日，教室——"
     
+    $ quick_menu = False
+    window hide
+    scene bg_classroom with Fade(0.5,0.8,0.5)
+    show screen tpoinfo("12月24日，星期五","丰宁育才中学") with dissolve
+    pause 1
+    hide screen tpoinfo with dissolve
+    show tophalfblk with dissolve
+    window show
+    $ quick_menu = True
     by "嘶……"
     by "感觉，我现在什么别的都不想考虑了。"
     "看着发下来的资料，白一倒吸一口凉气。"
     me "怎么了。"
-    by "眼前的才是最大的困难。"
+    by eye_still e "这才是现在最大的困难，其他的都滚一边去。"
     "她用手指了指白纸上的黑字，大标题“丰宁育才中学年度体质测验”。"
     "手指又向下划，到中间的某一行，“跑步：1000米”。"
     by "去年还是800米的，今年又加了……"
-    by "这大冷天，800我都不想跑……"
+    by "这大冷天，别说1000，800我都不想跑……"
     "她的声音幽幽传来，带着快要断气的感觉。"
     by "你能不能帮我跑啊？"
     me "……你又开始异想天开了。"
@@ -241,7 +289,7 @@ label c1_5:
     "实不相瞒，刚才我差点就要被那高度紧张的精神压垮了。"
     "只是，或许是因为身体跟着用力，放松下来后，有种四肢发麻的感觉。"
     "直到慢悠悠跟着做完跑步前的伸展运动，也没能让手脚多一些力气。"
-    # 【师】……下一组……白一……
+    teacher "……下一组……白一……"
     "听到自己的名字，白一打了一个激灵，赶忙上前，站到操场的跑道上。"
     "砰——"
     "发令枪响，脚步声也跟着迅速响起。"
