@@ -286,7 +286,7 @@ label c1_4:
     me "虽然我能理解你，但你这个比喻……"
     by eye_move e "这样才能表达我的恶心感。呕……"
     me "好吧……"
-    "竟然很有道理。我大概是被她同化了。"
+    "我竟然觉得很有道理。大概是被她同化了。"
 
     scene bg_schoolcorri with Dissolve(2)
     show swimg laugh at char_mid with moveinleft
