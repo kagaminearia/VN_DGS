@@ -48,6 +48,8 @@ layeredimage byimg:
             "images/char/by/eye-shock.webp"
         attribute eye_move:
             "images/char/by/eye-move.webp"
+        attribute eye_squint:
+            "images/char/by/eye-squint.webp"
 
     group mouse:
         attribute def default:
@@ -269,6 +271,8 @@ layeredimage xsimg:
             "images/char/xs/eye-squint.webp"
         attribute eye_shock:
             "images/char/xs/eye-shock.webp"
+        attribute eye_still:
+            "images/char/xs/eye-still.webp"
 
     group mouse:
         attribute def default:

@@ -527,59 +527,116 @@ label c1_4:
     scene bg_corri with ccirclewipe
     me "……嗯？？"
     by "呃……你们，这是？"
+    show xsimg o at char_right with moveinright
     xs "不好意思，看错时间。"
     "西顺重新打开门，冲白一笑了一下，这才把衣领扯好，又顺手拉开了旁边的椅子。"
-    xs "先坐啊，慢慢说。"
-    by "哦……"
+    hide xsimg
+    show xsimg laugh at char_right
+    xs "先进来啊，慢慢说。"
+    by eye_def def "哦……"
     "白一努力眨了眨眼睛，发现眼前的场景并没有变化后，有些木然地坐下。"
-    xs "结论就是，你上次的推测没什么问题。"
-    by "啊？什么？"
-    xs "最近，在外卖平台排查记录之后，查到那天有一个17:33的购买的订单，派送地址是温心的家。"
+
+    scene bg_meetingroom with dissolve
+    show xsimg at char_mid with moveinleft
+    by eye_def o "所以你要跟我说什么？"
+    hide xsimg
+    show xsimg o at char_mid
+    xs "嗯，要说的其实就是，你上次的推测没什么问题。"
+    by eye_def o "啊？什么？"
+    xs "最近，在外卖平台排查那天的记录之后，查到有一个17:33的购买的订单，派送地址是温心的家。"
+    hide xsimg
+    show xsimg eye_still o at char_mid
     xs "但你是大概六点多到的。所以……那天的确有另一个人去过那里。"
-    xs "哦，你的时间是通过手机定位估算的，可能有误差，但不会很多。"
-    by "原来如此。"
-    by "噢，对了……那天我好像因为作业没写完被留堂，之后又被班主任叫去给温心送资料。"
-    by "这应该就是我去她家的原因，而且还去得很晚。"
-    xs "哦，这样……那就更不会是你了，你总不可能在学校就提前用手机点外卖。"
-    by "查不出来是谁点的吗？"
+    hide xsimg
+    show xsimg o at char_mid
+    xs "哦，你到的时间是通过手机定位估算的，可能有误差，但不会很多。"
+    by eye_def o "原来如此。"
+    hide xsimg
+    show xsimg at char_mid
+    by eye_still e "噢，对了……那天我好像因为作业没写完被留堂，之后又被班主任叫去给温心送资料。"
+    by eye_def o "这应该就是我会去她家的原因，而且还去得很晚。"
+    hide xsimg
+    show xsimg o at char_mid
+    xs "这样的确说得通……只是不知道你到的时候，案发现场是什么状态。"
+    by eye_still e "……反正我都记不得，没区别吧。"
+    hide xsimg
+    show xsimg at char_mid
+    xs "啊……也是。"
+    by eye_def o "查不出来是谁点的吗？外卖。"
+    hide xsimg
+    show xsimg eye_close o at char_mid
     xs "没办法，找不到下单的操作设备，只能从外卖平台的网上数据一个个找。"
-    xs "这种留下的记录不多，只有电话号码，也已经弃用了，没有有效信息。"
-    by "哦……好吧。"
+    hide xsimg
+    show xsimg o at char_mid
+    xs "这种留下的记录不多，只有电话号码。号码也是一次性的，已经弃用了，没有有效信息。"
+    by eye_close def "哦……好吧。"
+    hide xsimg
+    show xsimg eye_still o at char_mid
     xs "不过，你想起来那天发生的事情了？"
-    by "那没有……别人跟我说的。"
+    by eye_still o "不是啊，我刚不都说了，我都不记得。是别人跟我说，我那天去送资料的。"
+    hide xsimg
+    show xsimg eye_move smile at char_mid
     xs "难怪……你直接问的他们？因为你自己不记得前几天的事？"
-    "西顺的脸上浮现出有些戏谑的笑容，像是在说“别人有没有觉得很奇怪”。"
-    by "滚啊……才不是。"
-    by "是因为……呃。"
-    "像是想到什么，白一止住了话。"
+    "西顺的脸上浮现出有些戏谑的笑容，像是在说“别人有没有觉得你很奇怪”。"
+    hide xsimg
+    show xsimg eye_move at char_mid
+    by eye_close o "滚啊……才不是。"
+    by eye_move e "是因为……呃。"
+    "说到一半，像是想到什么，白一止住了声音。"
     me "你不打算跟她说吗？这也是相关的事情吧。"
-    by "嗯……"
+    by eye_move def "嗯……"
     me "而且你来之前不也说了不去学校的事情。"
+    hide xsimg
+    show xsimg o at char_mid
     xs "什么事情？"
     me "噗……"
-    "差点忘了，这里有个人能听到我说话……我再次被吓出了一身冷汗。"
-    by "哦，我班长，就是报案人，说她收到通知，温心是自己失手忘关火，意外中毒死亡的。"
-    by "然后学校里就有传言，说那天我也去了她家，是我杀了她，还没事。"
-    by "总之，传言很多，顺便说了我去她家的原因，还说了一堆超假的恩怨情仇。"
-    by "然后就是我跟你说我不方便去学校了。"
+    "差点忘记，这里还有个人能听到我说话……"
+    "明明已经知道了，我还是又被吓出了一身冷汗。"
+    by eye_def o "哦，我班长，就是报案人，说她收到通知，温心是自己失手忘关火，意外中毒死亡的。"
+    by eye_def o "然后学校里就有传言，说那天我也去了她家，是我杀了她，还没被抓起来。"
+    by eye_move o "总之，传言很多，我也是从这里听说的我是去送资料。"
+    by eye_eye_still e "哦，还说了一堆超假的恩怨情仇。"
+    by eye_close o "然后就是我跟你说我不方便去学校了。"
+    hide xsimg
+    show xsimg eye_still at char_mid
     xs "……"
     "西顺的唇角顿时拉平，眉间也拧成小小的山丘。"
-    xs "可能是他们先斩后奏直接结案了……抱歉，我之前有阻止，但好像没拦住。"
-    by "别，不用跟我道歉。"
+    hide xsimg
+    show xsimg eye_still o at char_mid
+    xs "可能是他们先斩后奏，直接结案通知了……抱歉，我之前有阻止，但好像没拦住。"
+    by eye_still o "别，倒也不用跟我道歉。"
+    hide xsimg
+    show xsimg at char_mid
     "白一摆摆手，垂下眼睛，一副厌倦的样子。"
-    by "反正，也无所谓……"
+    by eye_close def "反正，其实也无所谓……"
+    hide xsimg
+    show xsimg o at char_mid
     xs "学校那边的流言，我会找人帮你平息的。"
+    hide xsimg
+    show xsimg eye_close o at char_mid
     xs "在那之前，再去趟晟欧路？"
     "晟欧路是温心住的地方，上一次去的时候西顺临时收到电话，于是匆匆叫停。"
-    by "啊？干嘛？"
-    xs "现在有查出来证实了推测嘛，所以我就去申请了一下。虽然城安局不会管，但我可以自己查了。"
-    by "跟之前有区别？不也是你自己查？"
-    xs "有啊，区别在于……我不会被扣工资了。"
-    by "……神经。"
+    by eye_def o "啊？要干嘛？"
+    hide xsimg
+    show xsimg o at char_mid
+    xs "现在有查出来线索，证实了推测嘛，所以我就去申请了一下。"
+    hide xsimg
+    show xsimg at char_mid
+    xs "虽然城安局不会管这件事，但我可以自己查了。"
+    by "……跟之前有区别？不也是你自己查？"
+    hide xsimg
+    show xsimg eye_close o at char_mid
+    xs "有啊，区别就在于，我不会因为查这个被扣工资。"
+    by eye_still e "……神经。"
+    hide xsimg
+    show xsimg o at char_mid
     xs "当然，还有可以帮你摆平学校的事。"
-    by "……"
+    by eye_move def "……"
+
+    scene bg_building1 with Fade(0.5,0.8,0.5)
     "再次来到晟欧路，这里仍然是脏乱的，在阴沉的天空下，显得格外灰扑扑。"
     "白一没有想要做什么的打算，只是慢慢跟在西顺身后。"
+    scene bg_stairwell1 with Dissolve(1)
     "踱步上楼到楼梯口，正好听到西顺在和一个人说话。"
 
     show cg_xs00 at cg0 with Dissolve(1.5)
@@ -602,17 +659,17 @@ label c1_4:
     xs "就是让您觉得和平时不太一样的，或者吸引到注意的。"
     fem "别的……好像没有了。"
     fem "对，都是上周的事情了，你看我这年纪了记性也不好，要是说错了更不行是吧。"
-    xs "好，好。"
+    xs "好，没问题，好。"
     xs "那……您要是发现之后还有人来找温心，或者有不认识的人过来的，能告诉我一下嘛？"
     fem "行啊，诶，没事的，不是什么大事儿，你给我这个我可不能收……"
 
-    scene corri1 with fade
+    scene bg_stairwell1 with fade
     show xsimg o at char_mid with moveinbottom
     xs "你怎么一直站在这？"
     hide xsimg 
     show xsimg at char_mid 
     by eye_shock o "哇啊！吓我一跳……"
-    by eye_still e "你们聊完了啊……我站在这等你啊，不然呢。"
+    by eye_still e "你们聊完了啊……我站在这，当然是等你啊，不然呢。"
     hide xsimg 
     show xsimg eye_close smile at char_mid
     "西顺盯着白一看了一会，突然无奈地笑了。"
@@ -626,45 +683,95 @@ label c1_4:
     show xsimg at char_mid 
     by eye_still e "……怎么可能会丢，我又不是弱智。"
     by eye_def o "这不是怕出去破坏了你们的交流吗，你说的搬家是什么鬼？"
+    hide xsimg 
+    show xsimg o at char_mid 
     xs "哦，我说我是温心的远房亲戚，听说她搬走了找不到，问她知不知道有什么人找过温心。"
     by eye_wacky e "……你真会编。"
-    xs "还行，毕竟我现在不能直接给证件查啊。"
+    hide xsimg 
+    show xsimg eye_close o at char_mid 
+    xs "还行，毕竟我现在不能直接给证件查啊，能忽悠两句就忽悠着吧。"
     "面对白一敷衍的语气，西顺耸了耸肩膀。"
-    xs "那你应该都听清了吧。"
-    by "是啊……长发女生。"
-    # 【人物选项卡-选错】【白】拜托，我说的是长发女生。
-    # 【选对】
-    by "等等，姒舞不就是长发女生吗？"
-    me "她不是解释过了嘛。"
-    by "有可能说谎啊，手机消息也可能是假的啊，提前做个记录又不难。"
-    me "……但是至于吗？"
-    by "都要杀人了怎么不至于。"
-    by "总不能是班长做的吧，班长短发啊。"
+    hide xsimg 
+    show xsimg o at char_mid
+    xs "所以，你在这听墙角……刚刚的话，你应该都听清了？"
+    by eye_close o "是啊……说看到长发女生嘛。"
+    hide xsimg 
+    show xsimg at char_mid
+    "白一无所谓地复述关键字，而后忽然愣住。"
+    by eye_def e "等等，姒舞不就是长发女生吗？"
+    me "……怎么忽然想到她？"
+    by eye_def o "因为……她看起来很可疑？"
+    by eye_def o "那么积极地找我拉近关系……还和霸凌的事相关。"
+    me "那个她之前不是解释过了嘛。"
+    by eye_close o "有可能说谎啊，手机消息也可能是假的啊，提前做个记录又不难。"
+    me "……是可能，但是至于吗？"
+    by eye_move e "都要杀人了怎么不至于。"
+    by eye_def o "总不能是班长做的吧，班长短发啊。"
+    me "但你这个怀疑也太随便了……"
+    by eye_close e "是啊，本来就是随便说的。"
+    me "喂……"
+    by eye_def o "反正也没别的线索啊？不是说从相关联的人和事调查吗。"
+    by eye_move e "那相关联的，不就这几个吗。"
+    hide xsimg 
+    show xsimg o at char_mid
     xs "等等……你们说的姒舞是谁？"
-    by "哦……你不知道。一个隔壁班的，据说是霸凌温心的人。"
-    by "哦，但本人并不承认。"
-    xs "霸凌啊……有点意思。"
+    "西顺终于忍不住开口询问。"
+    hide xsimg 
+    show xsimg at char_mid
+    by eye_def o "哦……你不知道。一个隔壁班的，据说是霸凌温心的人。"
+    by eye_def o "哦，但本人并不承认。"
+    hide xsimg 
+    show xsimg eye_still o at char_mid
+    xs "霸凌啊……这有确认过是真的吗？"
     "西顺咂了咂嘴，表情有些意味不明。"
+    by eye_move e "我怎么知道？反正她说不是。"
+    hide xsimg 
+    show xsimg o at char_mid
     xs "那，解释又是什么？她说她没有霸凌？"
-    by "对啊，她就是这么说。"
+    by eye_def o "对啊，她就是这么说。"
+    hide xsimg 
+    show xsimg at char_mid
     "白一比划了一下，把姒舞当时的说法复述了一遍。"
-    by "所以我正好想问，能不能查一下她的手机？"
+    by eye_def o "所以我正好想问，能不能查一下她的手机？"
+    hide xsimg 
+    show xsimg o at char_mid
     xs "这个没那么容易。"
-    by "为什么，你不都查了我了吗？"
-    xs "之前你被送到城安局，我们收过你的手机。你说的那个都没设备从哪查？"
-    by "这样的吗……"
-    xs "而且这是犯法的好吧，我只是打个比方，你不要真的在想啊。"
-    by "如果有手机号码呢？"
+    by eye_def o "为什么，你不都查了我的吗？"
+    hide xsimg 
+    show xsimg eye_move o at char_mid
+    xs "之前你被送到城安局，我们收过你的手机。你现在说的都没设备从哪查？"
+    by eye_still e "哦，这样的吗……"
+    hide xsimg 
+    show xsimg o at char_mid
+    xs "而且这样私自查是犯法的好吧，我只是打个比方，你不要真的在想啊。"
+    by eye_def o "如果有手机号码呢？"
+    hide xsimg 
+    show xsimg eye_still o at char_mid
     xs "号码，有可行性，但不能保证。"
-    xs "要纪录的话，最简单的其实是一开始就植入监控软件。像这样后期找，就只能看数据有没有在网上保存或者备份了。"
-    by "那要不试试？"
+    hide xsimg 
+    show xsimg o at char_mid
+    xs "要聊天记录的话，最简单的其实是一开始就植入监控软件。"
+    hide xsimg 
+    show xsimg eye_close o at char_mid
+    xs "像这样后期找，就只能看运气，看数据有没有在网上保存或者备份了。"
+    by eye_def o "看运气就是说有可能？那要不试试？"
+    hide xsimg 
+    show xsimg o at char_mid
     xs "不是说了这犯法吗小朋友。"
-    by "哦，好吧……我只是问问。"
+    by eye_move e "哦，好吧……我只是问问。"
+    hide xsimg 
+    show xsimg eye_still at char_mid
     "西顺盯着白一，但白一仍然只是一副无所谓的样子。"
-    xs "你——总之，我理解你的心情，但最好还是不要做太激进的事。"
-    xs "这边应该也真的没什么可以看的了，就这样吧。"
+    hide xsimg 
+    show xsimg eye_still o at char_mid
+    xs "你——总之，我理解你的心情，这事确实很难，但最好还是不要做太激进的事。"
+    by eye_move def "……"
+    hide xsimg 
+    show xsimg o at char_mid
+    xs "不过，这边应该也真的没什么可以看的了，就这样吧。"
     xs "你要我送你回去吗？"
-    by "别，不用。"
-    "和西顺打过招呼离开后，白一才冷冷地哼了一声。"
-    by "……你理解个屁啊。"
+    by eye_close o "别，不用。"
+    scene bg_building1 with dissolve
+    "和西顺打过招呼，看着她离开后，白一才冷冷地哼了一声。"
+    by eye_still def "……你理解个屁啊。"
     return
