@@ -511,13 +511,20 @@ label c1_4:
     $ quick_menu = True
     "提前打过招呼，白一很顺利地进了门，上二楼。"
     "之前待过的房间关着门，白一试探着敲了敲。"
+    show black with dissolve
     by eye_still o "喂，有人——"
+    show bg_xpxs00 at cg0 with w9
+    hide black
     by eye_def def "……吗？"
     "门没有关紧，被白一碰了一下就推开了。"
     "而门后的，是两道贴得很近的身影。"
     "这两个身影还都很熟悉，前不久才见过。"
+    show bg_xpxs01 at cg0 with dissolve
+    hide bg_xpxs00
     "以至于白一愣在原地，想说的话也被截断。"
+    scene black with circlewipe
     "下一秒，她想都没想，火速把门再次关好。"
+    scene bg_corri with ccirclewipe
     me "……嗯？？"
     by "呃……你们，这是？"
     xs "不好意思，看错时间。"
