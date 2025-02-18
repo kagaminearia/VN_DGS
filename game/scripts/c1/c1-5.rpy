@@ -8,7 +8,7 @@ label c1_5:
     show tophalfblk with dissolve
     window show
     $ quick_menu = True
-    by "哈……啾！"
+    by eye_squint o "哈……啾！"
     "白一胡乱地抹了鼻子几下，有些不爽。"
     by eye_still e "靠，都好几天了，感冒怎么还没好，鼻子都要被擦烂了。"
     me "的确……有点痛。要不你再多穿点？"
@@ -20,13 +20,21 @@ label c1_5:
     by eye_def o "在家待着就什么事都没了，是吧？"
     me "呃……嗯。"
     by eye_close o "所以说啊——"
-    show swimg laugh at char_mid with vpunchs
+    scene black
+    show bg_buildingoutside with vpunchm
     sw "白一！"
-    "肩膀突然从后面被人拍了一下，白一整个人都有一瞬的颤抖，差点就要原地跳起来。"
+    "肩膀突然从后面被人拍了一下，白一整个人都打了个激灵，差点就要原地跳起来。"
+    show cg_sw01 at cg0 with dissolve
     "回过头，果不其然是一脸笑意的姒舞。"
+    show cg_sw00 at cg0
+    hide cg_sw01
+    sw "早啊~白一~"
+    by eye_def o "……早。"
+    
+    show bg_buildingoutside with fade
     hide swimg
-    show swimg o at char_mid
-    sw "咦，你刚刚在说什么呢？"
+    show swimg o at char_mid with dissolve
+    sw "对了，刚刚好像听见你在跟谁说话？你刚刚在说什么呢？"
     hide swimg
     show swimg at char_mid
     by eye_move e "……呃，刚刚有电话。"

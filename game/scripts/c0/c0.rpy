@@ -242,7 +242,7 @@ label c0:
     "深黑色的眸子在灯下隐约闪烁着反光，如同深邃的漩涡，摄取人的心神。"
     hide xsimg
     show xsimg o at char_c
-    xs "这么说吧，特调组，还有另外一个名字。"
+    xs "嗯，让我这样解释……特调组，还有另外一个名字。"
     hide xsimg
     show xsimg at char_c
     python:
@@ -255,11 +255,13 @@ label c0:
     "但只是一瞬间。她很快又恢复气息，装作没有任何反应的样子。"
     by eye_move o "……你跟我解释这个干嘛？"
     hide xsimg
-    show xsimg eye_move smile at char_c
+    show xsimg eye_still smile at char_c
     xs "嗯，这个啊，意思就是——"
     show bg_black with dissolve
     hide xsimg
-    show xsimg laugh at char_c
-    xs "你，或者说在你身上的“那个东西”，到底是什么？"
+    pause(0.3)
+    show cg_xs10 at cg0 with dissolve
+    xs "你，或者说，{p}在你身上的{b}那个东西{/b}——"
+    xs "到底是什么？"
     
     return
