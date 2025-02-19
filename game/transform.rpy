@@ -37,3 +37,12 @@ init python:
     vpunchs = Move((0, 10), (0, -10), 0.3, bounce=True, repeat=True, delay=.275)
     vpunchm = Move((0, 40), (0, -40), 0.2, bounce=True, repeat=True, delay=.275)
     shake = Move((70, 70), (-70, -70), 3, bounce=True, repeat=True, delay=.275)
+
+
+transform shaking:
+    linear 0.1 xoffset -2 yoffset 2 
+    linear 0.1 xoffset 3 yoffset -3 
+    linear 0.1 xoffset 2 yoffset -2
+    linear 0.1 xoffset -3 yoffset 3
+    linear 0.1 xoffset 0 yoffset 0
+    repeat
