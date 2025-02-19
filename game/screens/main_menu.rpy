@@ -55,3 +55,5 @@ screen testchapter():
         textbutton ("c1-1") action Start("c1_1")
         textbutton ("c1-2") action Start("c1_2")
         textbutton ("c1-3") action Start("c1_3")
+        textbutton ("c1-4") action Start("c1_4")
+        textbutton ("c1-5") action Start("c1_5")

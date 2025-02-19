@@ -29,6 +29,10 @@ transform cg0:
     zoom 0.5
     xalign 0.5
     yalign 0.5
+
+transform cg1:
+    xalign 0.5
+    yalign 0.5
     
 
 init python:

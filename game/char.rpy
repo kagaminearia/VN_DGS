@@ -289,16 +289,16 @@ layeredimage xsimg:
 layeredimage zbimg:
     group body:
         attribute uniform default:
-            "images/char/xp/uniform.webp"
+            "images/char/zb/uniform.webp"
 
     group eyes:
         attribute eye_def default:
-            "images/char/xp/eye-def.webp"
+            "images/char/zb/eye-def.webp"
 
     group mouse:
         attribute def default:
-            "images/char/xp/m-def.webp"
+            "images/char/zb/m-def.webp"
         attribute o:
-            "images/char/xp/m-o.webp"
+            "images/char/zb/m-o.webp"
         attribute e:
-            "images/char/xp/m-e.webp"
+            "images/char/zb/m-e.webp"

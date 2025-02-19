@@ -2,14 +2,15 @@ label c1_5:
     $ quick_menu = False
     window hide
     scene bg_buildingoutside with Fade(0.5,0.8,0.5)
-    show screen tpoinfo("12月20日，星期一","丰宁二中") with dissolve
+    show screen tpoinfo("12月20日，星期一","丰宁育才中学") with dissolve
     pause 1
     hide screen tpoinfo with dissolve
-    show tophalfblk with dissolve
     window show
     $ quick_menu = True
+    show tophalfblk with dissolve
     by eye_squint o "哈……啾！"
     "白一胡乱地抹了鼻子几下，有些不爽。"
+    hide tophalfblk with dissolve
     by eye_still e "靠，都好几天了，感冒怎么还没好，鼻子都要被擦烂了。"
     me "的确……有点痛。要不你再多穿点？"
     "我跟着吸了吸鼻子。"
@@ -31,7 +32,7 @@ label c1_5:
     sw "早啊~白一~"
     by eye_def o "……早。"
 
-    show bg_buildingoutside with fade
+    scene bg_buildingoutside with fade
     hide swimg
     show swimg o at char_mid with dissolve
     sw "对了，刚刚好像听见你在跟谁说话？你刚刚在说什么呢？"
@@ -144,7 +145,7 @@ label c1_5:
     me "……啊？"
     by eye_move e "谣言要是能被轻易解决，就不会传成现在这样……"
     by eye_def def "而且被传的人还是我。"
-    by eye_close o "好吧……我瞎说的。不过，反正……大部分人都已经相信了吧，毕竟我本来就不受欢迎。"
+    by eye_close o "好吧……我瞎说的。不过，反正……大部分人都已经相信了吧，毕竟被传谣言的是我，本来就不受欢迎。"
     by eye_def o "就算之后说要澄清，大概率也是被无视或者不被相信之类的。"
     by eye_move def "嗯，大概吧。"
     "白一用最有自信的语气说出最丧气的话。"
@@ -213,7 +214,6 @@ label c1_5:
     show screen tpoinfo("12月21日，星期二","白一的家") with dissolve
     pause 1
     hide screen tpoinfo with dissolve
-    show tophalfblk with dissolve
     window show
     $ quick_menu = True
     show xsimg o at char_mid with moveinright
@@ -276,6 +276,8 @@ label c1_5:
     show xsimg o at char_mid
     xs "那样的话，我现在也没办法继续寻找真相，你的事情也会无疾而终。"
     xs "而——"
+    hide xsimg
+    show xsimg at char_mid
     by eye_wacky def "……哈？等等。"
     by eye_wacky o "所以你的意思是我是多么荣幸，能够承你的情咯？"
     by eye_wacky e "是不是还要对你感激万分才行？"
@@ -296,6 +298,8 @@ label c1_5:
     hide xsimg
     show xsimg o at char_mid
     xs "最多三个月，我们保持心平气和地说话，可以么？"
+    hide xsimg
+    show xsimg at char_mid
     by eye_move def "……"
     "白一移开视线，不去看西顺。"
     "好一会，她才闷闷地应声。"
@@ -307,6 +311,8 @@ label c1_5:
     hide xsimg
     show xsimg o at char_mid
     xs "就目前的情况，姒舞基本可以排除嫌疑，这一点上没有问题吧？"
+    hide xsimg
+    show xsimg at char_mid
     by eye_def o "我知道，其实我是大概相信她的话的。"
     by eye_move e "她……就是那样。"
     "双手无声地绞紧了手指，白一轻叹了口气，说不清自己是什么心情。"
@@ -326,6 +332,8 @@ label c1_5:
     xs "那，既然现在是这样……就先不继续查姒舞的事了，把时间放在别的地方。"
     xs "不过你平时也可以顺便关注一下，她说的温心的事情让我有些在意。"
     by eye_def o "啥？"
+    hide xsimg
+    show xsimg o at char_mid
     xs "记录显示，姒舞的确经常用帮忙的方法给温心送日用品，但是，她似乎并不知道温心前段时间生病的事。"
     by eye_def e "所以？"
     hide xsimg
@@ -415,7 +423,6 @@ label c1_5_extra:
     show screen tpoinfo("12月24日，星期五","丰宁育才中学") with dissolve
     pause 1
     hide screen tpoinfo with dissolve
-    show tophalfblk with dissolve
     window show
     $ quick_menu = True
     by "嘶……"
@@ -468,7 +475,7 @@ label c1_5_extra:
     "发令枪响，脚步声也跟着迅速响起。"
     scene black with dissolve
     "白一缀在一行人的最后，很快就拉开了差距。"
-    show bg_playground1 with shaking
+    show bg_playground1 at cg1, shaking
     "第一圈——"
     by eye_still def "嗯……"
     "第二圈——"
@@ -484,7 +491,7 @@ label c1_5_extra:
     "四肢格外沉重，手臂几乎要抬不起来，只能靠手指攥住上衣的布料保持不成型的动作。"
     "落地格外艰难，每一次脚落地时都几乎快要撑不住，软倒在地。"
     show bg_black with dissolve
-    pause 0.2
+    pause 0.1
     hide bg_black with dissolve
     "刷——"
     "白一再次被人从后面超过。"
@@ -507,8 +514,10 @@ label c1_5_extra:
     show bg_black with dissolve
     hide bg_playground2 
     pause 0.2
-    show bg_playground2 
+    show bg_playground2 with dissolve:
+        function WaveShader(period = 2, amp=1.0, repeat='mirrored', double="both")
     "眼前的景象开始变得模糊不清。"
     "疼痛与酸胀从身体各处升起。"
+    scene black with w19
     "下一秒，白一失去了意识。"
     return
