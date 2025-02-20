@@ -1,4 +1,5 @@
 image black = "#000000" 
+image white = "#ffffff"
 
 image ctc-img:
     yalign 0.96 xalign 0.81
