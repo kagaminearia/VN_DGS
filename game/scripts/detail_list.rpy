@@ -45,6 +45,11 @@ image clue4 = "images/clue/clue_4.png"
 image clue5 = "images/clue/clue_5.png"
 image clue6 = "images/clue/clue_6.png"
 image clue7 = "images/clue/clue_7.webp"
+image clue8 = "images/clue/clue_8.png"
+image clue9 = "images/clue/clue_9.png"
+image clue10 = "images/clue/clue_10.png"
+image clue11 = "images/clue/clue_7.webp"
+image clue12 = "images/clue/clue_7.webp"
 
 # character info
 define charList = [
