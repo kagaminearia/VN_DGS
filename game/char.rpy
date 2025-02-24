@@ -116,6 +116,32 @@ layeredimage fjimg:
             "images/char/fj/m-laugh.webp"
 
 
+# 梁绵绵
+layeredimage lmmimg:
+    group body:
+        attribute uniform default:
+            "images/char/lmm/shirt.webp"
+
+    group eyes:
+        attribute eye_def default:
+            "images/char/lmm/eye-def.webp"
+        attribute eye_squint:
+            "images/char/lmm/eye-squint.webp"
+        attribute eye_sad:
+            "images/char/lmm/eye-sad.webp"
+        attribute eye_close:
+            "images/char/lmm/eye-close.webp"
+
+    group mouse:
+        attribute def default:
+            "images/char/lmm/m-def.webp"
+        attribute smile:
+            "images/char/lmm/m-smile.webp"
+        attribute o:
+            "images/char/lmm/m-o.webp"
+        attribute laugh:
+            "images/char/lmm/m-laugh.webp"
+
 # 林望龙
 layeredimage lwlimg:
     group body:
