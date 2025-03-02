@@ -33,6 +33,11 @@ transform cg0:
 transform cg1:
     xalign 0.5
     yalign 0.5
+
+transform clue:
+    zoom 0.9
+    xalign 0.5
+    yalign 0.5
     
 
 init python:

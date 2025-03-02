@@ -91,7 +91,9 @@ screen wxroom_screen:
 
 label wxroom_table: 
     $ persistent.clue[1] = 1
+    show clue_1 at clue with dissolve
     "抽屉里有一双木质筷子，一双用过后洗干净的一次性筷子，上面刻有“湘味”的字迹。"
+    hide clue_1 with dissolve
     me "一次性筷子用第二次的话还能叫一次性筷子吗？"
     by eye_wacky e "哈？你要用谁会管你？等等，你在说这双吗？"
     me "嗯，这是用过之后洗干净的，被收起来了。"
@@ -107,7 +109,9 @@ label wxroom_table:
 
 label wxroom_bed:
     $ persistent.clue[2] = 1
+    show clue_2 at clue with dissolve
     "被子已经被掀开，堆在一边。床单很旧，有不少补丁，但很干净。枕头上有两个人躺过的痕迹。"
+    hide clue_2 with dissolve
     by eye_wacky e "我之前就跟她躺在这吗……"
     me "看起来是的。"
     by eye_wacky e "难以置信……我竟然会跟不熟的人睡一起……要死啊，到底发生了什么……"
@@ -121,7 +125,9 @@ label wxroom_bed:
 
 label wxroom_stove:
     $ persistent.clue[3] = 1
+    show clue_3 at clue with dissolve
     "有长时间开过火的痕迹，燃气灶老旧，燃气喷嘴处有异物堵塞。"
+    hide clue_3 with dissolve
     me "这个灶台，之前好像开了很久……旁边都烧到变形了。"
     me "喷嘴好像有点塞住了，这样会燃烧不完全，产生一氧化碳的吧。"
     by eye_def o "啊？这样的话，这应该是，嗯……她死亡的直接原因。"
@@ -133,7 +139,9 @@ label wxroom_stove:
 
 label wxroom_garbage:
     $ persistent.clue[4] = 1
+    show clue_4 at clue with dissolve
     "空空如也，没有袋子"
+    hide clue_4 with dissolve
     by eye_def o "收拾得好干净啊。"
     me "嗯。"
     by eye_def o "那这里好像没什么好看的。"
@@ -144,7 +152,9 @@ label wxroom_garbage:
 
 label wxroom_window:
     $ persistent.clue[5] = 1
+    show clue_5 at clue with dissolve
     "被百叶窗盖住的窗户关闭，上了锁"
+    hide clue_5 with dissolve
     me "嗯？百叶窗后面是锁死的。"
     by eye_def o "难怪感觉这里好闷，完全不透气啊。"
     me "那快点出去吧。"
@@ -153,7 +163,9 @@ label wxroom_window:
 
 label wxroom_medicine:
     $ persistent.clue[6] = 1
+    show clue_6 at clue with dissolve
     "透明药盒里有两瓶一样的感冒药，其中一瓶空了。"
+    hide clue_6 with dissolve
     by eye_def o "啊，这个我知道，味道超级苦的感冒药。"
     me "是吗？她吃了很多，有一瓶空了。"
     by eye_def o "哇，了不起。都怪这鬼天气，实在是太冷了。"
@@ -162,6 +174,9 @@ label wxroom_medicine:
 
 label wxroom_note:
     $ persistent.clue[7] = 1
+    show clue_7 at clue with dissolve
+    "6:30起床，7:00到校，17:00放学，XXXX（涂黑），20:00扔垃圾（周末整理房间），23:30睡觉"
+    hide clue_7 with dissolve
     by eye_def o "我去，好吓人的日程表。"
     me "你不是吗？同个学校的学生应该都差不多吧。"
     by eye_def o "我可没这么认真学习，受不了。"

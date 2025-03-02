@@ -53,7 +53,9 @@ screen medical_screen:
 
 label medical_bed:
     $ persistent.clue[8] = 1
+    show clue_8 at clue with dissolve
     "校医室的铁架单人床，套着简易被套，一条薄被放在床头，用来临时安置身体不舒服或是受伤的学生。"
+    hide clue_8 with dissolve
     by eye_def o "别说，睡起来还挺舒服的。"
     by eye_close o "以后能不能翘课来这里睡觉啊。"
     me "你的想法很危险……"
@@ -62,7 +64,9 @@ label medical_bed:
 
 label medical_door:
     $ persistent.clue[9] = 1
+    show clue_9 at clue with dissolve
     "校医室通往内侧房间的门，上面贴有几个可爱的贴纸。正中央挂着一张门牌，用圆润的字体画着“love”的字样。"
+    hide clue_9 with dissolve
     by eye_wacky e "这什么鬼？好恶心。"
     me "这是啥啊？"
     by eye_def o "心理辅导室的门。"
@@ -80,7 +84,9 @@ label medical_door:
 
 label medical_shelf:
     $ persistent.clue[10] = 1
+    show clue_10 at clue with dissolve
     "玻璃柜上了锁，可以看到里面摆放着创可贴，棉球，纱布，感冒冲剂等物品。"
+    hide clue_10
     me "好像没有温心吃的那种药，那个是药片我记得。"
     by eye_def o "嗯，这边没有。"
     by eye_def o "那个冲剂其实都没什么用，但学校里大概只能有这种东西。"
