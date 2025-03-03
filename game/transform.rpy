@@ -35,9 +35,10 @@ transform cg1:
     yalign 0.5
 
 transform clue:
-    zoom 0.9
+    zoom 0.55
     xalign 0.5
     yalign 0.5
+    yoffset -120
     
 
 init python:

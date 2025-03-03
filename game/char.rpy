@@ -14,6 +14,7 @@ define xs = Character("西顺",what_prefix="“",what_suffix="”")
 define zb = Character("张班",what_prefix="“",what_suffix="”")
 define unknown = Character("？？",what_prefix="“",what_suffix="”")
 
+define stu = Character("同学",what_prefix="“",what_suffix="”")
 define stuA = Character("同学A",what_prefix="“",what_suffix="”")
 define stuB = Character("同学B",what_prefix="“",what_suffix="”")
 define fem = Character("女性",what_prefix="“",what_suffix="”")

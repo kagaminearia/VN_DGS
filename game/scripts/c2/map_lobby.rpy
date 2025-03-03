@@ -73,6 +73,7 @@ init:
 
 
 label lobby_sign:
+    $ quick_menu = True
     $ persistent.clue[11] = 1
     show clue_11 at clue with dissolve
     "墙面上贴着指向标的图样。好几个箭头，标注了不同方向的信息。"
@@ -91,6 +92,7 @@ label lobby_sign:
     return
 
 label lobby_calender:
+    $ quick_menu = True
     $ persistent.clue[12] = 1
     show clue_12 at clue with dissolve
     "墙上挂着日历，停留在这个月的页面。设计简约，装帧精美，配上美丽的纹样，当作装饰也毫不突兀。"
@@ -132,6 +134,7 @@ label lobby_calender:
     return
 
 label lobby_sw:
+    $ quick_menu = True
     $ persistent.lobby_sw_flag = 1
     scene bg_lobby1
     show cg_sw10 at cg0 with dissolve
@@ -287,6 +290,7 @@ label lobby_sw:
     return
 
 label lobby_lmm:
+    $ quick_menu = True
     $ persistent.lobby_lmm_flag = 1
     scene bg_lobby3
     show cg_lmm00 at cg0 with dissolve
@@ -386,9 +390,12 @@ label lobby_lmm:
     return
 
 label lobby_wf:
+    $ quick_menu = True
     $ persistent.lobby_wf_flag = 1
+    show cg_wf00 at cg0 with dissolve
     "白一的目光扫过去的时候，正好看到班长从左侧的方向走出来。"
     "她手里拿着一个魔方，看到白一时，迅速低下头，一边摆弄着手里的魔方一边走开了。"
+    scene bg_lobby with dissolve
     by eye_still def "……"
     by eye_still o "靠。"
     by eye_def o "虽然她不来烦我我很高兴，但还是有种莫名的不爽。"

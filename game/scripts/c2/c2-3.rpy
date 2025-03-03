@@ -1,153 +1,270 @@
 label c2_3:
+    scene black with Dissolve(3)
     "……"
-    by "……"
-    by "……呃，什么鬼？"
+    scene bg_hotelroom with dissolve
+    show tophalfblk
+    by eye_close def "……"
+    by eye_still e "……呃，什么鬼？"
+    hide tophalfblk with dissolve
     "白一摇摇晃晃地从床上坐起来，眼睛半睁不睁，一时间还没有分清现在是什么情况。"
-    me "你昨晚回来之后，收拾了一下就直接睡着了。"
-    by "啊，哦，对……我很少这么晚睡，好累……"
+    me "你昨晚回到房间之后，收拾了一下就直接睡着了。"
+    by eye_still o "啊？哦，对……我很少这么晚睡，好累……"
     "昨晚的活动弄到十二点多一些，白一大概是十二点半睡的。"
     "现在醒来，还有些晕晕乎乎的感觉。"
-    by "说起来昨天都还没来得及看房间，还说要好好享受一下。"
-    by "可惜，待会吃完早餐就要走了。"
+    by eye_def o "说起来昨天都还没来得及看房间，还说要好好享受一下。"
+    by eye_close o "可惜，待会吃完早餐就要走了。"
     "白一说着，很快收拾好自己，准备推门——"
-    by "嗯？"
+    by eye_def def "嗯？"
     "推门出去，但门后却不是走廊，而是另一扇上锁的门。"
-    by "啥？……哦，我走错了。"
+    by eye_still o "啥？……哦，我走错了。"
     "她有些无语，这才发现房间里除了房门还有另外一扇内门，看起来一模一样。"
     me "这是干嘛的？"
-    by "大概就是，连号的两个房间是个套房，两边都打开门的话就可以变成大房间。"
-    by "都锁上就是分开的两个房间，可以分别住。"
+    by eye_def o "大概就是，连号的两个房间是个套房，两边都打开门的话就可以变成大房间。"
+    by eye_def o "都锁上就是分开的两个房间，可以分别住。"
     me "噢——"
-    by "啧，真的好高级。"
-    "尽管昨天的活动结束是零点之后，有些人也许闹到更晚，但年轻人大多是精力充沛的（白一除外），白一下楼的时候能看到大多数人已经起床了。"
+    by eye_move o "啧，真的好高级。"
+    scene bg_diningroom1 with fade
+    "尽管昨天的活动结束是零点之后，有些人也许闹到更晚，但年轻人大多是精力充沛的——当然，白一除外。"
+    "等到白一下楼的时候，已经能看到大多数人起床了，在走廊和大厅三三两两。"
     "部分人在餐厅吃饭，还有些更有精力的，拿着早饭就和别人开下一把游戏。"
-    by "唔，最后一次免费的饭，可惜啊。"
+    by eye_move e "唔，最后一次免费的饭，可惜啊。"
     "白一拿着包子塞进嘴里，一边含含糊糊地说着话。"
     me "嗯……说起来，明明是来参加天玉的生日会的，结果都没怎么看到她。"
-    by "没必要啊。"
-    by "她是大小姐，我是路人甲，待在角落凑合就好咯。"
+    by eye_close o "没必要啊。"
+    by eye_def o "她是大小姐，我是路人甲，待在角落凑合就好咯。"
     "她说着，又拿起另一个包子。"
     "包子的面皮柔软，内馅是香菇猪肉，味道香浓，鲜嫩多汁。"
     "配上冒着热气的豆浆，咸甜具备，鲜美的味道在口腔弥漫。"
     me "嗯……的确很好吃。"
     by "是吧，咱们专心吃饭就好——"
-    unknown "啊！！！"
+    show tophalfblk with vpunchm
+    unknown "{size=45}啊！！！{/size}"
     "话音刚落，隐约有尖叫声从不远处的大厅传来。"
     "能传到这里让人听见，说明声音不小。"
     "白一的动作顿了顿，迅速把最后一口吃的咽下去。"
-    by "难道我有乌鸦嘴？"
+    hide tophalfblk with dissolve
+    by eye_still o "难道我有乌鸦嘴？"
     me "嗯……不要迷信，要相信科学。"
-    by "……你这种东西都出现了，你让我相信科学？"
+    by eye_still e "……你这种东西都出现了，你让我相信科学？"
     me "……"
     "她毫不留情地吐槽我，但也没停下脚下的动作，跟着其他人往外走。"
+
+    scene bg_lobby with fade
     "大厅，不少人聚在靠墙的沙发旁边。"
     "不少人都在小声说话，聚在一起却也显得声音嘈杂。"
     "能听到声音，却听不清在说什么，令人感到更加烦躁。"
-    by "什么情况啊……"
+    by eye_still e "什么情况啊……"
     "白一皱了皱眉，刚想靠近一点，就感觉右边的手臂被拉住了。"
+    show swimg o at char_right with moveinright
     sw "等等呀，别过去。"
     by "姒舞？你怎么在这……"
+    hide swimg
+    show swimg eye_sad at char_right
     sw "大家都是听到声音过来的，有人突然晕倒了，正在打电话叫救护车。"
+    hide swimg
+    show swimg eye_sad o at char_right
     sw "你就别凑过去了，好挤的。"
-    by "呃，是吗……"
-    by "所以怎么会晕倒？"
+    by eye_def e "呃，是吗……"
+    by eye_def o "所以怎么会晕倒？"
+    hide swimg
+    show swimg eye_sad at char_right
     sw "唉，不知道啊，听说看起来像吃错东西了，但是不确定。"
-    by "啊？怎么可能？"
+    by eye_def o "啊？怎么可能？"
+    hide swimg
+    show swimg eye_sad o at char_right
     sw "对啊，所以大家都很担心的呢。"
+    hide swimg
+    show swimg eye_sad at char_right
     sw "感觉心情好复杂哦……"
-    by "？"
-    by "你和晕倒的人很熟吗？"
+    by eye_still def "？"
+    by eye_def o "你和晕倒的人很熟吗？"
+    hide swimg
+    show swimg o at char_right
     sw "不熟呀。"
-    by "那你复杂什么。"
+    by eye_def e "那你有什么好复杂的。"
+    hide swimg
+    show swimg eye_blink at char_right
     sw "唔，在这里出事，肯定会影响天玉。看到她吃亏我应该高兴。"
+    hide swimg
+    show swimg eye_sad o at char_right
     sw "但是因为别人的身体健康问题弄成这样……我又不高兴了。"
-    by "……"
-    by "别想太多。"
-    "白一只是干巴巴地这么说。"
+    hide swimg
+    show swimg eye_sad at char_right
+    by eye_still def "……"
+    by eye_move o "别想太多。"
+    "白一顿了顿，最后只是干巴巴地这么说。"
+
+    scene bg_lobby1 with fade
+    show tyimg eye_still o at char_mid with dissolve
     ty "大家——我有件事情想说。"
+    hide tyimg
+    show tyimg eye_still at char_mid
     "天玉的声音响起，其他人不约而同停下了说话。"
     "她的表情有些严肃，没了平时那副和气温柔的样子。"
-    ty "发生这样的事情，我很抱歉。"
+    hide tyimg
+    show tyimg eye_still o at char_mid
+    ty "今天发生这样的事情……我非常抱歉。"
     ty "救护车马上就到了。同时，我们会在送梁绵绵同学去医院之后，马上安排大家进行体检。"
     ty "我们从昨天晚上到今天都是一起在这里吃住，其他人没有事，也许梁绵绵同学也会很快好起来的。"
+    hide tyimg
+    show tyimg eye_close o at char_mid
     ty "我也不希望看到这样的情况，也希望大家保持冷静。"
+    hide tyimg
+    show tyimg eye_still o at char_mid
     ty "希望大家相信我，也要相信梁绵绵同学。"
+    hide tyimg
+    show tyimg eye_still at char_mid
     "大厅安静下来后，天玉的声音也能清晰地传入每个人的耳朵里。"
     "她的声音不大，也没有激动的吼叫声，只是有节奏地，沉静地把情况娓娓道来。"
     "清晰的话语柔和但不失力量，仿佛有一种魔力，使得其他人也不那么惶恐慌张。"
-    "她说完话，许久都没有人再开口，但那种如绷紧的弦一般的气氛慢慢消散了。"
+    "她说完话，许久都没有人再开口，但那种如绷紧的弦一般的气氛不知不觉间慢慢消散了。"
+
+    scene bg_lobby with fade
+    show swimg eye_sad o at char_mid with moveinleft
     sw "白一……"
-    by "啊。"
+    "人群散开后，姒舞不知道从哪又摸了过来。"
+    hide swimg
+    show swimg eye_sad at char_mid
+    by eye_def o "啊。"
+    hide swimg
+    show swimg eye_sad o at char_mid
     sw "怎么办，白一，我突然感觉天玉还挺厉害的……"
-    sw "可是，我好不喜欢她啊……"
+    sw "可是，我真的好不喜欢她啊……"
+    hide swimg
+    show swimg eye_sad at char_mid
     sw "可是，我又觉得我不好不喜欢她……"
     "姒舞自顾自地说了一通，让白一都没来得及说话，还差点被她绕来绕去的说法弄晕了。"
-    by "……那你就不喜欢啊。"
+    by eye_still e "……那你就不喜欢啊。"
+    hide swimg
+    show swimg o at char_mid
     sw "但她很厉害呀。"
-    by "她厉害跟你不喜欢有什么关系？"
+    by eye_still o "她厉害跟你不喜欢有什么关系？又不冲突。"
+    hide swimg
+    show swimg eye_sad o at char_mid
     sw "就是……觉得不太好。"
-    by "那你试着喜欢？"
+    by eye_def o "那你试着喜欢？"
+    hide swimg
+    show swimg eye_squint at char_mid
     sw "我不想喜欢……"
-    by "……"
+    by eye_wacky def "……"
+    by eye_wacky def "{size=23}到底要怎样啊……{/size}"
+    hide swimg
+    show swimg at char_mid
     "白一有些无语，拧了拧眉，索性转移了话题。"
-    by "车应该要到了，收拾好东西走吧。"
+    by eye_def o "车应该要到了，收拾好东西走吧。"
+    hide swimg
+    show swimg smile at char_mid
+    sw "诶？好~"
+
+    scene bg_medical1 with Fade(0.5,1,0.5)
     "医院是个很神奇的地方。"
     "人很多，声音也嘈杂，乱糟糟的。"
     "却并没有让人感觉到任何鲜活感。"
     "白一拿着自己的资料，跟在队伍后一个个做完检查，终于回归自由。"
-    by "好累啊……总觉得有点喘不过气。"
+    by eye_close o "好累啊……总觉得有点喘不过气。"
     me "嗯……出去透透气吧。"
     "白一的声音很轻，甚至可以说是有些虚弱。"
     "也许是因为排队太久，走路的时候腿脚也有些乏力。"
-    by "啊，真烦……"
-    by "没想到最后会是这个走向……啊！"
+
+    scene bg_medical3 with dissolve
+    by eye_move e "啊，真烦……"
+    by eye_close o "没想到最后会是这个走向……啊！"
+    show tophalfblk with vpunchm
     "下楼梯的时候，白一突然感觉腿一软，整个人向下倒去。"
-    by "呃……！"
+    by eye_squint def "呃……！"
     "想象中的剧痛并没有来临。"
     "有人及时拉住了她。"
-    me "好险……你没事吧？"
-    by "嗯……嗯？"
+    unknown "你没事吧？"
+    me "对啊好险……你没事吧？"
+    by eye_still o "嗯……嗯？"
     "白一重新睁开眼，看到面前的人抓住自己的手臂，又很快松开。"
     "她脸上带着的担忧变为惊讶，而后是像在忍受什么的，深深的凝视。"
+    scene bg_medical3 with fade
+    show cximg eye_sad at char_mid with dissolve
     cx "怎么会是你……"
-    by "呃……你是？"
+    by eye_still o "呃……你是？"
     "她和看起来和白一差不多大，表情变幻得像调色盘一样丰富，令白一感到困惑。"
     me "她叫岑宣，你认识吗？"
-    by "不认识……啊，我是说，我不认识你。"
+    by eye_def e "{size=23}不认识……{/size}啊，我是说，我不认识你。"
+    hide cximg
+    show cximg eye_angry at char_mid
     cx "……"
-    cx "我是，跟你一个学校的，就在你楼上的班级的，梁绵绵的朋友。"
+    hide cximg
+    show cximg eye_angry o at char_mid
+    cx "我是，跟你一个学校的，就在你楼上的班级的，你的同学，梁绵绵的朋友。"
     "岑宣一字一顿地说完这句话，每一次断句都加重了一次语气。"
-    by "……噢。"
+    hide cximg
+    show cximg eye_angry at char_mid
+    by eye_still o "……噢。"
     "这时候听到梁绵绵这个名字，不太算得上是让人高兴的话题。"
     "因而白一只是干巴巴地应了一声，却令岑宣的眉毛皱得更紧了。"
+    by eye_def o "你找我有事？"
+    hide cximg
+    show cximg eye_angry o at char_mid
     cx "你怎么能……都是因为你她才会这样！"
-    by "……啊？"
-    by "你是说昨天吗？那一桌上又不止我和她吃饭。"
+    hide cximg
+    show cximg eye_angry at char_mid
+    by eye_still o "……啊？"
+    "白一不理解她的突然发难，只觉得莫名其妙。"
+    by eye_def e "你是说昨天吗？那一桌上又不止我和她吃饭。"
+    hide cximg
+    show cximg eye_angry o at char_mid
     cx "不，你根本不知道。"
+    hide cximg
+    show cximg eye_sad at char_mid
     cx "绵绵她……她不是食物中毒，是别的方式中毒的……"
+    hide cximg
+    show cximg eye_sad o at char_mid
     cx "但是，医生说，她原本不会这么严重。是因为她腿上有大面积的伤口，所以才这么严重的。"
+    hide cximg
+    show cximg eye_angry o at char_mid
     cx "我说的有错吗？这都是，都是因为你啊……"
+    hide cximg
+    show cximg eye_angry at char_mid
     cx "而且她年纪比较小，这样子……对身体的影响更大了……"
-    by "……"
-    by "她是怎么中毒的？"
+    by eye_still def "……"
+    by eye_def o "她是怎么中毒的？"
+    hide cximg
+    show cximg eye_sad o at char_mid
     cx "什么？这……"
-    by "应该不是意外中毒吧。"
-    by "是谁让她中毒的呢？"
+    by eye_move e "应该不是意外中毒吧。"
+    by eye_def o "是谁让她中毒的呢？"
+    hide cximg
+    show cximg eye_sad at char_mid
     cx "……"
-    by "之前的事，我是很抱歉。"
-    by "但是，你不能让我把所有的情绪都放在自己身上承担吧。"
-    "白一垂下眼睛，只是淡淡地说完话，就陷入沉默。"
+    by eye_still e "之前的事，我是很抱歉。"
+    by eye_def o "但是……因为我做错了一件事，所有的事都要我承担吗？"
+    by eye_move o "我要把你们所有的情绪都放在自己身上承担吗，不太好吧。"
+    "白一垂下眼睛，只是淡淡地，缓慢地说完话，就陷入沉默。"
     "她的平静让我感到惊讶，但，我似乎也能感觉到，她的内心并不像语气表现出来的那样。"
     "或许……这只是她的一种习惯。"
-    "习惯于让自己变得在别人面前毫无破绽。"
+    "习惯于让自己在别人面前变得毫无破绽。"
+    hide cximg
+    show cximg eye_close at char_mid
     cx "……"
+    hide cximg
+    show cximg eye_sad o at char_mid
     cx "对，你说得没错……发生这样的事，不能都怪在你头上。"
+    hide cximg
+    show cximg eye_angry at char_mid
     cx "……你觉得，我应该这么说吗？"
+    hide cximg
+    show cximg eye_sad at char_mid
     cx "我很抱歉，抱歉……但是……我不知道……"
+    hide cximg
+    show cximg eye_sad o at char_mid
     cx "也许我该夸你很聪明？很冷静？被人质问还能想到这么多？"
+    hide cximg
+    show cximg eye_angry o at char_mid
     cx "但是，只是……因为你觉得与你无关，你置身事外，你不在乎，你才能做到这样……"
-    cx "是吗？啊，不，对不起……对不起……"
-    by "……"
+    hide cximg
+    show cximg eye_angry at char_mid
+    cx "是吗？是这样吗？"
+    hide cximg
+    show cximg eye_sad at char_mid
+    cx "啊，不，对不起……对不起……"
+    hide cximg with dissolve
+    by eye_still def "……"
     "岑宣看起来像是很痛苦，她完全没有看着白一，只是低声自语，也不期望得到白一的回答。"
     "而白一只是静静地看着她。"
     cx "你要去看看绵绵吗？不，跟我去看一下绵绵吧。"
@@ -167,15 +284,15 @@ label c2_3:
     "做完转头的动作后，她就没有别的反应了。"
     cx "……绵绵，我来看看你。"
     "岑宣小心翼翼地靠近病床，尝试轻声对她说话。"
-    # 【梁】……
-    # 【梁】啊……
+    lmm "……"
+    lmm "啊……"
     cx "那个……我，我是岑宣。"
-    # 【梁】……啊……哦……
-    # 【梁】嘿嘿……
+    lmm "……啊……哦……"
+    lmm "嘿嘿……"
     "梁绵绵的嘴微微开合，而后，咧开嘴笑了笑。"
     "她自顾自地笑了一会，又突然止住。"
     "像是想到什么，她皱起眉毛，用力抿住嘴巴又张开，又抿住。"
-    # 【梁】……不，不……呃……啊……
+    lmm "……不，不……呃……啊……"
     "声音有些僵硬，带着颤抖。"
     cx "好，好好休息，绵绵……就这样，靠着，对……我，我先走了……"
     "岑宣弓起身体，让自己的视线和梁绵绵齐平。"
@@ -189,7 +306,7 @@ label c2_3:
     "岑宣说完，低着头飞快离开了。"
     "那之后，白一看了看她的背影，又收回目光。"
     "好像绷紧的弦忽然松开了，白一靠在墙上，长长地叹了口气。"
-    by "X。"
+    by "[user]。"
     me "……啊？嗯。"
     "她很少这样，可以说是有些正式地叫我，让我一时间没反应过来。"
     by "没什么，就是叫一下，烦一下你。"
@@ -205,6 +322,7 @@ label c2_3:
     "白一也不知道自己是在说什么。"
     "是在感叹吗？感叹什么？"
     "感叹为何自己再次成为迁怒对象，还是感叹于那种竟然真实存在的情谊？"
+
     # 【“……”】
     "这样的气氛令人感到不安。"
     "因而，我只是保持沉默"
@@ -239,6 +357,9 @@ label c2_3:
     by "……"
     by "随便吧。"
     "白一没有反驳我，只是这么说。"
+
+
+    
     "如岑宣所说，很快白一和其他人就被叫回了云玉阁，每个人被隔离在单独的房间里。"
     "不过，为了防止影响现场判断，并不是待在之前的房间，而是在三楼。"
     "出乎白一预料的是，她看到一个熟悉的身影。"

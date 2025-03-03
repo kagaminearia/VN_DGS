@@ -52,6 +52,7 @@ screen medical_screen:
 
 
 label medical_bed:
+    $ quick_menu = True
     $ persistent.clue[8] = 1
     show clue_8 at clue with dissolve
     "校医室的铁架单人床，套着简易被套，一条薄被放在床头，用来临时安置身体不舒服或是受伤的学生。"
@@ -63,6 +64,7 @@ label medical_bed:
     return
 
 label medical_door:
+    $ quick_menu = True
     $ persistent.clue[9] = 1
     show clue_9 at clue with dissolve
     "校医室通往内侧房间的门，上面贴有几个可爱的贴纸。正中央挂着一张门牌，用圆润的字体画着“love”的字样。"
@@ -83,6 +85,7 @@ label medical_door:
     return
 
 label medical_shelf:
+    $ quick_menu = True
     $ persistent.clue[10] = 1
     show clue_10 at clue with dissolve
     "玻璃柜上了锁，可以看到里面摆放着创可贴，棉球，纱布，感冒冲剂等物品。"

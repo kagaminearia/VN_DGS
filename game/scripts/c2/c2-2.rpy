@@ -59,6 +59,7 @@ label c2_2:
     
 
 label c2_2_extra:
+    $ quick_menu = True
     scene bg_lobby with Fade(0.5,1,0.5)
     "绕一圈的时间过得很快，白一没空再去看这里的其他地方，人就到齐了。"
     "天玉从里面把门推开，一群人欢呼着进去。"
