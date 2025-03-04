@@ -149,7 +149,7 @@ label lobby_sw:
     "只看一眼，白一立马收回目光，假装刚刚什么都没看到，什么都没发生。"
     "身体转开，脚下已经开始动作，保持着平稳的步伐往另一个方向走。"
     "只是——"
-    show swimg eye_squint laugh at char_mid with moveinleft
+    show swimg coat eye_squint laugh at char_mid with moveinleft
     sw "白一~"
     "姒舞一如往常的热情，很快就朝着白一的方向走来。"
     show tophalfblk with dissolve
@@ -157,133 +157,133 @@ label lobby_sw:
     "听到声音，白一也没回头，而是开始自欺欺人。"
     hide tophalfblk
     hide swimg
-    show swimg eye_squint o at char_mid with vpunchm
+    show swimg coat eye_squint o at char_mid with vpunchm
     sw "白一！你明明就看到我了。"
     by eye_still def "……嘶。"
     "姒舞从白一的正前方冒出来，令白一不得不停住了脚步。"
     hide swimg
-    show swimg o at char_mid
+    show swimg coat o at char_mid
     sw "我还以为你不来了，人家好失望的呢。"
     by eye_still def "……"
     hide swimg
-    show swimg laugh at char_mid
+    show swimg coat laugh at char_mid
     sw "怎么样？我是不是很厉害，在天玉搞的活动里一样很受欢迎哦。"
     by eye_still def "……"
     "白一用余光瞥了瞥沙发那侧的人群，极其无奈地叹了口气。"
     by eye_move o "那你更不应该来找我。"
     hide swimg
-    show swimg o at char_mid
+    show swimg coat o at char_mid
     sw "欸——为什么啊？"
     hide swimg
-    show swimg at char_mid
+    show swimg coat at char_mid
     by eye_def o "难道，你没发现其他人都很讨厌我吗？"
     by eye_def o "跟我一起，影响你社交小天才的路啊。"
     "白一耸了耸肩，把姒舞自己说的称号还给她。"
     hide swimg
-    show swimg o at char_mid
+    show swimg coat o at char_mid
     sw "啊？不是……"
     hide swimg
-    show swimg at char_mid
+    show swimg coat at char_mid
     "姒舞看了看周围，许多隐晦打量的眼神飘过来，又因为她的转头飘走。"
     "她瘪了瘪嘴，似乎意识到不同寻常的气氛，也看出白一的不情愿。"
     by eye_def o "这样你的人气绝对比不过天玉。"
     "白一用她讨厌的人当理由，却没想到姒舞只是哼了一声。"
     hide swimg
-    show swimg eye_blink o at char_mid
+    show swimg coat eye_blink o at char_mid
     sw "我是讨厌她，但也没想着要靠你跟别人打好关系啊……那跟霸凌有什么区别？"
     by eye_def o "……也没那么严重吧。"
     by eye_close o "无所谓啊，又不是你主动害我。"
     hide swimg
-    show swimg o at char_mid with vpunchs
+    show swimg coat o at char_mid with vpunchs
     sw "……才不是咧！"
     by "而且其他人也没做什么，他们不喜欢我，我也不喜欢他们，都很正常的。"
     hide swimg
-    show swimg eye_sad at char_mid
+    show swimg coat eye_sad at char_mid
     sw "可是……那种眼神就很奇怪啊……"
     hide swimg
-    show swimg eye_sad o at char_mid
+    show swimg coat eye_sad o at char_mid
     sw "要是只是普通的不喜欢，为什么要一起弄出那种氛围呢……这样一点也不好。"
     by eye_def def "……"
     hide swimg
-    show swimg eye_sad at char_mid
+    show swimg coat eye_sad at char_mid
     sw "{size=27}但……如果你真的不想的话……{/size}"
     "面对沉默的白一，姒舞的声音也逐渐变低。"
     by eye_still def "……"
     by eye_def o "所以你啊，干嘛非要找我？"
     hide swimg
-    show swimg o at char_mid
+    show swimg coat o at char_mid
     sw "就是想跟你说说话啊。"
     by eye_shock o "……你有那么多朋友还不够说啊？"
     "白一是真的很震惊，平淡如水的语气都有了些起伏。"
     hide swimg
-    show swimg eye_blink o at char_mid
+    show swimg coat eye_blink o at char_mid
     sw "不是，这怎么能一样呢？"
     "姒舞举起手，认真地跟白一解释。"
     hide swimg
-    show swimg o at char_mid
+    show swimg coat o at char_mid
     sw "她们又不是你的替代品，你也不是她们的替代品啊。"
     sw "每个人都不一样的。"
     hide swimg
-    show swimg smile at char_mid
+    show swimg coat smile at char_mid
     sw "找你，也是因为喜欢跟你聊天的感觉啊。"
     by eye_still def "……"
     by eye_def o "你说话真的有点中二。"
     me "噗——"
     hide swimg
-    show swimg eye_squint o at char_mid
+    show swimg coat eye_squint o at char_mid
     sw "哇，我那么认真，你竟然这样说？"
     by eye_move e "……只是实话实说？"
     hide swimg
-    show swimg eye_blink at char_mid
+    show swimg coat eye_blink at char_mid
     sw "哼。"
     hide swimg
-    show swimg o at char_mid
+    show swimg coat o at char_mid
     sw "反正我都在这里了，你就跟我聊聊嘛。"
     sw "我保证之后就不在这主动找你了。"
     hide swimg
-    show swimg at char_mid
+    show swimg coat at char_mid
     by eye_def def "……哦。"
     "白一最终还是没再说拒绝的话。"
     "不过……毕竟她也没办法直接把人赶走就是了。"
     hide swimg
-    show swimg o at char_mid
+    show swimg coat o at char_mid
     sw "我跟你说哦，那边竟然有个游戏室，有超多游戏的。好羡慕~有钱真好~"
     hide swimg
-    show swimg at char_mid
+    show swimg coat at char_mid
     by "确实……有钱真好。"
     by "租这么大的场地肯定很贵。"
     hide swimg
-    show swimg o at char_mid
+    show swimg coat o at char_mid
     sw "欸，我不是这个意思。"
     by "啊？"
     hide swimg
-    show swimg eye_blink o at char_mid
+    show swimg coat eye_blink o at char_mid
     sw "你不知道吗？天玉她全名叫云天玉哦。"
     hide swimg
-    show swimg eye_blink at char_mid
+    show swimg coat eye_blink at char_mid
     by eye_still o "呃……云天玉？"
     hide swimg
-    show swimg eye_blink o at char_mid
+    show swimg coat eye_blink o at char_mid
     sw "那你记得这地方叫什么名字嘛？"
     me "……好像叫云玉阁。"
     by eye_wacky def "……靠。"
     by eye_wacky o "有钱真好。"
     hide swimg
-    show swimg eye_blink at char_mid
+    show swimg coat eye_blink at char_mid
     "见白一似乎已经懂了自己的意思，姒舞点了点头。"
     hide swimg
-    show swimg eye_squint at char_mid
+    show swimg coat eye_squint at char_mid
     sw "对吧？竟然是真的大小姐欸，真讨厌~"
     hide swimg
-    show swimg at char_mid
+    show swimg coat at char_mid
     "白一扶了扶额头，只觉得自己好像也有点讨厌天玉了。"
     "不过……纯粹是因为仇富之类的……倒没有姒舞那好像很复杂的爱恨情仇。"
     by eye_def o "你那么讨厌天玉，竟然不叫她全名。"
     hide swimg
-    show swimg eye_blink o at char_mid
+    show swimg coat eye_blink o at char_mid
     sw "一码归一码咯。她说她的称呼是这个，那当然要尊重。"
     hide swimg
-    show swimg o at char_mid
+    show swimg coat o at char_mid
     sw "毕竟名字很重要的啊。"
     by eye_def o "……是哦。"    
     jump lobby

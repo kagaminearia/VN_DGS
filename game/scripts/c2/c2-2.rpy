@@ -73,33 +73,33 @@ label c2_2_extra:
     "她猛地抬起头，瞪向受到冲击的方向。"
     stu "啊对不起不好意思……"
     "那人显然也很抱歉，不住地说对不起。"
-    show tyimg o at char_right with moveinright
+    show tyimg coat o at char_right with moveinright
     ty "怎么了？"
     "天玉似乎是听到声响，马上过来问道。"
-    show tyimg o at char_mid with moveinright
+    show tyimg coat o at char_mid with moveinright
     "看到她来了，那人像是找到了主心骨，立马朝天玉小声解释了几句，就赶紧离开了。"
     hide tyimg
-    show tyimg eye_sad at char_mid
+    show tyimg coat eye_sad at char_mid
     "只剩天玉站在白一面前，微微拧起眉毛。"
     hide tyimg
-    show tyimg eye_sad o at char_mid
+    show tyimg coat eye_sad o at char_mid
     ty "发生什么了？你们……没事吧？"
     by eye_def o "哦，没事，只是被撞了一下。"
     by eye_def e "但是手机飞出去了，然后——呃……你踩到了。"
     hide tyimg
-    show tyimg o at char_mid
+    show tyimg coat o at char_mid
     ty "啊？"
     "白一用手指指了指地面，天玉惊讶地睁大眼，立马把手机捡了起来。"
 
     "手机被摔碎了屏幕，拿起来的时候能看到电子屏上的内容正在不规则地闪烁。"
     hide tyimg
-    show tyimg eye_sad o at char_mid
+    show tyimg coat eye_sad o at char_mid
     ty "真是抱歉……不如就让我来负责修好你的手机吧？也当作替这位同学给你道歉了。"
     hide tyimg
-    show tyimg o at char_mid
+    show tyimg coat o at char_mid
     ty "我去找人，很快的，不过今天是活动嘛，大概要等几天。"
     hide tyimg
-    show tyimg smile at char_mid
+    show tyimg coat smile at char_mid
     ty "修好之后，我马上就拿去还给你。"
     by "呃……行啊。"
     "白一是真的不太在意这个——她没有什么联系人，平时也不怎么用手机——便无所谓地点了点头。"

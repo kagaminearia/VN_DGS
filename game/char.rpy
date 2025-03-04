@@ -171,8 +171,8 @@ layeredimage swimg:
     group body:
         attribute uniform default:
             "images/char/sw/uniform.webp"
-        attribute shirt:
-            "images/char/sw/shirt.webp"
+        attribute coat:
+            "images/char/sw/coat.webp"
 
     group eyes:
         attribute eye_def default:

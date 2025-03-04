@@ -55,105 +55,105 @@ label c2_3:
     "能听到声音，却听不清在说什么，令人感到更加烦躁。"
     by eye_still e "什么情况啊……"
     "白一皱了皱眉，刚想靠近一点，就感觉右边的手臂被拉住了。"
-    show swimg o at char_right with moveinright
+    show swimg coat o at char_right with moveinright
     sw "等等呀，别过去。"
     by "姒舞？你怎么在这……"
     hide swimg
-    show swimg eye_sad at char_right
+    show swimg coat eye_sad at char_right
     sw "大家都是听到声音过来的，有人突然晕倒了，正在打电话叫救护车。"
     hide swimg
-    show swimg eye_sad o at char_right
+    show swimg coat eye_sad o at char_right
     sw "你就别凑过去了，好挤的。"
     by eye_def e "呃，是吗……"
     by eye_def o "所以怎么会晕倒？"
     hide swimg
-    show swimg eye_sad at char_right
+    show swimg coat eye_sad at char_right
     sw "唉，不知道啊，听说看起来像吃错东西了，但是不确定。"
     by eye_def o "啊？怎么可能？"
     hide swimg
-    show swimg eye_sad o at char_right
+    show swimg coat eye_sad o at char_right
     sw "对啊，所以大家都很担心的呢。"
     hide swimg
-    show swimg eye_sad at char_right
+    show swimg coat eye_sad at char_right
     sw "感觉心情好复杂哦……"
     by eye_still def "？"
     by eye_def o "你和晕倒的人很熟吗？"
     hide swimg
-    show swimg o at char_right
+    show swimg coat o at char_right
     sw "不熟呀。"
     by eye_def e "那你有什么好复杂的。"
     hide swimg
-    show swimg eye_blink at char_right
+    show swimg coat eye_blink at char_right
     sw "唔，在这里出事，肯定会影响天玉。看到她吃亏我应该高兴。"
     hide swimg
-    show swimg eye_sad o at char_right
+    show swimg coat eye_sad o at char_right
     sw "但是因为别人的身体健康问题弄成这样……我又不高兴了。"
     hide swimg
-    show swimg eye_sad at char_right
+    show swimg coat eye_sad at char_right
     by eye_still def "……"
     by eye_move o "别想太多。"
     "白一顿了顿，最后只是干巴巴地这么说。"
 
     scene bg_lobby1 with fade
-    show tyimg eye_still o at char_mid with dissolve
+    show tyimg coat eye_still o at char_mid with dissolve
     ty "大家——我有件事情想说。"
     hide tyimg
-    show tyimg eye_still at char_mid
+    show tyimg coat eye_still at char_mid
     "天玉的声音响起，其他人不约而同停下了说话。"
     "她的表情有些严肃，没了平时那副和气温柔的样子。"
     hide tyimg
-    show tyimg eye_still o at char_mid
+    show tyimg coat eye_still o at char_mid
     ty "今天发生这样的事情……我非常抱歉。"
     ty "救护车马上就到了。同时，我们会在送梁绵绵同学去医院之后，马上安排大家进行体检。"
     ty "我们从昨天晚上到今天都是一起在这里吃住，其他人没有事，也许梁绵绵同学也会很快好起来的。"
     hide tyimg
-    show tyimg eye_close o at char_mid
+    show tyimg coat eye_close o at char_mid
     ty "我也不希望看到这样的情况，也希望大家保持冷静。"
     hide tyimg
-    show tyimg eye_still o at char_mid
+    show tyimg coat eye_still o at char_mid
     ty "希望大家相信我，也要相信梁绵绵同学。"
     hide tyimg
-    show tyimg eye_still at char_mid
+    show tyimg coat eye_still at char_mid
     "大厅安静下来后，天玉的声音也能清晰地传入每个人的耳朵里。"
     "她的声音不大，也没有激动的吼叫声，只是有节奏地，沉静地把情况娓娓道来。"
     "清晰的话语柔和但不失力量，仿佛有一种魔力，使得其他人也不那么惶恐慌张。"
     "她说完话，许久都没有人再开口，但那种如绷紧的弦一般的气氛不知不觉间慢慢消散了。"
 
     scene bg_lobby with fade
-    show swimg eye_sad o at char_mid with moveinleft
+    show swimg coat eye_sad o at char_mid with moveinleft
     sw "白一……"
     "人群散开后，姒舞不知道从哪又摸了过来。"
     hide swimg
-    show swimg eye_sad at char_mid
+    show swimg coat eye_sad at char_mid
     by eye_def o "啊。"
     hide swimg
-    show swimg eye_sad o at char_mid
+    show swimg coat eye_sad o at char_mid
     sw "怎么办，白一，我突然感觉天玉还挺厉害的……"
     sw "可是，我真的好不喜欢她啊……"
     hide swimg
-    show swimg eye_sad at char_mid
+    show swimg coat eye_sad at char_mid
     sw "可是，我又觉得我不好不喜欢她……"
     "姒舞自顾自地说了一通，让白一都没来得及说话，还差点被她绕来绕去的说法弄晕了。"
     by eye_still e "……那你就不喜欢啊。"
     hide swimg
-    show swimg o at char_mid
+    show swimg coat o at char_mid
     sw "但她很厉害呀。"
     by eye_still o "她厉害跟你不喜欢有什么关系？又不冲突。"
     hide swimg
-    show swimg eye_sad o at char_mid
+    show swimg coat eye_sad o at char_mid
     sw "就是……觉得不太好。"
     by eye_def o "那你试着喜欢？"
     hide swimg
-    show swimg eye_squint at char_mid
+    show swimg coat eye_squint at char_mid
     sw "我不想喜欢……"
     by eye_wacky def "……"
     by eye_wacky def "{size=23}到底要怎样啊……{/size}"
     hide swimg
-    show swimg at char_mid
+    show swimg coat at char_mid
     "白一有些无语，拧了拧眉，索性转移了话题。"
     by eye_def o "车应该要到了，收拾好东西走吧。"
     hide swimg
-    show swimg smile at char_mid
+    show swimg coat smile at char_mid
     sw "诶？好~"
 
     scene bg_medical1 with Fade(0.5,1,0.5)
@@ -180,57 +180,57 @@ label c2_3:
     "白一重新睁开眼，看到面前的人抓住自己的手臂，又很快松开。"
     "她脸上带着的担忧变为惊讶，而后是像在忍受什么的，深深的凝视。"
     scene bg_medical3 with fade
-    show cximg eye_sad at char_mid with dissolve
+    show cximg coat eye_sad at char_mid with dissolve
     cx "怎么会是你……"
     by eye_still o "呃……你是？"
     "她和看起来和白一差不多大，表情变幻得像调色盘一样丰富，令白一感到困惑。"
     me "她叫岑宣，你认识吗？"
     by eye_def e "{size=23}不认识……{/size}啊，我是说，我不认识你。"
     hide cximg
-    show cximg eye_angry at char_mid
+    show cximg coat eye_angry at char_mid
     cx "……"
     hide cximg
-    show cximg eye_angry o at char_mid
+    show cximg coat eye_angry o at char_mid
     cx "我是，跟你一个学校的，就在你楼上的班级的，你的同学，梁绵绵的朋友。"
     "岑宣一字一顿地说完这句话，每一次断句都加重了一次语气。"
     hide cximg
-    show cximg eye_angry at char_mid
+    show cximg coat eye_angry at char_mid
     by eye_still o "……噢。"
     "这时候听到梁绵绵这个名字，不太算得上是让人高兴的话题。"
     "因而白一只是干巴巴地应了一声，却令岑宣的眉毛皱得更紧了。"
     by eye_def o "你找我有事？"
     hide cximg
-    show cximg eye_angry o at char_mid
+    show cximg coat eye_angry o at char_mid
     cx "你怎么能……都是因为你她才会这样！"
     hide cximg
-    show cximg eye_angry at char_mid
+    show cximg coat eye_angry at char_mid
     by eye_still o "……啊？"
     "白一不理解她的突然发难，只觉得莫名其妙。"
     by eye_def e "你是说昨天吗？那一桌上又不止我和她吃饭。"
     hide cximg
-    show cximg eye_angry o at char_mid
+    show cximg coat eye_angry o at char_mid
     cx "不，你根本不知道。"
     hide cximg
-    show cximg eye_sad at char_mid
+    show cximg coat eye_sad at char_mid
     cx "绵绵她……她不是食物中毒，是别的方式中毒的……"
     hide cximg
-    show cximg eye_sad o at char_mid
+    show cximg coat eye_sad o at char_mid
     cx "但是，医生说，她原本不会这么严重。是因为她腿上有大面积的伤口，所以才这么严重的。"
     hide cximg
-    show cximg eye_angry o at char_mid
+    show cximg coat eye_angry o at char_mid
     cx "我说的有错吗？这都是，都是因为你啊……"
     hide cximg
-    show cximg eye_angry at char_mid
+    show cximg coat eye_angry at char_mid
     cx "而且她年纪比较小，这样子……对身体的影响更大了……"
     by eye_still def "……"
     by eye_def o "她是怎么中毒的？"
     hide cximg
-    show cximg eye_sad o at char_mid
+    show cximg coat eye_sad o at char_mid
     cx "什么？这……"
     by eye_move e "应该不是意外中毒吧。"
     by eye_def o "是谁让她中毒的呢？"
     hide cximg
-    show cximg eye_sad at char_mid
+    show cximg coat eye_sad at char_mid
     cx "……"
     by eye_still e "之前的事，我是很抱歉。"
     by eye_def o "但是……因为我做错了一件事，所有的事都要我承担吗？"
@@ -240,28 +240,28 @@ label c2_3:
     "或许……这只是她的一种习惯。"
     "习惯于让自己在别人面前变得毫无破绽。"
     hide cximg
-    show cximg eye_close at char_mid
+    show cximg coat eye_close at char_mid
     cx "……"
     hide cximg
-    show cximg eye_sad o at char_mid
+    show cximg coat eye_sad o at char_mid
     cx "对，你说得没错……发生这样的事，不能都怪在你头上。"
     hide cximg
-    show cximg eye_angry at char_mid
+    show cximg coat eye_angry at char_mid
     cx "……你觉得，我应该这么说吗？"
     hide cximg
-    show cximg eye_sad at char_mid
+    show cximg coat eye_sad at char_mid
     cx "我很抱歉，抱歉……但是……我不知道……"
     hide cximg
-    show cximg eye_sad o at char_mid
+    show cximg coat eye_sad o at char_mid
     cx "也许我该夸你很聪明？很冷静？被人质问还能想到这么多？"
     hide cximg
-    show cximg eye_angry o at char_mid
+    show cximg coat eye_angry o at char_mid
     cx "但是，只是……因为你觉得与你无关，你置身事外，你不在乎，你才能做到这样……"
     hide cximg
-    show cximg eye_angry at char_mid
+    show cximg coat eye_angry at char_mid
     cx "是吗？是这样吗？"
     hide cximg
-    show cximg eye_sad at char_mid
+    show cximg coat eye_sad at char_mid
     cx "啊，不，对不起……对不起……"
     hide cximg with dissolve
     by eye_still def "……"
