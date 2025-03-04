@@ -67,6 +67,8 @@ layeredimage cximg:
     group body:
         attribute uniform default:
             "images/char/cx/uniform.webp"
+        attribute coat:
+            "images/char/cx/coat.webp"
 
     group eyes:
         attribute eye_def default:
@@ -169,6 +171,8 @@ layeredimage swimg:
     group body:
         attribute uniform default:
             "images/char/sw/uniform.webp"
+        attribute shirt:
+            "images/char/sw/shirt.webp"
 
     group eyes:
         attribute eye_def default:
@@ -196,6 +200,8 @@ layeredimage tyimg:
     group body:
         attribute uniform default:
             "images/char/ty/uniform.webp"
+        attribute coat:
+            "images/char/ty/coat.png"
 
     group eyes:
         attribute eye_def default:
@@ -223,6 +229,8 @@ layeredimage wfimg:
     group body:
         attribute uniform default:
             "images/char/wf/uniform.webp"
+        attribute coat:
+            "images/char/wf/coat.webp"
 
     group eyes:
         attribute eye_def default:
