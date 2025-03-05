@@ -343,25 +343,18 @@ label c1_1:
     by eye_def def "哦……"
     by eye_still def "{size=23}看来，还是得看你了。我肯定什么也想不起来。{/size}"
     "白一这句话说得很轻，我知道她是对我说的。"
+    hide xsimg with dissolve
     jump wxroom
     return
 
 
 
 label c1_1_extra:
-    scene bg_wxroom with fade
-    $ quick_menu = True
-    by eye_def o "好像看完了，你觉得是什么情况？"
-    me "嗯……"
     menu:
         "没有他人导致温心死亡":
             me "她……应该是自杀，或者意外死亡？"
             by eye_def e "是吗？你怎么看出来的？"
-            # 【选择笔记】
-            by eye_wacky o "……这和你的结论有什么关系？"
-            me "呃……就是，这样，那样？"
-            by eye_wacky e "你在搞笑吗？"
-            me "……"
+            jump c1_1_wrongmenu
             return
         "有他人导致温心死亡":
             me "她……应该不是自杀吧。是被人害了。"
@@ -370,7 +363,26 @@ label c1_1_extra:
             jump c1_1_menu1
             return
 
+# for【没有他人导致温心死亡】
+label c1_1_wrongmenu:
+    window hide
+    $ quick_menu = False
+    show screen clue_choice([3,6],"c1_1_wrongmenu_continue","c1_1_wrongmenu_continue")
+    pause
+    jump c1_1_wrongmenu
+    return
 
+
+label c1_1_wrongmenu_continue:
+    by eye_wacky o "……这和你的结论有什么关系？"
+    me "呃……就是，这样，那样？"
+    by eye_wacky e "你在搞笑吗？"
+    me "……"
+    jump c1_1_extra
+    return
+
+
+# for 【有他人导致温心死亡】
 label c1_1_menu1:
     window hide
     $ quick_menu = False
@@ -386,7 +398,7 @@ label c1_1_menu1_wrong:
     # 【选错笔记】
     by eye_wacky o "你是怎么通过这种东西得出刚才的结论的？"
     me "……"
-    jump c1_1_menu1
+    jump c1_1_extra
     return
 
 

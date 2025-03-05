@@ -186,6 +186,10 @@ label wxroom_note:
 
 label wxroom_by:
     if persistent.clue[1] and persistent.clue[2] and persistent.clue[3] and persistent.clue[4] and persistent.clue[5] and persistent.clue[6] and persistent.clue[7]:
+        scene bg_wxroom with fade
+        $ quick_menu = True
+        by eye_def o "好像看完了，你觉得是什么情况？"
+        me "嗯……"
         jump c1_1_extra
     else:
         by eye_still e "怎么了，继续看啊？"

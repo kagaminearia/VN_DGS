@@ -51,6 +51,7 @@ screen about():
 {a=https://www.freepik.com/}Freepik{/a}") 
         text _("代码设计：{a=https://lemmasoft.renai.us/forums/viewtopic.php?t=37628&sid=acd42f4aadf6680211571a586cbf4a80}image dissolve transitions{/a}，\
 {a=https://wattson.itch.io/renpy-wave-shader}Ren'py Wave Shader by Wattson{/a}，\
+{a=https://wattson.itch.io/renpy-auto-highlight}Renpy Auto Highlight by Wattson{/a}，\
 {a=https://feniksdev.itch.io/easy-renpy-gui}Easy Ren'Py GUI by Feniks{/a}\
 {a=https://nighten.itch.io/yet-another-phone-renpy}Phone System by Nighten{/a}")
         text _("字体：仓耳渔阳体，站酷高端黑，香萃潮汐宋，清松手写体，BlueSecretText")

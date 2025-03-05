@@ -15,7 +15,7 @@ screen main_menu():
         style_prefix "main_navigation"
         xpos 125
         yalign 0.5
-        yoffset 150
+        yoffset 180
         spacing 10
         
         textbutton _("开始游戏") action Start()
