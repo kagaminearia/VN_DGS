@@ -1,5 +1,7 @@
 label c2_3:
+    $ quick_menu = False
     scene black with Dissolve(3)
+    $ quick_menu = True
     "……"
     scene bg_hotelroom with dissolve
     show tophalfblk
@@ -58,41 +60,40 @@ label c2_3:
     show swimg coat o at char_right with moveinright
     sw "等等呀，别过去。"
     by "姒舞？你怎么在这……"
-    hide swimg
-    show swimg coat eye_sad at char_right
+    show swimg coat o at char_mid with moveinright
     sw "大家都是听到声音过来的，有人突然晕倒了，正在打电话叫救护车。"
     hide swimg
-    show swimg coat eye_sad o at char_right
+    show swimg coat eye_sad o at char_mid
     sw "你就别凑过去了，好挤的。"
     by eye_def e "呃，是吗……"
     by eye_def o "所以怎么会晕倒？"
     hide swimg
-    show swimg coat eye_sad at char_right
+    show swimg coat eye_sad at char_mid
     sw "唉，不知道啊，听说看起来像吃错东西了，但是不确定。"
     by eye_def o "啊？怎么可能？"
     hide swimg
-    show swimg coat eye_sad o at char_right
+    show swimg coat eye_sad o at char_mid
     sw "对啊，所以大家都很担心的呢。"
     hide swimg
-    show swimg coat eye_sad at char_right
+    show swimg coat eye_sad at char_mid
     sw "感觉心情好复杂哦……"
     by eye_still def "？"
     by eye_def o "你和晕倒的人很熟吗？"
     hide swimg
-    show swimg coat o at char_right
+    show swimg coat o at char_mid
     sw "不熟呀。"
     by eye_def e "那你有什么好复杂的。"
     hide swimg
-    show swimg coat eye_blink at char_right
+    show swimg coat eye_blink at char_mid
     sw "唔，在这里出事，肯定会影响天玉。看到她吃亏我应该高兴。"
     hide swimg
-    show swimg coat eye_sad o at char_right
+    show swimg coat eye_sad o at char_mid
     sw "但是因为别人的身体健康问题弄成这样……我又不高兴了。"
     hide swimg
-    show swimg coat eye_sad at char_right
+    show swimg coat eye_sad at char_mid
     by eye_still def "……"
     by eye_move o "别想太多。"
-    "白一顿了顿，最后只是干巴巴地这么说。"
+    "白一无法理解她这复杂的心情，最后只是干巴巴地这么说。"
 
     scene bg_lobby1 with fade
     show tyimg coat eye_still o at char_mid with dissolve
@@ -176,7 +177,7 @@ label c2_3:
     "有人及时拉住了她。"
     unknown "你没事吧？"
     me "对啊好险……你没事吧？"
-    by eye_still o "嗯……嗯？"
+    by eye_still o "嗯，没……嗯？"
     "白一重新睁开眼，看到面前的人抓住自己的手臂，又很快松开。"
     "她脸上带着的担忧变为惊讶，而后是像在忍受什么的，深深的凝视。"
     scene bg_medical3 with fade
@@ -360,77 +361,101 @@ label c2_3:
     by eye_def e "[user]？"
     me "……啊？嗯。"
     "她很少这样，可以说是有些刻意地叫我，让我一时间没反应过来。"
-    by "没什么，就是叫一下，烦一下你。"
+    by eye_still o "没什么，就是叫一下，烦一下你。"
     me "……"
-    by "突然感觉好烦啊。"
-    by "为什么又是这种事？"
+    by eye_move e "突然感觉好烦啊。"
+    by eye_close o "为什么我又要遇到这种事？"
     me "嗯……是啊。"
-    by "为什么她们都要这样。"
+    by "我真是搞不懂她们，为什么都要这样。"
     me "嗯……嗯？什么意思，谁？"
     by "温心，梁绵绵啊……还有班长，岑宣。"
-    by "都会这样吗？在她出事后……会有人因为她的事受影响，甚至迁怒别人。然后为她奔走。"
+    by "{size=23}都会这样吗？发神经……好吧，也不是。{/size}"
+    by "{size=23}出事之后……会有人因为她的事受影响，为她奔走，甚至迁怒别人。{/size}"
     by "啊，算了，当我没说。"
     "白一似乎也不知道自己是在说什么，只是摇摇头，将刚才的话全部撇去。"
     "也许……是在感叹吗？感叹什么？"
     "感叹为何自己再次成为迁怒对象，还是感叹于那种竟然真实存在的情谊？"
+    menu:
+        "“……”":
+            "这样的气氛令人感到不安。"
+            "因而，我只是保持沉默"
+        "“我也会”":
+            "这样的气氛令人感到不安。"
+            "但，不知为何，在这样的气氛下，我还是想要说些什么。"
+            me "我也会。"
+            by eye_wacky o "……你在说啥？会什么？"
+            me "会因为你的事受影响。"
+            by eye_still def "……"
+            by eye_still e "你是忘了西顺说的话吗。"
+            me "……没。"
+            "我当然没忘。"
+            "她的意思无非就是，我和她现在的一切都只是共感带来的移情，都是被困在一起的吊桥效应。"
+            "是一份仅仅存在三个月的，虚假的关系。"
+            menu:
+                "认同":
+                    me "好吧……你说得也对。"
+                    "我叹了口气，没法反驳，也不再继续这个话题。"
+                "反驳":
+                    me "是这样……但是……你是结果论吗？"
+                    by eye_still o "啥？什么？"
+                    me "只要结果是错，所有都是错的？"
+                    by eye_still e "那不是废话吗？走错路，走一段死路有什么意义？"
+                    me "呃……也许你觉得走在路上也挺开心的？"
+                    by eye_wacky def "难道我是白痴吗？"
+                    me "……"
+                    "不对……好像又被她带偏了。"
+                    me "我只是觉得，只是想说……走那条路是一种经历。"
+                    "我慢吞吞地解释，尽量不让自己词不达意。"
+                    me "就算没有结果，并不会让经历过的事情当作没发生过……"
+                    me "就像所有事情都会留下痕迹……"
+                    by eye_def def "……"
+                    by eye_close o "随便吧。"
+                    "白一没有反驳我，只是这么说。"
+    return
 
-    # 【“……”】
-    "这样的气氛令人感到不安。"
-    "因而，我只是保持沉默"
-    # 【“我也会”】
-    "这样的气氛令人感到不安。"
-    "但，不知为何，我还是想要说些什么。"
-    me "我也会。"
-    by "……你在说啥？会什么？"
-    me "会因为你的事受影响。"
-    by "……"
-    by "你是忘了西顺说的话吗。"
-    me "……没。"
-    "我当然没忘。"
-    "她是说，我和她现在的一切都只是共感带来的移情，都是被困在一起的吊桥效应。"
-    "是一份仅仅存在三个月的，虚假的关系。"
-    # 【认同】
-    me "好吧……你说得对。"
-    "我叹了口气，也不再继续这个话题。"
-    # 【反驳】
-    me "但……你是结果论吗？"
-    by "什么？"
-    me "只要结果是错，所有都是错的？"
-    by "那不是废话吗？走错路，走一段死路有什么意义？"
-    me "呃……也许你觉得走在路上也挺开心的？"
-    by "难道我是白痴吗？"
-    me "……"
-    "不对……好像又被她带偏了。"
-    me "我只是觉得，只是想说……走那条路是一种经历。"
-    "我慢吞吞地解释，尽量不让自己词不达意。"
-    me "就算没有结果，并不会让经历过的事情当作没发生过……"
-    me "就像所有事情都会留下痕迹……"
-    by "……"
-    by "随便吧。"
-    "白一没有反驳我，只是这么说。"
 
 
     scene bg_lobby2 with Fade(0.5,1,0.5)
     "如岑宣所说，很快白一和其他人就被叫回了云玉阁，每个人被隔离在单独的房间里。"
     "不过，为了防止影响现场的判断，并不是待在之前的房间，而是在三楼。"
     "出乎白一预料的是，她看到一个熟悉的身影。"
-    by "你来干嘛？"
+
+    scene bg_hotelroom with Dissolve(2)
+    show xsimg at char_mid with dissolve
+    by eye_def o "……怎么又是你？你来干嘛？"
+    hide xsimg
+    show xsimg eye_move smile at char_mid 
     xs "来加班啊。"
-    "西顺懒懒地挑起一个笑容，在白一看来，有些不怀好意。"
-    by "这种也算特别案件？"
+    hide xsimg
+    show xsimg smile at char_mid 
+    "西顺懒懒地挑起一个笑容，在白一看来，实在很像不怀好意。"
+    by eye_still o "这种也算特别案件？"
+    hide xsimg
+    show xsimg o at char_mid 
     xs "从影响上看，勉强算吧。"
     xs "概率是随机伤人，伤害未成年，还是在这种大型集团的产业里发生的事。"
+    hide xsimg
+    show xsimg eye_close o at char_mid 
     xs "唔，很难搞啊。"
+    hide xsimg
+    show xsimg eye_close at char_mid 
     "她耸了耸肩，一副无奈的样子。"
+    hide xsimg
+    show xsimg o at char_mid 
     xs "所以，你要不要来帮我？"
-    by "哈？？"
-    by "跟我有什么关系？"
+    by eye_shock o "哈？？"
+    by eye_wacky o "跟我有什么关系？"
     xs "我听说了啊，你和受害人的爱恨情仇。"
-    by "……你知道谣言是怎么产生的吗？"
-    xs "好吧，我开玩笑的。你确实很好用，可以帮我提高效率。"
-    by "别把人说得像工具啊。"
+    hide xsimg
+    show xsimg smile at char_mid 
+    xs "不如说，我是因为听说你在这，才过来的。"
+    by eye_wacky e "……你知道谣言是怎么产生的吗？"
+    hide xsimg
+    show xsimg eye_close o  at char_mid 
+    xs "好吧，我开玩笑的。但你确实很好用，可以帮我提高效率。"
+    by eye_still o "别把人说得像工具啊。"
     "尽管这么说，但白一并没有拒绝西顺的话。"
-    "从各种意义上说，她都没办法拒绝——西顺很麻烦，她在的机构更麻烦。"
+    "从各种意义上说，她都没办法拒绝。"
 
 
     $ quick_menu = False
@@ -443,7 +468,7 @@ label c2_3:
     $ quick_menu = True
     me "这里应该就是案发现场吧。"
     by "嗯，对。"
-    by "不能破坏现场，交给你了。"
+    by "啧……我感觉我就是个工具人。"
     "因为事情发生在早上，房间还没有来得及收拾，而后被保持在梁绵绵离开时候的样子。"
     # map
     jump hotelroom
@@ -491,13 +516,15 @@ label c2_3_extra:
     "**，***，**，**，*** 21：40去游戏室，直到电影放完"
     "————"
 
-    by "我靠，这也太多了吧，这要一个个问过去吗？"
+    by eye_wacky e "我靠，这也太多了吧，这要一个个问过去吗？"
     "那张表格的确问得很详细，基本上有一半的同学名字都在上面。"
     me "嗯……也许？"
     me "要不从你熟悉的人开始看。"
     by "我没有熟悉的人。"
     me "喂……"
-    "姒舞要是听到这句话又要哭死了，虽然大概率是装的。"
+    me "你这话要是让人家姒舞知道了，她会很难过吧。"
+    by "她装的。"
+    me "……"
     by "就算熟悉也不知道啊，拜托，我昨天全程只关注过吃饭好吗？"
     by "如果有看到别的，难道你会不知道吗？"
     by "或者，你有注意到别的？"

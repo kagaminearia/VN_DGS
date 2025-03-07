@@ -238,14 +238,14 @@ label c0:
     by eye_still e "所以，是不是有什么危险的事情，跟我有关，所以你们才……？"
     xs "嗯，是，但不完全是。不过你那么想也没问题。"
     hide xsimg
-    show xsimg smile at char_c with dissolve
+    show xsimg smile at char_mid with dissolve
     "西顺忽然露出一个浅笑，眼睛直勾勾盯着白一。"
     "深黑色的眸子在灯下隐约闪烁着反光，如同深邃的漩涡，摄取人的心神。"
     hide xsimg
-    show xsimg o at char_c
+    show xsimg o at char_mid
     xs "嗯，让我这样解释……特调组，还有另外一个名字。"
     hide xsimg
-    show xsimg at char_c
+    show xsimg at char_mid
     python:
         persistent.dictList.append(("特调组","对外称为特别案件调查组，负责解决已经对社会产生重大恶劣影响的事件。\n除此之外，组内更重要的任务是处理一些无法用常理解释的“非正常”事件，因此也称为特殊怪异事件调查组。"))
         persistent.dictList.append(("怪异","对“无法用现如今的常识解释的，违反对科学的普遍认知超自然的事件”的统称。\n怪异有多种形态，可单独存在，也可以和生物相互影响。\n怪异各有不同，一千种怪异可能有一千种特征。它们被收录在城安局的信息系统，也总结出了一套处理公式。"))
@@ -256,11 +256,11 @@ label c0:
     "但只是一瞬间。她很快又恢复气息，装作没有任何反应的样子。"
     by eye_move o "……你跟我解释这个干嘛？"
     hide xsimg
-    show xsimg eye_still smile at char_c
+    show xsimg eye_still smile at char_mid
     xs "嗯，这个啊，意思就是——"
-    show bg_black with dissolve
+    show black with dissolve
     hide xsimg
-    pause(0.3)
+    pause(0.15)
     show cg_xs10 at cg0 with dissolve
     xs "你，或者说，{p}在你身上的{b}那个东西{/b}——"
     xs "到底是什么？"

@@ -59,3 +59,4 @@ screen testchapter():
         textbutton ("c1-5") action Start("c1_5")
         textbutton ("c2-1") action Start("c2_1")
         textbutton ("c2-2") action Start("c2_2")
+        textbutton ("c2-3") action Start("c2_3")

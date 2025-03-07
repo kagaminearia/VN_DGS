@@ -89,7 +89,8 @@ screen wxroom_screen:
             action [Hide("wxroom_screen"), Jump(location["label"])]
 
 
-label wxroom_table: 
+label wxroom_table:
+    $ quick_menu = True
     $ persistent.clue[1] = 1
     show clue_1 at clue with dissolve
     "抽屉里有一双木质筷子，一双用过后洗干净的一次性筷子，上面刻有“湘味”的字迹。"
@@ -108,6 +109,7 @@ label wxroom_table:
     return
 
 label wxroom_bed:
+    $ quick_menu = True
     $ persistent.clue[2] = 1
     show clue_2 at clue with dissolve
     "被子已经被掀开，堆在一边。床单很旧，有不少补丁，但很干净。枕头上有两个人躺过的痕迹。"
@@ -124,6 +126,7 @@ label wxroom_bed:
     return
 
 label wxroom_stove:
+    $ quick_menu = True
     $ persistent.clue[3] = 1
     show clue_3 at clue with dissolve
     "有长时间开过火的痕迹，燃气灶老旧，燃气喷嘴处有异物堵塞。"
@@ -138,6 +141,7 @@ label wxroom_stove:
     return
 
 label wxroom_garbage:
+    $ quick_menu = True
     $ persistent.clue[4] = 1
     show clue_4 at clue with dissolve
     "空空如也，没有袋子"
@@ -151,6 +155,7 @@ label wxroom_garbage:
     return
 
 label wxroom_window:
+    $ quick_menu = True
     $ persistent.clue[5] = 1
     show clue_5 at clue with dissolve
     "被百叶窗盖住的窗户关闭，上了锁"
@@ -162,6 +167,7 @@ label wxroom_window:
     return
 
 label wxroom_medicine:
+    $ quick_menu = True
     $ persistent.clue[6] = 1
     show clue_6 at clue with dissolve
     "透明药盒里有两瓶一样的感冒药，其中一瓶空了。"
@@ -173,6 +179,7 @@ label wxroom_medicine:
     return
 
 label wxroom_note:
+    $ quick_menu = True
     $ persistent.clue[7] = 1
     show clue_7 at clue with dissolve
     "6:30起床，7:00到校，17:00放学，XXXX（涂黑），20:00扔垃圾（周末整理房间），23:30睡觉"
@@ -185,6 +192,7 @@ label wxroom_note:
     return
 
 label wxroom_by:
+    $ quick_menu = True
     if persistent.clue[1] and persistent.clue[2] and persistent.clue[3] and persistent.clue[4] and persistent.clue[5] and persistent.clue[6] and persistent.clue[7]:
         scene bg_wxroom with fade
         $ quick_menu = True
