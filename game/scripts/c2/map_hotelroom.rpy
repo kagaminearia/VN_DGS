@@ -15,46 +15,46 @@ define loc_lobby = [
         "idle_image": "images/map/star_idle.png",
         "hover_image": "images/map/star_hover.png",
         "label": "room_candle",
-        "xpos": 1492,
-        "ypos": 116
+        "xpos": 1127,
+        "ypos": 655
     },
     {
         "name": "客房-杯子",
         "idle_image": "images/map/star_idle.png",
         "hover_image": "images/map/star_hover.png",
         "label": "room_cup",
-        "xpos": 1375,
-        "ypos": 295
+        "xpos": 1355,
+        "ypos": 567
     },
     {
         "name": "客房-内门",
-        "idle_image": "images/map/qsw_idle.webp",
-        "hover_image": "images/map/qsw_hover.webp",
+        "idle_image": "images/map/star_idle.webp",
+        "hover_image": "images/map/star_hover.webp",
         "label": "room_door",
-        "xpos": 503,
-        "ypos": 652
+        "xpos": 1525,
+        "ypos": 266
     },
     {
         "name": "客房-地面",
-        "idle_image": "images/map/qlmm_idle.webp",
-        "hover_image": "images/map/qlmm_hover.webp",
+        "idle_image": "images/map/star_idle.webp",
+        "hover_image": "images/map/star_hover.webp",
         "label": "room_ground",
-        "xpos": 1452,
-        "ypos": 601
+        "xpos": 17,
+        "ypos": 673
     },
     {
-        "name": "客房-墙面",
-        "idle_image": "images/map/qwf_idle.webp",
-        "hover_image": "images/map/qwf_hover.webp",
+        "name": "客房-平面图",
+        "idle_image": "images/map/star_idle.webp",
+        "hover_image": "images/map/star_hover.webp",
         "label": "room_wall",
-        "xpos": 28,
-        "ypos": 499
+        "xpos": 314,
+        "ypos": 230
     },
 ]
 
 screen hotelroom_screen:
     modal True
-    add "images/map/lobby.webp"
+    add "images/map/hotelroom.webp"
 
     # buttons for each location
     for location in loc_lobby:

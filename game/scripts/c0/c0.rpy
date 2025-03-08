@@ -261,8 +261,9 @@ label c0:
     show black with dissolve
     hide xsimg
     pause(0.15)
-    show cg_xs10 at cg0 with dissolve
+    scene cg_xs10 at cg0 with dissolve
     xs "你，或者说，{p}在你身上的{b}那个东西{/b}——"
+    show cg_xs11 at cg0 with dissolve
     xs "到底是什么？"
     
     return
