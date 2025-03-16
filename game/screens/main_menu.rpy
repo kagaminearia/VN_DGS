@@ -13,9 +13,8 @@ screen main_menu():
     add "main-title"
     vbox:
         style_prefix "main_navigation"
-        xpos 125
-        yalign 0.5
-        yoffset 180
+        xpos 175
+        yalign 0.85
         spacing 10
         
         textbutton _("开始游戏") action Start()
@@ -38,7 +37,7 @@ screen main_menu():
 style main_navigation_button_text:
     color gui.white
     hover_color gui.white
-    size 48
+    size 50
     hover_underline True
     selected_underline True
     selected_hover_underline True

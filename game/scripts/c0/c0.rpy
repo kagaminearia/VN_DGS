@@ -171,13 +171,13 @@ label c0:
     window show
     $ quick_menu = True
     by eye_def e "什么情况……有毛病？这些人又要干嘛啊……"
-    me "不知道。这里，好像是城安局。"
-    me "不过，话说，城安局是什么地方？"
+    me "不知道。不过……这里，好像是城安局。"
+    me "话说，城安局是什么地方？"
     by eye_wacky o "……啊？你连城安局是什么都不知道，却知道这里是？\n真是有够奇怪的……"
     python:
         persistent.dictList.append(("城安局","全称为城市安全管理局，顾名思义，负责处理影响到城市安全的事件。\n内部人员一般分为三个组，民案组，刑事组，特调组。"))
         persistent.dictList = list(set(persistent.dictList))
-    by eye_def e "就是城市安全管理局啊，顾名思义吧。"
+    by eye_def e "就是城市安全管理局啊，看名字就懂了吧。"
     me "哦……"
     by eye_move o "这么看，这里应该是询问室了。啧……我怎么这么倒霉。"
     "白一坐在角落的凳子上，双手紧绷着握拳，似乎意识到什么，放低了说话声音。"
