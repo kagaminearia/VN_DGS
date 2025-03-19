@@ -40,6 +40,7 @@ define clueList = [ # clue content, index = line number - 2
 default persistent.clue = [0]*36
 # images for clues
 image evlocked = "gui/ev/ev-locked.png"
+image clue0 = "images/clue/clue_0.png"
 image clue1 = "images/clue/clue_1.png"
 image clue2 = "images/clue/clue_2.png"
 image clue3 = "images/clue/clue_3.png"
@@ -52,6 +53,32 @@ image clue9 = "images/clue/clue_9.png"
 image clue10 = "images/clue/clue_10.png"
 image clue11 = "images/clue/clue_7.webp"
 image clue12 = "images/clue/clue_7.webp"
+image clue13 = "images/clue/clue_13.png"
+image clue14 = "images/clue/clue_14.png"
+image clue15 = "images/clue/clue_15.png"
+image clue16 = "images/clue/clue_16.png"
+image clue17 = "images/clue/clue_17.png"
+image clue18 = "images/clue/clue_18.png"
+image clue19 = "images/clue/clue_19.png"
+image clue20 = "images/clue/clue_20.png"
+image clue21 = "images/clue/clue_21.png"
+image clue22 = "images/clue/clue_22.png"
+image clue23 = "images/clue/clue_23.png"
+image clue24 = "images/clue/clue_24.png"
+image clue25 = "images/clue/clue_25.png"
+image clue26 = "images/clue/clue_26.png"
+image clue27 = "images/clue/clue_27.png"
+image clue28 = "images/clue/clue_28.png"
+image clue29 = "images/clue/clue_29.png"
+image clue30 = "images/clue/clue_30.png"
+image clue31 = "images/clue/clue_31.png"
+image clue32 = "images/clue/clue_32.png"
+image clue33 = "images/clue/clue_33.png"
+image clue34 = "images/clue/clue_34.png"
+image clue35 = "images/clue/clue_35.png"
+
+
+
 
 # character info
 define charList = [

@@ -13,6 +13,11 @@ label c2_3:
     by eye_still o "啊？哦，对……我很少这么晚睡，好累……"
     "昨晚的活动弄到十二点多一些，白一大概是十二点半睡的。"
     "现在醒来，还有些晕晕乎乎的感觉。"
+    by eye_still e "呃啊，好难受……"
+    me "……十二点半睡也还好吧？"
+    by eye_move o "估计是昨晚太吵了……感觉现在头还在痛……"
+    "白一发出有些烦躁的呻吟，不太痛快地下床。"
+
     by eye_def o "说起来昨天都还没来得及看房间，还说要好好享受一下。"
     by eye_close o "可惜，待会吃完早餐就要走了。"
     "白一说着，很快收拾好自己，准备推门——"
@@ -173,14 +178,18 @@ label c2_3:
     show tophalfblk with vpunchm
     "下楼梯的时候，白一突然感觉腿一软，整个人向下倒去。"
     by eye_squint def "呃……！"
+    show black with dissolve
     "想象中的剧痛并没有来临。"
     "有人及时拉住了她。"
     unknown "你没事吧？"
     me "对啊好险……你没事吧？"
     by eye_still o "嗯，没……嗯？"
+    show cg_cx01 at cg0 with dissolve
+    hide black
     "白一重新睁开眼，看到面前的人抓住自己的手臂，又很快松开。"
+    show cg_cx00 at cg0 with dissolve
     "她脸上带着的担忧变为惊讶，而后是像在忍受什么的，深深的凝视。"
-    scene bg_medical3 with fade
+    scene bg_medical3 with Fade(0.5,1,0.5)
     show cximg coat eye_sad at char_mid with dissolve
     cx "怎么会是你……"
     by eye_still o "呃……你是？"
@@ -326,7 +335,7 @@ label c2_3:
     "岑宣弓起身体，让自己的视线和梁绵绵齐平。"
     "她缓缓地用手上的动作安抚梁绵绵，而后，再次谨慎地远离病床，拉着白一走出了房间。"
 
-    scene bg_medical1 with pix
+    scene bg_medical1 with pix1
     show cximg coat eye_sad at char_mid with dissolve
     cx "……"
     hide cximg
@@ -374,7 +383,7 @@ label c2_3:
     by "啊，算了，当我没说。"
     "白一似乎也不知道自己是在说什么，只是摇摇头，将刚才的话全部撇去。"
     "也许……是在感叹吗？感叹什么？"
-    "感叹为何自己再次成为迁怒对象，还是感叹于那种竟然真实存在的情谊？"
+    "是感叹为何自己再次成为迁怒对象，还是感叹于那种竟然真实存在的情谊？"
     menu:
         "“……”":
             "这样的气氛令人感到不安。"
@@ -382,9 +391,10 @@ label c2_3:
         "“我也会”":
             "这样的气氛令人感到不安。"
             "但，不知为何，在这样的气氛下，我还是想要说些什么。"
-            me "我也会。"
+            me "……我也会？"
             by eye_wacky o "……你在说啥？会什么？"
-            me "会因为你的事受影响。"
+            me "啊，就是……我应该也会，因为你的事受影响，吧……"
+            me "被她反问，我竟然有些不确定。"
             by eye_still def "……"
             by eye_still e "你是忘了西顺说的话吗。"
             me "……没。"
@@ -411,16 +421,15 @@ label c2_3:
                     by eye_def def "……"
                     by eye_close o "随便吧。"
                     "白一没有反驳我，只是这么说。"
-    return
 
 
 
-    scene bg_lobby2 with Fade(0.5,1,0.5)
-    "如岑宣所说，很快白一和其他人就被叫回了云玉阁，每个人被隔离在单独的房间里。"
+    scene bg_lobby1 with Fade(0.5,1,0.5)
+    "如岑宣所说，很快白一和其他人就被叫回了云玉阁，每个人会被隔离在单独的房间里。"
     "不过，为了防止影响现场的判断，并不是待在之前的房间，而是在三楼。"
     "出乎白一预料的是，她看到一个熟悉的身影。"
 
-    scene bg_hotelroom with Dissolve(2)
+    scene bg_lobby2 with Dissolve(2)
     show xsimg at char_mid with dissolve
     by eye_def o "……怎么又是你？你来干嘛？"
     hide xsimg
@@ -460,7 +469,7 @@ label c2_3:
 
     $ quick_menu = False
     window hide
-    scene bg_hotelroom with Fade(0.5,0.8,0.5)
+    scene bg_hotelroom with Fade(0.5,1,0.5)
     show screen tpoinfo("1月1日，星期六","云玉阁") with dissolve
     pause 1
     hide screen tpoinfo with dissolve
@@ -476,31 +485,83 @@ label c2_3:
 
 
 
-label c2_3_extra:
+label c2_3_extra1:
+    scene bg_hotelroom with fade
+    $ quick_menu = True
     xs "你看出什么了吗？"
     xs "哦，对了，你先看这个。"
     "西顺递过来一份资料，是关于梁绵绵的报告。上面有些地方被划掉了，大约是一些内部信息。"
     by "原来是这样。"
     by "我觉得……让她中毒的直接原因……"
-    # 【其他】
+    jump c2_3_menu1
+    
+    return
+
+
+# for 【中毒原因】
+label c2_3_menu1:
+    window hide
+    $ quick_menu = False
+    # 【选择蜡烛】
+    show screen clue_choice([14],"c2_3_menu1_wrong","c2_3_menu1_correct")
+    pause
+    jump c2_3_menu1
+    return
+
+label c2_3_menu1_wrong:
+    $ quick_menu = True
     xs "嗯，这个和中毒有关系吗？"
     by "不，等等，不是这个……"
-    # 【选择蜡烛】
-    by "蜡烛吧，说是呼吸道吸入中毒的话……"
+    jump c2_3_menu1
+    return
+    
+# 【选择蜡烛】
+label c2_3_menu1_correct:
+    $ quick_menu = True
+    by "是蜡烛吧，说是呼吸道吸入中毒的话……"
     me "对，蜡烛可能有问题。"
     me "容器里还有燃烧后的残留物，如果检查的话应该能查出来。"
     xs "嗯，这样说就行得通。"
     xs "除了这个，还有别的吗？"
+    jump c2_3_menu2
+    return
+
+# for 【补充内容】
+label c2_3_menu2:
+    window hide
+    $ quick_menu = False
     # 【选择地面痕迹】
+    show screen clue_choice([17],"c2_3_menu2_wrong","c2_3_menu2_correct")
+    pause
+    jump c2_3_menu2
+    return
+
+
+label c2_3_menu2_wrong:
+    $ quick_menu = True
+    xs "嗯？这个似乎没有更多细节了。"
+    by "哦……是吗。"
+    jump c2_3_menu2
+    return
+
+# 【选择地面痕迹】
+label c2_3_menu2_correct:
+    $ quick_menu = True
     by "有一个……呃，看起来像鞋印的东西。"
     xs "等等，我去看看。你没把痕迹弄掉吧？"
     by "你觉得我看起来像白痴吗？"
     xs "嗯，没错，是鞋印。那好，等会我去把所有人的鞋底都记录一下。"
+    jump c2_3_extra2
+    return
+
+
+label c2_3_extra2:
+    $ quick_menu = True
     xs "那现在先这样。"
     xs "因为推测中毒时间是零点到一点半之间，所以我去问了在这之前所有人的单独行动情况。"
     xs "你看一下这些，有没有可以补充的。"
 
-
+    by "啊？哦……"
     # 【行动表】
     "*时间有偏差，仅作参考*"
     "天玉 19:30前在宴会厅准备，21:30左右检查了一次茶水间的包裹，其余时间都和大多数人一起"
@@ -523,15 +584,22 @@ label c2_3_extra:
     by "我没有熟悉的人。"
     me "喂……"
     me "你这话要是让人家姒舞知道了，她会很难过吧。"
-    by "她装的。"
+    by "她装的吧。"
     me "……"
     by "就算熟悉也不知道啊，拜托，我昨天全程只关注过吃饭好吗？"
+    me "这倒也是……"
     by "如果有看到别的，难道你会不知道吗？"
+    me "这，这倒也是……"
     by "或者，你有注意到别的？"
     me "……我没有。"
     "说完，我不免有些心虚。好像是没有问她的必要……"
-    by "对啊，这太扯了，等西顺回来，让她自己筛选去吧。"
+    by "呵呵，那你还能知道点什么？你怎么好意思问我的？"
+    "白一果然冷笑起来，明晃晃地翻了个白眼。"
+    by "这太扯了，关我什么事。"
+    by "等西顺回来，让她自己筛选去吧。"
     me "……"
+
+
     xs "蜡烛的确是直接原因，不过不是它本身有问题，而是被人为加入了有毒物质，在蜡烛使用时被一起燃烧。"
     xs "问过云玉阁那边，提供给学生的那个助眠包裹是19：10才分装到每个小盒子里的。在此之前，那些蜡烛和茶包都是在密封的快递箱里。"
     by "所以在分完之后才有机会放东西进去咯？"
