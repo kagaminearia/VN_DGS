@@ -70,7 +70,8 @@ label room_candle:
     $ quick_menu = True
     $ persistent.clue[14] = 1
     show clue_14 at clue with dissolve
-    "放在床头柜上，已经烧完了。透过留给灯芯的洞，能够看到容器里剩下的浅浅一层像是碎屑的残留物。"
+    "香薰蜡烛被放在床头柜上，已经烧完了。"
+    "透过留给灯芯的洞，能够看到容器里剩下的浅浅一层像是碎屑的残留物。"
     hide clue_14
     jump hotelroom
     return

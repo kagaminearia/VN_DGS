@@ -30,8 +30,16 @@ label c2_3:
     by eye_def o "都锁上就是分开的两个房间，可以分别住。"
     me "噢——"
     by eye_move o "啧，真的好高级。"
-    scene bg_diningroom1 with fade
-    "尽管昨天的活动结束是零点之后，有些人也许闹到更晚，但年轻人大多是精力充沛的——当然，白一除外。"
+
+    $ quick_menu = False
+    window hide
+    scene bg_diningroom1 with Fade(0.5,1,0.5)
+    show screen tpoinfo("1月1日，星期六","云玉阁") with dissolve
+    pause 1
+    hide screen tpoinfo with dissolve
+    window show
+    $ quick_menu = True
+    "尽管昨天的活动结束是零点之后，有些人也许闹到更晚，但年轻人大多是精力充沛的——{p}当然，白一除外。"
     "等到白一下楼的时候，已经能看到大多数人起床了，在走廊和大厅三三两两。"
     "部分人在餐厅吃饭，还有些更有精力的，拿着早饭就和别人开下一把游戏。"
     by eye_move e "唔，最后一次免费的饭，可惜啊。"
@@ -375,13 +383,13 @@ label c2_3:
     by eye_move e "突然感觉好烦啊。"
     by eye_close o "为什么我又要遇到这种事？"
     me "嗯……是啊。"
-    by "我真是搞不懂她们，为什么都要这样。"
+    by eye_still o "我真是搞不懂她们，为什么都要这样。"
     me "嗯……嗯？什么意思，谁？"
-    by "温心，梁绵绵啊……还有班长，岑宣。"
-    by "{size=23}都会这样吗？发神经……好吧，也不是。{/size}"
-    by "{size=23}出事之后……会有人因为她的事受影响，为她奔走，甚至迁怒别人。{/size}"
-    by "啊，算了，当我没说。"
-    "白一似乎也不知道自己是在说什么，只是摇摇头，将刚才的话全部撇去。"
+    by eye_close o "温心，梁绵绵啊……还有班长，岑宣。"
+    by eye_still e "{size=23}都会这样吗？发神经……好吧，也不是。{/size}"
+    by tye_move def "{size=23}出事之后……会有人因为她的事受影响，为她奔走，甚至迁怒别人。{/size}"
+    by eye_close o "啊，算了，当我没说。"
+    "白一似乎也不知道自己是在说什么，只是有些烦躁地摇摇头，将刚才的话全部撇去。"
     "也许……是在感叹吗？感叹什么？"
     "是感叹为何自己再次成为迁怒对象，还是感叹于那种竟然真实存在的情谊？"
     menu:
@@ -467,18 +475,11 @@ label c2_3:
     "从各种意义上说，她都没办法拒绝。"
 
 
-    $ quick_menu = False
-    window hide
     scene bg_hotelroom with Fade(0.5,1,0.5)
-    show screen tpoinfo("1月1日，星期六","云玉阁") with dissolve
-    pause 1
-    hide screen tpoinfo with dissolve
-    window show
-    $ quick_menu = True
-    me "这里应该就是案发现场吧。"
-    by "嗯，对。"
-    by "啧……我感觉我就是个工具人。"
-    "因为事情发生在早上，房间还没有来得及收拾，而后被保持在梁绵绵离开时候的样子。"
+    me "所以，这里应该就是案发现场吧。"
+    by eye_def o "嗯，对啊。"
+    by eye_still def "啧……我感觉我就是个工具人。"
+    "因为事情发生在早上，房间还没有来得及收拾。在事情发生之后，也被保持在梁绵绵离开时候的样子。"
     # map
     jump hotelroom
     return
@@ -488,11 +489,14 @@ label c2_3:
 label c2_3_extra1:
     scene bg_hotelroom with fade
     $ quick_menu = True
+    show xsimg o at char_mid with dissolve
     xs "你看出什么了吗？"
+    hide xsimg
+    show xsimg at char_mid 
     xs "哦，对了，你先看这个。"
     "西顺递过来一份资料，是关于梁绵绵的报告。上面有些地方被划掉了，大约是一些内部信息。"
-    by "原来是这样。"
-    by "我觉得……让她中毒的直接原因……"
+    by eye_still def "原来是这样。"
+    by eye_def o "我觉得……让她中毒的直接原因……"
     jump c2_3_menu1
     
     return
@@ -510,19 +514,29 @@ label c2_3_menu1:
 
 label c2_3_menu1_wrong:
     $ quick_menu = True
+    hide xsimg
+    show xsimg o at char_mid 
     xs "嗯，这个和中毒有关系吗？"
-    by "不，等等，不是这个……"
+    hide xsimg
+    show xsimg at char_mid 
+    by eye_move o "呃，不，等等，不是这个……"
     jump c2_3_menu1
     return
     
 # 【选择蜡烛】
 label c2_3_menu1_correct:
     $ quick_menu = True
-    by "是蜡烛吧，说是呼吸道吸入中毒的话……"
-    me "对，蜡烛可能有问题。"
+    by eye_def o "是蜡烛吧，说是呼吸道吸入中毒的话……"
+    me "啊——对，蜡烛可能有问题。"
     me "容器里还有燃烧后的残留物，如果检查的话应该能查出来。"
-    xs "嗯，这样说就行得通。"
+    hide xsimg
+    show xsimg eye_still o at char_mid 
+    xs "嗯，有道理。这样说就行得通。"
+    hide xsimg
+    show xsimg o at char_mid 
     xs "除了这个，还有别的吗？"
+    hide xsimg
+    show xsimg at char_mid 
     jump c2_3_menu2
     return
 
@@ -539,17 +553,29 @@ label c2_3_menu2:
 
 label c2_3_menu2_wrong:
     $ quick_menu = True
-    xs "嗯？这个似乎没有更多细节了。"
-    by "哦……是吗。"
+    hide xsimg
+    show xsimg o at char_mid 
+    xs "嗯？这个部分似乎没有更多细节了。"
+    hide xsimg
+    show xsimg at char_mid 
+    by eye_still o "哦……是吗。那，就不是这个……"
     jump c2_3_menu2
     return
 
 # 【选择地面痕迹】
 label c2_3_menu2_correct:
     $ quick_menu = True
-    by "有一个……呃，看起来像鞋印的东西。"
+    by eye_def o "哦，对了，洗手间里。"
+    by eye_still e "有一个……呃，看起来像鞋印的东西。"
+    hide xsimg
+    show xsimg o at char_mid 
     xs "等等，我去看看。你没把痕迹弄掉吧？"
-    by "你觉得我看起来像白痴吗？"
+    by eye_still e "……你觉得我看起来像白痴吗？"
+    hide xsimg with dissolve
+    "西顺已经习惯白一的阴阳怪气，对此视若无睹。"
+    "她推开洗手间的门，有些小心，不让自己影响里面的痕迹。"
+    scene bg_hotelroom with fade
+    show xsimg o at char_mid with dissolve
     xs "嗯，没错，是鞋印。那好，等会我去把所有人的鞋底都记录一下。"
     jump c2_3_extra2
     return
@@ -557,110 +583,200 @@ label c2_3_menu2_correct:
 
 label c2_3_extra2:
     $ quick_menu = True
+    hide xsimg
+    show xsimg at char_mid 
     xs "那现在先这样。"
-    xs "因为推测中毒时间是零点到一点半之间，所以我去问了在这之前所有人的单独行动情况。"
+    hide xsimg
+    show xsimg o at char_mid 
+    xs "因为推测中毒时间是零点到一点半之间，所以我去问了在这之前所有人的单独行动情况，然后选了一部分。"
+    hide xsimg
+    show xsimg at char_mid 
     xs "你看一下这些，有没有可以补充的。"
-
+    hide xsimg with dissolve
     by "啊？哦……"
-    # 【行动表】
-    "*时间有偏差，仅作参考*"
-    "天玉 19:30前在宴会厅准备，21:30左右检查了一次茶水间的包裹，其余时间都和大多数人一起"
-    "服务员 从19:00开始，每隔一小时就会在一楼每间房巡逻一次，0:30去每间客房递送睡前服务包裹"
-    "卫锋 19:15去过洗手间 22:33去过茶水间"
-    "** 19:00去过茶水间"
-    "姒舞 19:10去过游戏室 21:50去过茶水间"
-    "** 20:00去过洗手间"
-    "** 19:56去过洗手间"
-    "** 22:50去过茶水间"
-    "** 23:22 去过洗手间"
-    "岑宣 23:15去过洗手间"
-    "**，***，**，**，*** 21：40去游戏室，直到电影放完"
-    "————"
-
+    
+    $ persistent.clue[20] = 1
+    show clue_20 at clue with dissolve
+    xs "就是这些，当然这个具体时间点是有偏差的，不过不多，也不影响。"
+    hide clue_20 with dissolve
     by eye_wacky e "我靠，这也太多了吧，这要一个个问过去吗？"
-    "那张表格的确问得很详细，基本上有一半的同学名字都在上面。"
+    "那张表格的确问得很详细，基本上有三分之一的同学名字都在上面。"
+
     me "嗯……也许？"
     me "要不从你熟悉的人开始看。"
-    by "我没有熟悉的人。"
-    me "喂……"
+    by eye_def o "我没有熟悉的人。"
+    me "……喂……"
     me "你这话要是让人家姒舞知道了，她会很难过吧。"
-    by "她装的吧。"
+    by eye_close o "她装的吧。"
     me "……"
-    by "就算熟悉也不知道啊，拜托，我昨天全程只关注过吃饭好吗？"
+    by eye_still o "就算熟悉也不知道啊，拜托，我昨天全程只关注过吃饭好吗？"
     me "这倒也是……"
-    by "如果有看到别的，难道你会不知道吗？"
+    by eye_stil le "如果有看到别的，难道你会不知道吗？"
     me "这，这倒也是……"
-    by "或者，你有注意到别的？"
+    by eye_still o "或者，你有注意到别的？"
     me "……我没有。"
     "说完，我不免有些心虚。好像是没有问她的必要……"
-    by "呵呵，那你还能知道点什么？你怎么好意思问我的？"
+    by eye_wacky smile "呵呵，那你还能知道点什么？你怎么好意思问我的？"
     "白一果然冷笑起来，明晃晃地翻了个白眼。"
-    by "这太扯了，关我什么事。"
-    by "等西顺回来，让她自己筛选去吧。"
+    by eye_close o "这太扯了，关我什么事。"
+    by eye_close def "等西顺回来，让她自己筛选去吧。"
     me "……"
 
-
-    xs "蜡烛的确是直接原因，不过不是它本身有问题，而是被人为加入了有毒物质，在蜡烛使用时被一起燃烧。"
-    xs "问过云玉阁那边，提供给学生的那个助眠包裹是19：10才分装到每个小盒子里的。在此之前，那些蜡烛和茶包都是在密封的快递箱里。"
-    by "所以在分完之后才有机会放东西进去咯？"
+    scene bg_hotelroom with fade
+    show xsimg eye_close o at char_mid with dissolve
+    xs "啊……"
+    "西顺在墙边的沙发上坐下，轻轻叹出一口气。"
+    hide xsimg
+    show xsimg o at char_mid 
+    xs "你看得怎么样了？"
+    by "……就那样？"
+    hide xsimg
+    show xsimg eye_close at char_mid 
+    xs "好吧。那么……"
+    hide xsimg
+    show xsimg eye_still o at char_mid 
+    xs "蜡烛的确是直接原因，不过不是它本身有问题，而是被人为加入了有毒物质。"
+    hide xsimg
+    show xsimg o at char_mid 
+    xs "具体还不知道是什么东西，不过，总之是被掺杂在一起，在蜡烛使用时一起燃烧。"
+    xs "问过云玉阁那边，提供给学生的那个助眠礼盒是七点左右才拆开分装到每个小盒子里的。"
+    xs "在此之前，那些蜡烛和茶包都是在密封的快递箱里。"
+    by eye_def o "就是说，所以在分完之后才有机会放东西进去咯？"
+    hide xsimg
+    show xsimg at char_mid 
     xs "嗯，没错。"
+    hide xsimg
+    show xsimg o at char_mid 
     xs "小盒子是谁都可以打开的，所以要往里面放东西很容易。"
-    xs "那些盒子放在茶水间，天玉在21:30的时候还一个个检查过。但是她只看了有没有缺东西，没仔细看过里面。"
-    by "那个蜡烛的容器不是透明的，不是刻意的话，很难看到里面吧。"
+    xs "那些盒子放在茶水间，天玉说她在21:30的时候还一个个检查过。但是她只看了有没有缺东西，没仔细看过里面。"
+    by eye_still e "哦……那个蜡烛的容器不是透明的，不是刻意的话，很难看到里面吧。"
+    hide xsimg
+    show xsimg at char_mid 
     xs "是啊。"
+    hide xsimg
+    show xsimg o at char_mid 
     xs "一楼走廊上有监控，我们确认过，和询问的记录能够对应。"
+    hide xsimg
+    show xsimg eye_close o at char_mid 
     xs "不过那个监控角度不行，游戏室和茶水间在一侧，看不清具体是哪个门进出的。"
+    hide xsimg
+    show xsimg o at char_mid 
     xs "当然，两个房间互相进出走动是看得出来的。"
-    by "那还能看清人的吗？"
+    by eye_def o "那还能看清人的吗？"
     xs "看得清，门是角度问题嘛。也能够看到没人拿过那些助眠包裹到走廊上。"
-    by "所以要下手的话肯定是在茶水间里咯。"
+    by eye_def o "所以要下手的话肯定是在茶水间里咯。"
+    hide xsimg
+    show xsimg at char_mid 
     xs "没错。而且从逻辑上来说，特地把它拿走再放回去没什么必要。"
-    by "也就是说，要查去过茶水间那个方向的人啊……"
-    by "也太多了吧喂。"
+    by eye_def o "也就是说，要查去过茶水间那个方向的人啊……"
+    by eye_wacky e "也太多了吧喂。"
+    hide xsimg
+    show xsimg eye_move o at char_mid 
     xs "没办法，谁让你们来了这么多人呢。"
-    by "……"
-    xs "哦，对了，刚才检验那边查出来，梁绵绵房间的那个助眠包裹上，只有她和服务员的指纹。"
-    by "哪个凶手会把自己的指纹留在上面啊？那跟叫人来抓自己有什么区别。"
-    me "等等，是这两个人的指纹的话有点奇怪？"
-    by "嗯？什么？"
-    by "好像是……"
-    by "哦——这样应该可以筛选一部分人了吧，从那个行动表。"
+    by eye_still def "……"
+    hide xsimg
+    show xsimg o at char_mid 
+    xs "对了，刚才检验那边查出来，梁绵绵房间的那个助眠礼盒上，只有她和服务员的指纹。"
+    by eye_still e "哦……所以呢？她是凶手？"
+    hide xsimg
+    show xsimg eye_close def at char_mid 
+    xs "这不能确定，一般凶手不会让自己的指纹留在现场，但，也不排除有疏忽的可能性。"
+    hide xsimg
+    show xsimg o at char_mid 
+    xs "不过，大家都知道是她把礼盒送到每个人的房间，没有留下指纹反而才奇怪。"
+    by eye_still o "……那你说这个有什么意义？"
+    xs "嗯，从目前的线索看，她就算不是凶手，也至少算是嫌疑人之一。"
+    hide xsimg
+    show xsimg at char_mid 
+    xs "就像你说的，我们不可能漫无目的地枚举。"
+    by eye_move def "哦……"
+    hide xsimg with dissolve
+    me "等等，礼盒有这两个人的指纹的话有点奇怪？"
+    by eye_def o "嗯？什么奇怪？"
+    me "因为……如果是这样的话……那张行动表上，有嫌疑的只有一部分人……"
+    by eye_def o "啊？是吗。"
+    "白一下意识皱眉，又重新看了看那张纸。"
+    by eye_def e "哦……那，有嫌疑的是谁，要问多少人啊？"
+    return
+
+label c2_3_choice:
+    me "嗯……要问的人数应该是……"
+    menu:
+        "3":
+            jump c2_3_choice_wrong
+        "4":
+            jump c2_3_choice_wrong
+        "5":
+            jump c2_3_extra3
+        "6":
+            jump c2_3_choice_wrong
+    return
+
+
+label c2_3_choice_wrong:
     # 【选错】
-    by "不不，你是不是不识数？不是这些……"
-    # 【选对】
-    by "对，应该是这样。"
-    "白一用旁边的笔在纸上潦草地画了几笔，递给西顺。"
-    xs "嗯？"
-    by "你不是说，天玉在21:30的时候还检查过吗，那她肯定碰过，却没有指纹。"
-    me "所以凶手肯定是在这个时间点之后过去的，然后擦掉了前面的指纹。"
-    by "所以只有后面送去客房的服务员和梁绵绵有。"
-    me "这样的话，就可以去掉其中一大部分人。"
+    by eye_still o "嗯……好像不对吧？你是不是不识数？不是这些……"
+    jump c2_3_choice
+    return
+
+label c2_3_extra3:
+    by eye_def o "哦，对，应该是这样。"
+    "白一点点头，用旁边的笔在纸上潦草地画了几笔，递给西顺。"
+    show xsimg o at char_mid with dissolve
+    xs "嗯？这是……"
+    hide xsimg
+    show xsimg eye_still o at char_mid 
+    xs "我明白了，你的意思是说，礼盒上没有天玉的指纹。"
+    by eye_def def "对……"
+    hide xsimg
+    show xsimg o at char_mid 
+    xs "她在21:30的时候还检查过，却没有留下指纹。"
+    xs "那么，如果是凶手擦掉的，凶手只能是在她之后进入房间的，或者，就是她本人。"
+    hide xsimg
+    show xsimg at char_mid 
+    by eye_still def "嗯……"
+    by eye_def o "所以，至少现在只用看这些人对吧？"
+    hide xsimg
+    show xsimg o at char_mid 
+    xs "嗯，行，应该没问题。"
     "西顺拿着手机，又看看那张资料，似乎是在比对什么。"
-    xs "行，应该没问题。"
+    xs "那么，几个需要现在调查的人，天玉，服务员小蓝，姒舞，卫锋，岑宣。"
     xs "那工作量就少很多了，你可以先休息会，吃点东西。"
     xs "我之后再来跟你说。"
-    by "哦，好。"
-    "房间的窗户很大，拉开窗帘，能够看见摆放成特定形状的花朵。"
-    "更远处是一片空地，昨天，众人就是在那里完成庆祝活动。"
-    by "然后，就在这些人里面……一个同学要害了另一个吗？"
-    by "啧啧……"
+    by eye_def o "哦，好。"
+
+    scene bg_hotelroom with fade
+    "云玉阁分给同学们住的房间窗户很大，拉开窗帘，能够看见摆放成特定形状的花朵。"
+    show bg_garden with dissolve
+    "窗外更远处，能看到是一片空地，昨天，众人就是在那里完成庆祝活动。"
+    hide bg_garde with dissolve
+    by eye_still o "然后，就在这些人里面……一个同学要害了另一个吗？"
+    by eye_move def "啧啧……"
     "白一用手撑着头，坐在窗边，百无聊赖地戳弄着窗帘上的绳子。"
     me "你觉得会是谁？"
-    by "我怎么知道……"
-    by "我唯一知道的就是，这几个人我都认识。"
+    by eye_still o "我怎么知道……"
+    by eye_close o "我唯一知道的就是，这几个人我都认识。"
     me "……那你知道的可真多。"
-    by "还行还行。"
+    by eye_move o "还行还行。"
     "我跟她互相呛声，但也只是说了一些废话般的言论，说不出个所以然来。"
-    by "不过硬要说的话，就因为认识，反而更难猜测了。"
+    by eye_def e "不过硬要说的话，就因为认识，反而更难猜测了。"
     me "……近乡情怯？"
-    by "这词是这么用的吗？"
-    by "我只是觉得，虽然我是没什么感觉……但真的会发生什么事，要到给人下毒的地步吗？"
-    by "这里又不是电视剧，大家都是普通女高中生没错吧……"
-    me "应该是吧？"
-    me "但要这么讲，现在你好像是最不普通的那个。"
-    by "……靠！"
+    by eye_still o "这词是这么用的吗？"
+    by eye_move o "我只是觉得，虽然我是没什么感觉……但真的会发生什么事，要到给人下毒的地步吗？"
+    by eye_move def "梁绵绵啊……"
+    "白一不由自主地轻声念着梁绵绵的名字。"
+    "也许即使是她，虽然说着没感觉，但也会因为这样的事情感到惋惜。"
+    "那个笑得开朗，甚至有些傻傻的女生……"
+    "为什么，非得遇到这种事情不可呢？"
+
+
+    by eye_close o"啊，真是的……这里又不是电视剧，大家都是普通女高中生没错吧……"
+    by eye_still def "竟然给我搞这种事……"
+    me "……应该是吧？"
+    me "但要这么讲，现在你好像是最不普通的那个，女高中生。"
+    by eye_wacky def "……靠！"
     "白一的手指顿住，而后忽然用力扯了扯绳子，像在发泄情绪。"
-    by "你还好意思说？那不都是因为你？"
-    me "不不，在这一点上，我们都是被坑了好嘛？"
-    by "……切。"
+    by eye_still o "你还好意思说？那不都是因为你？"
+    me "……不不，在这一点上，我们都是被坑了好嘛？"
+    by eye_move def "……切。"
     return
