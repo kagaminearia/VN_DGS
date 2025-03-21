@@ -29,6 +29,19 @@ image ctc-img:
     pause 0.3
     repeat
 
+image rec:
+    "images/rec0.webp"
+    pause 0.15
+    "images/rec1.webp"
+    pause 0.15
+    "images/rec2.webp"
+    pause 0.15
+    "images/rec1.webp"
+    pause 0.15
+    "images/rec0.webp"
+    pause 0.15
+    repeat
+
 screen tpoinfo(time,loc):
     add "images/tpo.webp"
     style_prefix 'tpo'

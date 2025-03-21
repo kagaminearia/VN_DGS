@@ -81,6 +81,8 @@ init:
                 "images/char/cx/eye-angry.webp"
             attribute eye_sad:
                 "images/char/cx/eye-sad.webp"
+            attribute eye_shock:
+                "images/char/cx/eye-shock.webp"
 
         group mouse:
             attribute def default:
@@ -219,6 +221,8 @@ init:
                 "images/char/ty/eye-squint.webp"
             attribute eye_sad:
                 "images/char/ty/eye-sad.webp"
+            attribute eye_still:
+                "images/char/ty/eye-still.webp"
 
         group mouse:
             attribute def default:

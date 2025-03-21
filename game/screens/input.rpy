@@ -8,18 +8,31 @@
 ## various input parameters.
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#input
+init:
+    define persistent.inputstyle = 0
 
 screen input(prompt):
     style_prefix "input"
-    frame:
-        xalign 0.5
-        yalign 0.5
-        xpadding 50
-        ypadding 50
-        vbox:
-            spacing 20
-            text prompt style "input_prompt"
-            input id "input"
+    if persistent.inputstyle == 0:
+        frame:
+            xalign 0.5
+            yalign 0.5
+            xpadding 50
+            ypadding 50
+            vbox:
+                spacing 20
+                text prompt style "input_prompt"
+                input id "input"
+    elif persistent.inputstyle == 1:
+        frame:
+            xalign 0.01
+            yalign 0.5
+            xpadding 20
+            ypadding 50
+            vbox:
+                spacing 20
+                text prompt style "input_prompt"
+                input id "input"
 
 style input_prompt:
     xalign 0.0

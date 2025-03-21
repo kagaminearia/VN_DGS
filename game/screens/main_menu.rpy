@@ -9,8 +9,8 @@ screen main_menu():
     ## This ensures that any other menu screen is replaced.
     tag menu
 
-    add "main"
-    add "main-title"
+    add "images/main/main.png"
+    add "images/main/main-title.png"
     vbox:
         style_prefix "main_navigation"
         xpos 175
@@ -46,16 +46,24 @@ screen testchapter():
     tag menu
     key "mouseup_3" action Return()
     add "#000000ff"
-    vbox:
-        xalign 0.25
-        yalign 0.25
-        spacing 10
-        textbutton ("c0") action Start("c0")
-        textbutton ("c1-1") action Start("c1_1")
-        textbutton ("c1-2") action Start("c1_2")
-        textbutton ("c1-3") action Start("c1_3")
-        textbutton ("c1-4") action Start("c1_4")
-        textbutton ("c1-5") action Start("c1_5")
-        textbutton ("c2-1") action Start("c2_1")
-        textbutton ("c2-2") action Start("c2_2")
-        textbutton ("c2-3") action Start("c2_3")
+    hbox:
+        xalign 0.3
+        yalign 0.5
+        spacing 110
+        vbox:
+            # xalign 0.25
+            # yalign 0.25
+            spacing 10
+            textbutton ("c0") action Start("c0")
+            textbutton ("c1-1") action Start("c1_1")
+            textbutton ("c1-2") action Start("c1_2")
+            textbutton ("c1-3") action Start("c1_3")
+            textbutton ("c1-4") action Start("c1_4")
+            textbutton ("c1-5") action Start("c1_5")
+            textbutton ("c2-1") action Start("c2_1")
+            textbutton ("c2-2") action Start("c2_2")
+            textbutton ("c2-3") action Start("c2_3")
+            textbutton ("c2-4") action Start("c2_4")
+            textbutton ("c2-5") action Start("c2_5")
+        vbox:
+            textbutton ("temp") action Start("c2_4_choice1")

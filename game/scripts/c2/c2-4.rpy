@@ -1,141 +1,355 @@
+init:
+    define persistent.c2_4_ty = 0
+    define persistent.c2_4_xl = 0
+    define persistent.c2_4_wf = 0
+    define persistent.c2_4_sw = 0
+    define persistent.c2_4_cx = 0
+
 label c2_4:
-    "根据之前的信息，除去其他人后，西顺选择先仔细询问在可能作案时间里去过茶水间方向的几人。"
+    scene bg_hotelroom with Fade(0.5,1,0.5)
+    "根据之前得到的信息，除去其他人后，西顺选择先仔细询问在可能作案时间里去过茶水间方向的几人。"
+    "这几个人是目前嫌疑最高的，仔细调查必不可少。"
     "再次询问，一是为了得到可能的更多细节，二是通过重复问话来观察他们有没有说谎。"
-    # 【天玉】
-    ty "姐姐你好，嗯嗯，是还要问什么吗？"
-    ty "去茶水间的时候吗？我之前其实说过了呀。当时是人已经来齐了，所以我就打算在吃饭之前最后去检查一遍那些盒子。"
-    ty "因为是要发给大家的嘛，如果弄错就不好了。"
-    ty "对，那些盒子是谁都可以打开的。"
-    ty "是我疏忽了，没有想到……我只是在旁边写了纸条，说不要碰。"
-    ty "但要是有人还是动了的话，我也不知道……"
-    ty "蜡烛吗？是可以单独拿出来。"
-    ty "但是为了固定，那个盒子里是加了卡扣的，拿出来就会被破坏。"
-    ty "我当时检查的时候，并没有看到有坏掉的。"
-    ty "唔，别的我没注意，抱歉……"
-    ty "我只能记得，那时检查的时候，就是为了确认里面的东西嘛。"
-    ty "所以能确定东西都在，至少数量都是对的，没有缺少内容，也没有坏掉的情况。"
-    ty "嗯，对，好，如果能帮到忙就太好了……"
-    ty "我也很希望能快点找出结果，辛苦你们了……谢谢。"
-    # 【服务员】
-    xl "啊……！您，您好……"
-    xl "我，我真的没有对东西动过手脚！"
-    xl "我怎么会动要送人的东西呢……这个，这个是不可能做的。"
-    xl "是的，昨天一天都是我在负责这里的杂事……"
-    xl "巡逻就是检查一遍一楼整体的情况……主要是看有没有人跑到不该去的地方，或者走错了之类的。"
-    xl "没，没有要求的时候，我就会在大厅等候。"
-    xl "对，对不起……！我不知道……"
-    xl "因为来的同学很多……我实在没法对上每个人的长相。"
-    xl "不过，不过我能确定的是……在第二天凌晨回房之前，所有人都是在一楼没错……"
-    xl "是的，那些助眠套装都是我送的……但我真的没有打开过！"
-    xl "就，就是，去每个房间敲门，把东西给他们……"
-    xl "那应该，应该是在十二点二十左右……就是他们刚回房没多久。"
-    xl "因因因为再晚的话就可能有人睡了，就太打扰了……所以十二点半之前肯定送完了。"
-    xl "是的，我做的就只有这些……真的没有擅自主张什么的……"
-    # 【卫锋】
-    wf "您好……嗯，好的。"
-    wf "嗯，昨天的事，我记得的。"
-    wf "一开始……我是提前到的，因为这样比较好……啊，对，提前了一点，然后等待过程中去了一下洗手间。"
-    wf "之后就是，看电影的时候。嗯，大概就是十点多吧……"
-    wf "中途去了一次茶水间，因为想给可乐加一点冰……就去拿了。"
-    wf "嗯……就是，因为我不习惯晚睡，所以当时有点困，就想喝点冰的。"
-    wf "啊？不知道有没有被看到……"
-    wf "我是自己去的。"
-    wf "因为大家都在看电影，当然不好麻烦其他人，这样。"
-    wf "其他的，我也没有注意……我加完冰之后就回去了。"
-    wf "晚上？我住219，没有出去过。"
-    wf "嗯，很快，就是这些了。"
-    # 【姒舞】
-    sw "欸——那个……你好你好。"
-    sw "昨晚的行动，不是说过了嘛？"
-    sw "噢，具体的两个时候……去游戏室和茶水间的时候？"
-    sw "我那一晚上好像就去了这两个地方啊！唔，对不起，我太激动了……"
-    sw "七点多的时候我刚到，就想着到处逛逛嘛……"
-    sw "然后就看到游戏室了，当然会想着看一下里面啊——这样子。"
-    sw "我到的比较早，所以没找到熟悉的人跟我一起去。"
-    sw "就是到那里看了一下下，没别的了。"
-    sw "去茶水间就是晚上嘛，当时是去拿点零食，想着打游戏的时候可以一边吃一边打。"
-    sw "这个当时游戏室有好几个人呀，大家都知道的。"
-    sw "嗯嗯，就是这样……"
-    sw "我的房间是217，我是一直在打游戏嘛，是最晚一批回去的，回去之后就睡了，其他不知道。"
-    sw "其他人？我没注意过哎……感觉没什么特别的呀……"
-    # 【岑宣】
-    cx "嗯，好……昨天吗？嗯……"
-    cx "之前好像说过一次了……我没怎么动过……就是去了一次洗手间。"
-    cx "嗯，那时候是在看电影……我自己出去的。"
-    cx "好像，就是十一点之后吧……大概几分十几分的时候？"
-    cx "不，没人看见我……应该。"
-    cx "那个放电影的地方很大，入口也拐了好几次，所以……中途自己出去，不会被影响别人看电影……也不会被注意到……"
-    cx "晚上房间……？是，202……"
-    cx "没有，抱歉……我真的不知道……"
-    cx "不，没有，我……抱歉……对不起……"
-    "岑宣陷入无法控制的情绪中，对话中断。"
+    jump c2_4_menu1
+    return
+
+label c2_4_menu1:
+    hide rec
+    if persistent.c2_4_ty == 1 and persistent.c2_4_xl == 1 and persistent.c2_4_wf == 1 and persistent.c2_4_sw == 1 and persistent.c2_4_cx == 1:
+        jump c2_4_extra1
+    show black with dissolve
+    pause 0.4
+    hide black with dissolve
+    menu:
+        "天玉":
+            show rec with dissolve
+            show tyimg coat smile at char_mid with dissolve
+            ty "姐姐你好，嗯嗯，是还要问什么吗？"
+            hide tyimg
+            show tyimg coat o at char_mid
+            ty "去茶水间的时候吗？这个我之前其实说过了呀。当时是人已经来齐了，所以我就打算在吃饭之前最后去检查一遍那些盒子。"
+            hide tyimg
+            show tyimg coat smile at char_mid
+            ty "因为是要发给大家的嘛，如果弄错就不好了。"
+            hide tyimg
+            show tyimg coat o at char_mid
+            ty "对，那些盒子是谁都可以打开的。"
+            hide tyimg
+            show tyimg coat eye_sad o at char_mid
+            ty "是我疏忽了，没有想到……我只是在旁边写了纸条，说不要碰。"
+            hide tyimg
+            show tyimg coat eye_sad at char_mid
+            ty "但要是有人还是动了的话，我也不知道……"
+            hide tyimg
+            show tyimg coat o at char_mid
+            ty "蜡烛吗？是可以单独拿出来。"
+            hide tyimg
+            show tyimg coat eye_still o at char_mid
+            ty "但是为了固定，那个盒子里是加了卡扣的，拿出来就会被破坏。"
+            ty "我当时检查的时候，并没有看到有坏掉的。"
+            hide tyimg
+            show tyimg coat at char_mid
+            ty "唔，别的我没注意，抱歉……"
+            hide tyimg
+            show tyimg coat o at char_mid
+            ty "我只能记得，那时检查的时候，就是为了确认里面的东西嘛。"
+            ty "所以能确定东西都在，至少数量都是对的，没有缺少内容，也没有坏掉的情况。"
+            hide tyimg
+            show tyimg coat eye_sad smile at char_mid
+            ty "嗯，对，好，如果能帮到忙就太好了……"
+            hide tyimg
+            show tyimg coat eye_close o at char_mid
+            ty "我也很希望能快点找出结果，辛苦你们了……谢谢。"
+            hide tyimg with dissolve
+            jump c2_4_menu1
+        "小蓝":
+            show rec with dissolve
+            show xlimg o at char_mid with dissolve
+            xl "啊……！您，您好……"
+            xl "我，我真的没有对东西动过手脚！"
+            hide xlimg
+            show xlimg at char_mid
+            xl "我怎么会动要送人的东西呢……这个，这个是不可能做的。"
+            hide xlimg
+            show xlimg o at char_mid
+            xl "是的，昨天一天都是我在负责这里的杂事……"
+            xl "巡逻就是检查一遍一楼整体的情况……主要是看有没有人跑到不该去的地方，或者走错了之类的。"
+            hide xlimg
+            show xlimg at char_mid
+            xl "没，没有要求的时候，我就会在大厅等候。"
+            hide xlimg
+            show xlimg o at char_mid
+            xl "对，对不起……！我不知道……"
+            xl "因为来的同学很多……我实在没法对上每个人的长相。"
+            hide xlimg
+            show xlimg at char_mid
+            xl "不过，不过我能确定的是……在第二天凌晨回房之前，所有人都是在一楼没错……"
+            hide xlimg
+            show xlimg o at char_mid
+            xl "是的，那些助眠礼盒都是我送到每个房间的……但我真的没有打开过！"
+            hide xlimg
+            show xlimg at char_mid
+            xl "就，就是，去每个房间敲门，把东西给他们……"
+            hide xlimg
+            show xlimg o at char_mid
+            xl "那应该，应该是在十二点二十左右……就是他们刚回房没多久。"
+            xl "因因因为是……再晚的话就可能有人睡了，就太打扰了……所以十二点半之前肯定送完了。"
+            hide xlimg
+            show xlimg at char_mid
+            xl "是的，我做的就只有这些……真的没有擅自主张什么的……"
+            hide xlimg with dissolve
+            jump c2_4_menu1
+        "卫锋":
+            show rec with dissolve
+            show wfimg coat eye_sad purse at char_mid with dissolve
+            wf "您好……我是卫锋。"
+            hide wfimg
+            show wfimg coat eye_sad o at char_mid
+            wf "好的，我……明白。"
+            hide wfimg
+            show wfimg coat o at char_mid
+            wf "嗯，昨天的事，我记得的。"
+            hide wfimg
+            show wfimg coat eye_still o at char_mid
+            wf "一开始……我是提前到的，因为这样比较好……啊，对，提前了一点，然后等待过程中去了一下洗手间。"
+            hide wfimg
+            show wfimg coat o at char_mid
+            wf "之后就是，看电影的时候。嗯，大概就是十点多吧……"
+            hide wfimg
+            show wfimg coat purse at char_mid
+            wf "中途去了一次茶水间，因为想给可乐加一点冰……就去拿了。"
+            hide wfimg
+            show wfimg coat eye_sad o at char_mid
+            wf "嗯……就是，因为我不习惯晚睡，所以当时有点困，就想喝点冰的。"
+            hide wfimg
+            show wfimg coat o at char_mid
+            wf "啊？不知道有没有被看到……"
+            hide wfimg
+            show wfimg coat at char_mid
+            wf "我是自己去的。"
+            hide wfimg
+            show wfimg coat eye_sad purse at char_mid
+            wf "因为大家都在看电影，当然不好麻烦其他人，这样。"
+            hide wfimg
+            show wfimg coat eye_still o at char_mid
+            wf "其他的，我也没有注意……我加完冰之后就回去了。"
+            hide wfimg
+            show wfimg coat o at char_mid
+            wf "晚上？我住219，没有出去过。"
+            hide wfimg
+            show wfimg coat eye_close at char_mid
+            wf "嗯，很快，就是这些了。"
+            hide wfimg with dissolve
+            jump c2_4_menu1
+        "姒舞":
+            show rec with dissolve
+            show swimg coat at char_mid with dissolve
+            sw "欸——那个……你好你好。"
+            hide swimg
+            show swimg coat eye_blink o at char_mid
+            sw "啥？我昨晚的行动？不是说过了嘛？"
+            hide swimg
+            show swimg coat o at char_mid
+            sw "噢，具体的两个时候……去游戏室和茶水间的时候？"
+            hide swimg
+            show swimg coat eye_squint o at char_mid
+            sw "我那一晚上好像就去了这两个地方啊！唔，对不起，我太激动了……"
+            hide swimg
+            show swimg coat at char_mid
+            sw "七点多的时候我刚到，就想着到处逛逛嘛……"
+            hide swimg
+            show swimg coat o at char_mid
+            sw "然后就看到游戏室了，当然会想着看一下里面啊——这样子。"
+            sw "我到的比较早，所以没找到熟悉的人跟我一起去。"
+            hide swimg
+            show swimg coat at char_mid
+            sw "就是到那里看了一下下，没别的了。"
+            hide swimg
+            show swimg coat o at char_mid
+            sw "去茶水间就是晚上嘛，当时是去拿点零食，想着打游戏的时候可以一边吃一边打。"
+            hide swimg
+            show swimg coat eye_blink o at char_mid
+            sw "这个当时游戏室有好几个人呀，大家都知道的。"
+            hide swimg
+            show swimg coat at char_mids
+            sw "嗯嗯，就是这样……"
+            hide swimg
+            show swimg coat o at char_mid
+            sw "我的房间是217，我是一直在打游戏嘛，是最晚一批回去的，回去之后就睡了，其他不知道。"
+            hide swimg
+            show swimg coat eye_sad o at char_mid
+            sw "其他人？我没注意过哎……感觉没什么特别的呀……"
+            hide swimg
+            jump c2_4_menu1
+        "岑宣":
+            show rec with dissolve
+            show cximg coat eye_sad at char_mid with dissolve
+            cx "嗯，好……昨天吗？嗯……"
+            hide cximg
+            show cximg coat eye_sad o at char_mid
+            cx "之前好像说过一次了……我没怎么动过……就是去了一次洗手间。"
+            hide cximg
+            show cximg coat eye_close at char_mid
+            cx "嗯，那时候是在看电影……我自己出去的。"
+            hide cximg
+            show cximg coat o at char_mid
+            cx "好像，就是十一点之后吧……大概几分十几分的时候？"
+            hide cximg
+            show cximg coat at char_mid
+            cx "不，没人看见我……应该。"
+            hide cximg
+            show cximg coat o at char_mid
+            cx "那个放电影的地方很大，入口也拐了好几次，所以……中途自己出去，不会被影响别人看电影……也不会被注意到……"
+            cx "晚上房间……？是，202……"
+            hide cximg
+            show cximg coat eye_sad o at char_mid
+            cx "没有，抱歉……我真的不知道……"
+            hide cximg
+            show cximg coat eye_angry o at char_mid
+            cx "我也不知道梁绵绵为什么会这样！"
+            hide cximg
+            show cximg coat eye_shock o at char_mid
+            cx "不，没有，我……抱歉……对不起……"
+            hide cximg
+            show cximg coat eye_shock at char_mid
+            "岑宣陷入无法控制的情绪中，对话中断。"
+            hide cximg with dissolve
+            jump c2_4_menu1s
+        
+    return
+    
+label c2_4_extra1:
+    scene bg_hotelroom with Fade(0.5,1,0.5)
     "嘟。"
-    "录音笔播完了记录的询问对话，西顺把它拿起来，收回兜里。"
+    "录像带播完，记录的询问对话也看完了，西顺把它拿起来，收回兜里。"
+    show xsimg o at char_mid with dissolve
     xs "有什么想法吗？你们。"
-    by "有个毛线啊……什么都听不出来。"
+    by eye_still o "有个毛线啊……什么都听不出来。"
     me "嗯……只有这些也不太好推测什么吧。"
-    xs "的确，暂时没有物证，还得继续看。"
-    by "你问房间号干嘛啊？"
-    xs "看晚上她们有没有出去找过人啊，如果是在服务员到之后去找梁绵绵也是有可能的吧。"
+    hide xsimg
+    show xsimg eye_close o at char_mid
+    xs "的确，现在暂时没有物证，还得继续看。"
+    by eye_def o  "你问房间号干嘛啊？"
+    hide xsimg
+    show xsimg o at char_mid
+    xs "看晚上她们有没有出去找过人啊，如果是在服务员离开之后去找梁绵绵也是有可能的吧。"
+    hide xsimg
+    show xsimg at char_mid
     xs "别忘了那个鞋印。"
-    by "是有可能……但谁会告诉你啊？"
-    by "二楼没监控的吗？"
+    by eye_still o "是有可能……但谁会告诉你啊？"
+    by eye_def o "二楼没监控的吗？"
+    hide xsimg
+    show xsimg o at char_mid
     xs "没有，这种地方都比较注意隐私。"
-    by "啧……那你问了有什么用。"
+    by eye_still o "啧……那你问了有什么用。"
     xs "嗯，还是得问一下，当做参考。"
-    xs "不过现场的痕迹已经查出来了，有一些进展。"
-    by "什么？"
+    hide xsimg
+    show xsimg eye_close o at char_mid
+    xs "之后如果和询问的情况对不上，从说谎动机也可以继续分析。"
+    hide xsimg
+    show xsimg o at char_mid
+    xs "不过，现场的痕迹已经查出来了，有一些进展。"
+    by eye_def o "什么？"
+    hide xsimg
+    show xsimg eye_still smile at char_mid
     xs "这个啊……这个就要你帮忙了。"
-    by "哈？"
+    "看到西顺浅浅的笑容，白一顿觉不妙。"
+    by eye_wacky o "哈？?"
+    hide xsimg
+    show xsimg o at char_mid
     xs "等会我把收集好的鞋印给你，你来跟房间里的那个比对一下。"
-    by "哈？为什么又是我，那你呢？"
+    by eye_still o "哈？为什么又是我，那你呢？"
+    hide xsimg
+    show xsimg at char_mid
     xs "我去查颜料啊。"
-    by "颜料？"
-    xs "哦，我是不是没有说，有毒物质也查出来了。"
-    xs "是一种含铅量很高的颜料，被放在蜡烛下面，等蜡烛烧完跟着一起。"
+    by eye_still def "颜料？"
+    hide xsimg
+    show xsimg o at char_mid
+    xs "对。哦，我是不是没有说，有毒物质也查出来了。"
+    hide xsimg
+    show xsimg eye_still o at char_mid
+    xs "是一种含铅量很高的颜料，被扔进蜡烛的容器里面。等蜡烛烧到底下，就跟着一起燃烧。"
+    hide xsimg
+    show xsimg o at char_mid
     xs "烧的时候，出来的气体全是含铅颗粒的，被受害人从呼吸道吸入，也从暴露的伤口感染了。"
-    by "颜料……？竟然会是这种东西。"
-    by "听起来并不是那种很难搞到的东西啊。"
+    hide xsimg
+    show xsimg at char_mid
+    by eye_still o "颜料……？竟然会是这种东西。"
+    by eye_def e "听起来并不是那种很难搞到的东西啊。"
     me "但是，颜料的毒性有这么重，还能拿出来卖吗？"
-    by "也许是一般人不会想着把它烧了？"
+    by eye_def o "也许是一般人不会想着把它烧了？"
     me "嗯……"
+    hide xsimg
+    show xsimg o at char_mid
     xs "这种颜料会有残留一定毒性，但一般来说效果不会这么严重……"
+    hide xsimg
+    show xsimg eye_still o at char_mid
     xs "虽然也有受害人本身的体质原因，但我们还是认为颜料问题很大。"
-    xs "所以现在要查它的来源。"
-    xs "所以，检查鞋印的事情，就拜托你了。"
-    by "哦，难怪……等等？？"
+    hide xsimg
+    show xsimg eye_still at char_mid
+    xs "所以，现在要查它的来源。"
+    hide xsimg
+    show xsimg o at char_mid
+    xs "那么，检查鞋印的事情，就拜托你了。"
+    by eye_still o "哦，难怪……{size=35}等等？？？{/size}"
     "西顺三言两语间就给白一增加了工作。"
+    hide xsimg with dissolve
     "以至于白一都还没反应过来，她就已经把东西留下，人出去了。"
-    by "不是，她——我靠？？"
+    by eye_wacky o "不是，她——我靠？？"
     me "噗……人都已经走了，你叫也没用。"
-    by "你在笑个毛线啊？难道你就不用看了？"
+    by eye_wacky o "你在笑个毛线啊？难道你就不用看了？"
     me "……好吧。"
-    "白一认命地把资料摊开，对着那些相似的形状找出和房间里相同的那个。"
-    # 【选错】
-    by "哦，是这个吗？我看看……"
-    by "……"
-    by "你眼睛是不是有问题？这看起来哪像了？"
-    me "……这是个意外。"
-    # 【选对】
-    by "哦，是这个吗？我看看……"
-    by "嗯——好像……真的是？"
+    "房间里留下的痕迹并不多，只能收集部分鞋印图案，所以不容易直接比对。"
+    "白一认命地把资料摊开，对着那些相似的形状，试图找出和房间里相同的那个。"
+    jump c2_4_choice1
+    return
+
+label c2_4_choice1:
+    scene black with dissolve
+    $ quick_menu = False
+    show footprint with dissolve
+    $ persistent.inputstyle = 1
+    python:
+        foot = renpy.input("能对应上的编号是？", length=4)
+        foot = foot.strip()
+        if not foot:
+            user = "0"
+    $ quick_menu = True
+    if foot == "10":
+        jump c2_4_extra2
+    else:
+        scene bg_hotelroom with Dissolve(1)
+        by eye_def def "哦，是这个吗？我看看……"
+        by eye_still def "……"
+        by eye_still o "你眼睛是不是有问题？这看起来哪像了？"
+        me "啊？哦，嗯……这是个意外。"
+        jump c2_4_choice1
+    return
+
+label c2_4_extra2:
+    scene bg_hotelroom with Dissolve(1)
+    by eye_def def "哦，是这个吗？我看看……"
+    by eye_still o "嗯——好像……真的是？"
     "看到走势几乎一模一样的曲线，白一反而有些不敢相信，来回比对了好几次。"
-    by "嗯，好像真的是。"
+    by eye_def def "嗯，好像真的是。"
     me "对啊，就是这个没错。"
     me "所以这是谁的？"
-    by "哦我看看，是——"
+    by eye_def o "嗯我看看啊，是——"
     "白一的声音忽然停了一会，才说完后半句。"
-    by "呃，是岑宣的。"
+    by eye_still e "……呃，是岑宣的。"
     me "……啊？"
     me "岑宣？"
-    by "是啊，就是那个在医院恨不得把我吃了的岑宣。"
+    "一瞬间，我怀疑自己的耳朵出了问题。"
+    by eye_close o "是啊，就是那个在医院恨不得把我吃了的岑宣。"
     me "……"
-    me "应该……不会是她做的吧？"
+    me "可是……她……应该……不会是她做的吧？"
     "说这话的时候，我的声音放得很轻。"
     "毕竟，我自己也知道没什么说服力，只是自己不希望是这样而已。"
-    by "啧……没说是她啊。这只是说明她很有嫌疑罢了。"
-    by "哦不，应该说是，这说明她现在是最有嫌疑的那个。"
-    me "……听起来好像也没有好到哪里去……"
+    by "啧……这也不能说明就是她啊。只能说明，她曾经去过梁绵绵的房间，并且在这件事上说谎了而已。"
+    me "……听起来好像也没有好到哪里去……感觉更可疑了呢。"
+    by "那又怎样？不过，她现在的确就是最有嫌疑的那个吧。"
+    me "嗯……"
+
     by "你忘了吗，之前我们看到的那个应该就跟她有关。"
     me "什么？"
     # 【选错】
