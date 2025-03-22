@@ -79,11 +79,22 @@ image clue35 = "images/clue/clue_35.png"
 
 
 
-
 # character info
 define charList = [
-
+    "白一",
+    "岑宣",
+    "繁锦",
+    "梁绵绵",
+    "林望龙",
+    "姒舞",
+    "天玉",
+    "卫锋",
+    "温心",
+    "西平",
+    "西顺",
+    "张班",
 ]
+default persistent.char = [0]*len(charList)
 
 # story noun explanation
 define persistent.dictList = [

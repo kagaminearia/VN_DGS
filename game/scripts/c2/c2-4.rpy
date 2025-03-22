@@ -61,6 +61,7 @@ label c2_4_menu1:
             show tyimg coat eye_close o at char_mid
             ty "我也很希望能快点找出结果，辛苦你们了……谢谢。"
             hide tyimg with dissolve
+            $ persistent.c2_4_ty = 1
             jump c2_4_menu1
         "小蓝":
             show rec with dissolve
@@ -98,6 +99,7 @@ label c2_4_menu1:
             show xlimg at char_mid
             xl "是的，我做的就只有这些……真的没有擅自主张什么的……"
             hide xlimg with dissolve
+            $ persistent.c2_4_xl = 1
             jump c2_4_menu1
         "卫锋":
             show rec with dissolve
@@ -140,6 +142,7 @@ label c2_4_menu1:
             show wfimg coat eye_close at char_mid
             wf "嗯，很快，就是这些了。"
             hide wfimg with dissolve
+            $ persistent.c2_4_wf = 1
             jump c2_4_menu1
         "姒舞":
             show rec with dissolve
@@ -171,7 +174,7 @@ label c2_4_menu1:
             show swimg coat eye_blink o at char_mid
             sw "这个当时游戏室有好几个人呀，大家都知道的。"
             hide swimg
-            show swimg coat at char_mids
+            show swimg coat at char_mid
             sw "嗯嗯，就是这样……"
             hide swimg
             show swimg coat o at char_mid
@@ -180,6 +183,7 @@ label c2_4_menu1:
             show swimg coat eye_sad o at char_mid
             sw "其他人？我没注意过哎……感觉没什么特别的呀……"
             hide swimg
+            $ persistent.c2_4_sw = 1
             jump c2_4_menu1
         "岑宣":
             show rec with dissolve
@@ -200,7 +204,7 @@ label c2_4_menu1:
             hide cximg
             show cximg coat o at char_mid
             cx "那个放电影的地方很大，入口也拐了好几次，所以……中途自己出去，不会被影响别人看电影……也不会被注意到……"
-            cx "晚上房间……？是，202……"
+            cx "晚上房间……？是，我住202……"
             hide cximg
             show cximg coat eye_sad o at char_mid
             cx "没有，抱歉……我真的不知道……"
@@ -214,7 +218,8 @@ label c2_4_menu1:
             show cximg coat eye_shock at char_mid
             "岑宣陷入无法控制的情绪中，对话中断。"
             hide cximg with dissolve
-            jump c2_4_menu1s
+            $ persistent.c2_4_cx = 1
+            jump c2_4_menu1
         
     return
     
@@ -340,15 +345,21 @@ label c2_4_extra2:
     me "……啊？"
     me "岑宣？"
     "一瞬间，我怀疑自己的耳朵出了问题。"
-    by eye_close o "是啊，就是那个在医院恨不得把我吃了的岑宣。"
+    by eye_close o "是啊，就是那个在医院里恨不得把我吃了的岑宣。"
     me "……"
-    me "可是……她……应该……不会是她做的吧？"
+    me "可是……她……为什么？应该……不会是她做的吧……"
     "说这话的时候，我的声音放得很轻。"
     "毕竟，我自己也知道没什么说服力，只是自己不希望是这样而已。"
-    by "啧……这也不能说明就是她啊。只能说明，她曾经去过梁绵绵的房间，并且在这件事上说谎了而已。"
+    by "啧……这也不能说明就是她啊。"
+    by "只能说明，她曾经去过梁绵绵的房间，并且在这件事上说谎了而已。"
     me "……听起来好像也没有好到哪里去……感觉更可疑了呢。"
     by "那又怎样？不过，她现在的确就是最有嫌疑的那个吧。"
     me "嗯……"
+    me "不过，说起来……她的话，的确是最方便的……"
+    by "为啥啊？"
+    me "因为，那个啊——"
+
+
 
     by "你忘了吗，之前我们看到的那个应该就跟她有关。"
     me "什么？"
